@@ -1,0 +1,864 @@
+
+<html class="">
+              
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest', // Options: 'nest', 'remove', 'replace'
+      };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+<style>
+  * {
+    font-family: "Inter", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+    
+<style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+</style>
+
+    
+<style>
+   :root {
+          /* Base colors */
+          --color-base: #ffffff;
+          --color-base-50: #f9fafb;
+          --color-base-100: #f3f4f6;
+          --color-base-200: #e5e7eb;
+          --color-base-300: #d1d5db;
+          --color-base-400: #9ca3af;
+          --color-base-500: #6b7280;
+          --color-base-600: #4b5563;  
+          --color-base-700: #374151;
+          --color-base-800: #1f2937;  
+          --color-base-900: #111827;
+          --color-base-content: #1f2937;
+
+          /* Primary colors */
+          --color-primary: #3b82f6;
+          --color-primary-50: #eff6ff;
+          --color-primary-100: #dbeafe;
+          --color-primary-200: #bfdbfe;
+          --color-primary-300: #93c5fd;
+          --color-primary-400: #60a5fa;
+          --color-primary-500: #3b82f6;
+          --color-primary-600: #2563eb;
+          --color-primary-700: #1d4ed8;
+          --color-primary-800: #1e40af;
+          --color-primary-900: #1e3a8a;
+          --color-primary-focus: #2563eb;
+          --color-primary-content: #ffffff;
+
+          /* Secondary colors */
+          --color-secondary: #8b5cf6;
+          --color-secondary-50: #f5f3ff;
+          --color-secondary-100: #ede9fe;
+          --color-secondary-200: #ddd6fe;
+          --color-secondary-300: #c4b5fd;
+          --color-secondary-400: #a78bfa;
+          --color-secondary-500: #8b5cf6;
+          --color-secondary-600: #7c3aed;
+          --color-secondary-700: #6d28d9;
+          --color-secondary-800: #5b21b6;
+          --color-secondary-900: #4c1d95;
+          --color-secondary-focus: #7c3aed;
+          --color-secondary-content: #ffffff;
+
+          /* Accent colors */
+          --color-accent: #f472b6;
+          --color-accent-50: #fdf2f8;
+          --color-accent-100: #fce7f3;
+          --color-accent-200: #fbcfe8;
+          --color-accent-300: #f9a8d4;
+          --color-accent-400: #f472b6;
+          --color-accent-500: #ec4899;
+          --color-accent-600: #db2777;
+          --color-accent-700: #be185d;
+          --color-accent-800: #9d174d;
+          --color-accent-900: #831843;
+          --color-accent-focus: #db2777;
+          --color-accent-content: #ffffff;
+
+          /* Neutral colors */
+          --color-neutral: #6b7280;
+          --color-neutral-50: #f9fafb;
+          --color-neutral-100: #f3f4f6;
+          --color-neutral-200: #e5e7eb;
+          --color-neutral-300: #d1d5db;
+          --color-neutral-400: #9ca3af;
+          --color-neutral-500: #6b7280;
+          --color-neutral-600: #4b5563;
+          --color-neutral-700: #374151;
+          --color-neutral-800: #1f2937;
+          --color-neutral-900: #111827;
+          --color-neutral-focus: #4b5563;
+          --color-neutral-content: #ffffff;
+
+          /* Info colors */
+          --color-info: #3b82f6;
+          --color-info-50: #eff6ff;
+          --color-info-100: #dbeafe;
+          --color-info-200: #bfdbfe;
+          --color-info-300: #93c5fd;
+          --color-info-400: #60a5fa;
+          --color-info-500: #3b82f6;
+          --color-info-600: #2563eb;
+          --color-info-700: #1d4ed8;
+          --color-info-800: #1e40af;
+          --color-info-900: #1e3a8a;
+          --color-info-focus: #2563eb;
+          --color-info-content: #ffffff;
+
+          /* Success colors */
+          --color-success: #10b981;
+          --color-success-50: #ecfdf5;
+          --color-success-100: #d1fae5;
+          --color-success-200: #a7f3d0;
+          --color-success-300: #6ee7b7;
+          --color-success-400: #34d399;
+          --color-success-500: #10b981;
+          --color-success-600: #059669;
+          --color-success-700: #047857;
+          --color-success-800: #065f46;
+          --color-success-900: #064e3b;
+          --color-success-focus: #059669;
+          --color-success-content: #ffffff;
+
+          /* Warning colors */
+          --color-warning: #f59e0b;
+          --color-warning-50: #fffbeb;
+          --color-warning-100: #fef3c7;
+          --color-warning-200: #fde68a;
+          --color-warning-300: #fcd34d;
+          --color-warning-400: #fbbf24;
+          --color-warning-500: #f59e0b;
+          --color-warning-600: #d97706;
+          --color-warning-700: #b45309;
+          --color-warning-800: #92400e;
+          --color-warning-900: #78350f;
+          --color-warning-focus: #d97706;
+          --color-warning-content: #ffffff;
+
+          /* Error colors */
+          --color-error: #ef4444;
+          --color-error-50: #fef2f2;
+          --color-error-100: #fee2e2;
+          --color-error-200: #fecaca;
+          --color-error-300: #fca5a5;
+          --color-error-400: #f87171;
+          --color-error-500: #ef4444;
+          --color-error-600: #dc2626;
+          --color-error-700: #b91c1c;
+          --color-error-800: #991b1b;
+          --color-error-900: #7f1d1d;
+          --color-error-focus: #dc2626;
+          --color-error-content: #ffffff;
+        }
+</style>
+
+    
+<style>
+/* Dark theme */
+        .dark {
+          /* Base colors */
+          --color-base: #1f2937;
+          --color-base-50: #111827;
+          --color-base-100: #1f2937;
+          --color-base-200: #374151;
+          --color-base-300: #4b5563;
+          --color-base-400: #6b7280;
+          --color-base-500: #9ca3af;
+          --color-base-600: #d1d5db;
+          --color-base-700: #e5e7eb;
+          --color-base-800: #f3f4f6;
+          --color-base-900: #f9fafb;
+          --color-base-content: #f9fafb;
+
+          /* Primary colors */
+          --color-primary: #60a5fa;
+          --color-primary-50: #1e3a8a;
+          --color-primary-100: #1e40af;
+          --color-primary-200: #1d4ed8;
+          --color-primary-300: #2563eb;
+          --color-primary-400: #3b82f6;
+          --color-primary-500: #60a5fa;
+          --color-primary-600: #93c5fd;
+          --color-primary-700: #bfdbfe;
+          --color-primary-800: #dbeafe;
+          --color-primary-900: #eff6ff;
+          --color-primary-focus: #3b82f6;
+          --color-primary-content: #1f2937;
+
+          /* Secondary colors */
+          --color-secondary: #a78bfa;
+          --color-secondary-50: #4c1d95;
+          --color-secondary-100: #5b21b6;
+          --color-secondary-200: #6d28d9;
+          --color-secondary-300: #7c3aed;
+          --color-secondary-400: #8b5cf6;
+          --color-secondary-500: #a78bfa;
+          --color-secondary-600: #c4b5fd;
+          --color-secondary-700: #ddd6fe;
+          --color-secondary-800: #ede9fe;
+          --color-secondary-900: #f5f3ff;
+          --color-secondary-focus: #8b5cf6;
+          --color-secondary-content: #1f2937;
+
+          /* Accent colors */
+          --color-accent: #f472b6;
+          --color-accent-50: #831843;
+          --color-accent-100: #9d174d;
+          --color-accent-200: #be185d;
+          --color-accent-300: #db2777;
+          --color-accent-400: #ec4899;
+          --color-accent-500: #f472b6;
+          --color-accent-600: #f9a8d4;
+          --color-accent-700: #fbcfe8;
+          --color-accent-800: #fce7f3;
+          --color-accent-900: #fdf2f8;
+          --color-accent-focus: #ec4899;
+          --color-accent-content: #1f2937;
+
+          /* Neutral colors remain the same as light theme */
+
+          /* Info colors */
+          --color-info: #60a5fa;
+          --color-info-50: #1e3a8a;
+          --color-info-100: #1e40af;
+          --color-info-200: #1d4ed8;
+          --color-info-300: #2563eb;
+          --color-info-400: #3b82f6;
+          --color-info-500: #60a5fa;
+          --color-info-600: #93c5fd;
+          --color-info-700: #bfdbfe;
+          --color-info-800: #dbeafe;
+          --color-info-900: #eff6ff;
+          --color-info-focus: #3b82f6;
+          --color-info-content: #1f2937;
+
+          /* Success colors */
+          --color-success: #34d399;
+          --color-success-50: #064e3b;
+          --color-success-100: #065f46;
+          --color-success-200: #047857;
+          --color-success-300: #059669;
+          --color-success-400: #10b981;
+          --color-success-500: #34d399;
+          --color-success-600: #6ee7b7;
+          --color-success-700: #a7f3d0;
+          --color-success-800: #d1fae5;
+          --color-success-900: #ecfdf5;
+          --color-success-focus: #10b981;
+          --color-success-content: #1f2937;
+
+          /* Warning colors */
+          --color-warning: #fbbf24;
+          --color-warning-50: #78350f;
+          --color-warning-100: #92400e;
+          --color-warning-200: #b45309;
+          --color-warning-300: #d97706;
+          --color-warning-400: #f59e0b;
+          --color-warning-500: #fbbf24;
+          --color-warning-600: #fcd34d;
+          --color-warning-700: #fde68a;
+          --color-warning-800: #fef3c7;
+          --color-warning-900: #fffbeb;
+          --color-warning-focus: #f59e0b;
+          --color-warning-content: #1f2937;
+
+          /* Error colors */
+          --color-error: #f87171;
+          --color-error-50: #7f1d1d;
+          --color-error-100: #991b1b;
+          --color-error-200: #b91c1c;
+          --color-error-300: #dc2626;
+          --color-error-400: #ef4444;
+          --color-error-500: #f87171;
+          --color-error-600: #fca5a5;
+          --color-error-700: #fecaca;
+          --color-error-800: #fee2e2;
+          --color-error-900: #fef2f2;
+          --color-error-focus: #ef4444;
+          --color-error-content: #1f2937;
+        }
+</style>
+
+    
+  <script>
+        tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                ...{"transparent":"transparent","current":"currentColor","black":"#000000","white":"#ffffff","gray":{"50":"#f9fafb","100":"#f3f4f6","200":"#e5e7eb","300":"#d1d5db","400":"#9ca3af","500":"#6b7280","600":"#4b5563","700":"#374151","800":"#1f2937","900":"#111827"},"red":{"50":"#fef2f2","100":"#fee2e2","200":"#fecaca","300":"#fca5a5","400":"#f87171","500":"#ef4444","600":"#dc2626","700":"#b91c1c","800":"#991b1b","900":"#7f1d1d"},"yellow":{"50":"#fffbeb","100":"#fef3c7","200":"#fde68a","300":"#fcd34d","400":"#fbbf24","500":"#f59e0b","600":"#d97706","700":"#b45309","800":"#92400e","900":"#78350f"},"green":{"50":"#ecfdf5","100":"#d1fae5","200":"#a7f3d0","300":"#6ee7b7","400":"#34d399","500":"#10b981","600":"#059669","700":"#047857","800":"#065f46","900":"#064e3b"},"blue":{"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"},"indigo":{"50":"#eef2ff","100":"#e0e7ff","200":"#c7d2fe","300":"#a5b4fc","400":"#818cf8","500":"#6366f1","600":"#4f46e5","700":"#4338ca","800":"#3730a3","900":"#312e81"},"purple":{"50":"#f5f3ff","100":"#ede9fe","200":"#ddd6fe","300":"#c4b5fd","400":"#a78bfa","500":"#8b5cf6","600":"#7c3aed","700":"#6d28d9","800":"#5b21b6","900":"#4c1d95"},"pink":{"50":"#fdf2f8","100":"#fce7f3","200":"#fbcfe8","300":"#f9a8d4","400":"#f472b6","500":"#ec4899","600":"#db2777","700":"#be185d","800":"#9d174d","900":"#831843"}},
+                ...{"primary":{"50":"var(--color-primary-50)","100":"var(--color-primary-100)","200":"var(--color-primary-200)","300":"var(--color-primary-300)","400":"var(--color-primary-400)","500":"var(--color-primary-500)","600":"var(--color-primary-600)","700":"var(--color-primary-700)","800":"var(--color-primary-800)","900":"var(--color-primary-900)","DEFAULT":"var(--color-primary)","focus":"var(--color-primary-focus)","content":"var(--color-primary-content)"},"secondary":{"50":"var(--color-secondary-50)","100":"var(--color-secondary-100)","200":"var(--color-secondary-200)","300":"var(--color-secondary-300)","400":"var(--color-secondary-400)","500":"var(--color-secondary-500)","600":"var(--color-secondary-600)","700":"var(--color-secondary-700)","800":"var(--color-secondary-800)","900":"var(--color-secondary-900)","DEFAULT":"var(--color-secondary)","focus":"var(--color-secondary-focus)","content":"var(--color-secondary-content)"},"accent":{"50":"var(--color-accent-50)","100":"var(--color-accent-100)","200":"var(--color-accent-200)","300":"var(--color-accent-300)","400":"var(--color-accent-400)","500":"var(--color-accent-500)","600":"var(--color-accent-600)","700":"var(--color-accent-700)","800":"var(--color-accent-800)","900":"var(--color-accent-900)","DEFAULT":"var(--color-accent)","focus":"var(--color-accent-focus)","content":"var(--color-accent-content)"},"neutral":{"50":"var(--color-neutral-50)","100":"var(--color-neutral-100)","200":"var(--color-neutral-200)","300":"var(--color-neutral-300)","400":"var(--color-neutral-400)","500":"var(--color-neutral-500)","600":"var(--color-neutral-600)","700":"var(--color-neutral-700)","800":"var(--color-neutral-800)","900":"var(--color-neutral-900)","DEFAULT":"var(--color-neutral)","focus":"var(--color-neutral-focus)","content":"var(--color-neutral-content)"},"info":{"50":"var(--color-info-50)","100":"var(--color-info-100)","200":"var(--color-info-200)","300":"var(--color-info-300)","400":"var(--color-info-400)","500":"var(--color-info-500)","600":"var(--color-info-600)","700":"var(--color-info-700)","800":"var(--color-info-800)","900":"var(--color-info-900)","DEFAULT":"var(--color-info)","focus":"var(--color-info-focus)","content":"var(--color-info-content)"},"success":{"50":"var(--color-success-50)","100":"var(--color-success-100)","200":"var(--color-success-200)","300":"var(--color-success-300)","400":"var(--color-success-400)","500":"var(--color-success-500)","600":"var(--color-success-600)","700":"var(--color-success-700)","800":"var(--color-success-800)","900":"var(--color-success-900)","DEFAULT":"var(--color-success)","focus":"var(--color-success-focus)","content":"var(--color-success-content)"},"warning":{"50":"var(--color-warning-50)","100":"var(--color-warning-100)","200":"var(--color-warning-200)","300":"var(--color-warning-300)","400":"var(--color-warning-400)","500":"var(--color-warning-500)","600":"var(--color-warning-600)","700":"var(--color-warning-700)","800":"var(--color-warning-800)","900":"var(--color-warning-900)","DEFAULT":"var(--color-warning)","focus":"var(--color-warning-focus)","content":"var(--color-warning-content)"},"error":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"},"danger":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"}},
+                },
+              },
+            },
+            variants: {
+              extend: {
+                backgroundColor: ['active', 'group-hover'],
+                textColor: ['active', 'group-hover'],
+              },
+            },
+            plugins: [],
+          };
+  </script>
+
+</head>
+
+              <body class="h-full text-base-content">
+                <!-- Navbar -->
+<nav id="header" class="fixed top-0 w-full bg-indigo-950 bg-opacity-95 z-50 px-4 sm:px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="index.html" class="flex items-center">
+            <img src="assets/images/logos/logo.png" alt="Offr Group Logo" class="h-8 sm:h-10">
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-white">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-gray-300 hover:text-white">Home</a>
+            <a href="about.html" class="text-gray-300 hover:text-white">Our Methodology</a>
+            <a href="https://www.careerkitchen.co" target="_blank" class="text-gray-300 hover:text-white">Career Kitchen Blog and Podcast</a>
+            <a href="contact.html" class="text-white bg-indigo-600 px-4 py-2 rounded-full">Engage With Us</a>
+            <a href="https://form.typeform.com/to/fTjZFf" target="_blank" class="text-gray-300 hover:text-white">Get Support Now</a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-indigo-950 bg-opacity-95 z-50">
+            <div class="flex flex-col h-full p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <img src="assets/images/logos/logo.png" alt="Offr Group Logo" class="h-8">
+                    <button id="close-menu" class="text-white">
+                        <i class="fa-solid fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-6">
+                    <a href="index.html" class="text-gray-300 hover:text-white text-lg">Home</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white text-lg">Our Methodology</a>
+                    <a href="https://www.careerkitchen.co" target="_blank" class="text-gray-300 hover:text-white text-lg">Career Kitchen Blog and Podcast</a>
+                    <a href="contact.html" class="text-white bg-indigo-600 px-4 py-2 rounded-full text-lg text-center">Engage With Us</a>
+                    <a href="https://form.typeform.com/to/fTjZFf" target="_blank" class="text-gray-300 hover:text-white text-lg">Get Support Now</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="hidden md:block text-white">
+            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="relative bg-gradient-to-b from-indigo-950 via-indigo-900 to-white h-[800px] flex items-center fade-in-section">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="relative z-10 hero-animate">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                Connecting Growing<br>Companies To Top Tier<br>Talent
+            </h1>
+            <p class="text-xl text-gray-300 mb-8">
+                Work With Us And Take Recruiting Completely Off Of Your Plate!
+            </p>
+            <div class="flex space-x-4">
+                <a href="https://form.typeform.com/to/fTjZFf" target="_blank" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700">
+                    Hire top talent
+                </a>
+                <a href="https://form.typeform.com/to/loGrlaKi" target="_blank" class="border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded-lg hover:bg-emerald-400 hover:text-white">
+                    Find a new opportunity
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-0 w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
+            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Trusted Brands Section -->
+<section id="trusted-brands" class="bg-white py-16 fade-in-section">
+    <div class="max-w-7xl mx-auto px-6 brands-animate">
+        <h2 class="text-center text-3xl font-semibold mb-8">Trusted by the world's biggest brands</h2>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center">
+            <img src="assets/images/logos/kitman-labs.jpg" alt="Kitman Labs" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
+            <img src="assets/images/logos/merrill-lynch.png" alt="Merrill Lynch" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
+            <img src="assets/images/logos/netflix.png" alt="Netflix" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
+            <img src="assets/images/logos/packetfabric.png" alt="PacketFabric" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
+            <img src="assets/images/logos/windstream.png" alt="Windstream" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
+            <img src="assets/images/logos/linq.png" alt="Linq" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="bg-purple-600 py-16 fade-in-section">
+    <div class="max-w-7xl mx-auto px-6 testimonial-animate">
+        <h2 class="text-center text-3xl font-bold text-white mb-4">What People Say</h2>
+        <p class="text-center text-white mb-12">What our clients and candidates say about us</p>
+        
+        <div class="relative">
+            <div class="overflow-hidden">
+                <div class="flex transition-transform duration-500" id="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="w-full flex-none">
+                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
+                            <div class="flex items-center text-purple-600 mb-4">
+                                <h3 class="text-xl font-semibold">Great Work</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">"Brandon knows people, and how to attract the best talent. In the SaaS industry, finding the right talent can be a challenge, especially in the state of the market now. If you want someone who knows what they're doing and actually cares - talk to Brandon."</p>
+                            <div class="flex items-center">
+                                <img src="assets/images/testimonials/jeff-hunter.png" alt="Jeff Hunter" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold">Jeff Hunter</p>
+                                    <p class="text-sm text-gray-500">CEO of Savage Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="w-full flex-none">
+                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
+                            <div class="flex items-center text-purple-600 mb-4">
+                                <h3 class="text-xl font-semibold">Perfect Job</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">"Brandon has been an excellent mentor to me and accountability partner. Brandon has taught me the meaning and importance of cultivating relationships in business. I am a great sales leader and business woman thanks to Brandon's continuous 'push'."</p>
+                            <div class="flex items-center">
+                                <img src="assets/images/testimonials/sierra-alston.jpg" alt="Sierra Alston" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold">Sierra Alston</p>
+                                    <p class="text-sm text-gray-500">CEO of Arreis Construction Group</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="w-full flex-none">
+                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
+                            <div class="flex items-center text-purple-600 mb-4">
+                                <h3 class="text-xl font-semibold">Service Good</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">"I owe a lot of my success to this man and Offr Group. I now have a bright career with solid training under my belt thanks to Brandon. To have been taught by Brandon, along with other industry leaders, is truly a blessing. Thank you for your teachings and support you've given me!"</p>
+                            <div class="flex items-center">
+                                <img src="assets/images/testimonials/brian-kwa.jpg" alt="Brian Kwa" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold">Brian Kwa</p>
+                                    <p class="text-sm text-gray-500">Founder, MPH Academy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="w-full flex-none">
+                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
+                            <div class="flex items-center text-purple-600 mb-4">
+                                <h3 class="text-xl font-semibold">Work Hard</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">"Brandon is a very decisive and innovative entrepreneur. Along with being tech savvy, he is also a quick thinker, giving him a very clear advantage. He understands the proper marketing strategies and the needs of businesses to be able to grow and succeed."</p>
+                            <div class="flex items-center">
+                                <img src="assets/images/testimonials/debbrah-dizon.jpg" alt="Debbrah Dizon" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold">Debbrah Dizon</p>
+                                    <p class="text-sm text-gray-500">Sales Enablement Leader</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="w-full flex-none">
+                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
+                            <div class="flex items-center text-purple-600 mb-4">
+                                <h3 class="text-xl font-semibold">Great Work</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">"Brandon and his team are rising stars with limitless potential. He is the single most positive person I have ever had the good fortune to work with. He is passionate, hard working and skilled. He takes coaching and criticism very well and is always looking to grow and improve. Brandon's consistency is a welcome addition to any company he works with."</p>
+                            <div class="flex items-center">
+                                <img src="assets/images/testimonials/scott-leese.jpg" alt="Scott Leese" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold">Scott Leese</p>
+                                    <p class="text-sm text-gray-500">President of Sales</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="w-full flex-none">
+                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
+                            <div class="flex items-center text-purple-600 mb-4">
+                                <h3 class="text-xl font-semibold">Work Hard</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">"Brandon's expertise proved invaluable in navigating the course en route to my first official offer letter. I appreciate that his methodology is based on practice and not theory, built upon a foundation of many years of experience working the roles he now fills; you'd be hard-pressed to find someone with a better understanding of the inside sales recruiting process. As he came highly recommended to me and lived up to his edification, I too highly recommend Brandon's services to efficiently bridge the gap between hiring managers and job seekers."</p>
+                            <div class="flex items-center">
+                                <img src="assets/images/testimonials/eugene-tomanpos.png" alt="Eugene Tomanpos" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-semibold">Eugene Tomanpos</p>
+                                    <p class="text-sm text-gray-500">Product Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="flex justify-center mt-8 space-x-2" id="slider-dots">
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="0"></button>
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="1"></button>
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="2"></button>
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="3"></button>
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="4"></button>
+                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="5"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Learn Section -->
+<section id="learn" class="bg-white py-16 fade-in-section">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="learn-animate">
+                <h2 class="text-4xl font-bold mb-6">Learn new career skills when and where you like.</h2>
+                <p class="text-gray-600 mb-8">Listen to our podcast and start getting advice from business leaders in your industry. Our courses can help you level up your skills.</p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
+                        Free Resume Template
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
+                        Free Career Navigation Courses
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
+                        Get A Promotion
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
+                        Learn From Top Industry Leaders
+                    </li>
+                </ul>
+                <a href="https://www.careerkitchen.co" target="_blank" class="bg-indigo-950 text-white px-8 py-3 rounded-lg hover:bg-indigo-900 inline-block">
+                    Start Here
+                </a>
+            </div>
+            <div class="learn-animate delay-200">
+                <img class="rounded-2xl" src="assets/images/about.png" alt="Professional team members collaborating in modern office setting">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="bg-purple-600 py-16 fade-in-section">
+    <div class="max-w-7xl mx-auto px-6 text-center newsletter-animate">
+        <h2 class="text-3xl font-bold text-white mb-8">Join our newsletter!</h2>
+        <button class="bg-emerald-400 text-white px-8 py-3 rounded-lg hover:bg-emerald-500">
+            Join Now
+        </button>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="bg-indigo-950 py-8 fade-in-section">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-gray-400">© 2025 The Offr Group All Rights Reserved.</p>
+    </div>
+</footer>
+
+<style>
+  /* Add after the existing styles */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  /* Base animation styles */
+  [class*="-animate"] {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+
+  [class*="-animate"].is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none !important;
+  }
+
+  /* Hero specific animation */
+  .hero-animate {
+    transform: scale(0.8) translateY(100px);
+  }
+
+  .hero-animate.is-visible {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Brands specific animation */
+  .brands-animate {
+    transform: translateY(100px);
+  }
+
+  .brands-animate img {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+
+  .brands-animate.is-visible img {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Add stagger delays to brand logos */
+  .brands-animate img:nth-child(1) { transition-delay: 0.1s; }
+  .brands-animate img:nth-child(2) { transition-delay: 0.2s; }
+  .brands-animate img:nth-child(3) { transition-delay: 0.3s; }
+  .brands-animate img:nth-child(4) { transition-delay: 0.4s; }
+  .brands-animate img:nth-child(5) { transition-delay: 0.5s; }
+  .brands-animate img:nth-child(6) { transition-delay: 0.6s; }
+
+  /* Testimonials specific animation */
+  .testimonial-animate {
+    transform: translateX(-200px);
+  }
+
+  .testimonial-animate.is-visible {
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  /* Learn section specific animation */
+  .learn-animate {
+    transform: translateX(200px);
+  }
+
+  .learn-animate h2,
+  .learn-animate p,
+  .learn-animate ul,
+  .learn-animate a {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
+  }
+
+  .learn-animate.is-visible h2,
+  .learn-animate.is-visible p,
+  .learn-animate.is-visible ul,
+  .learn-animate.is-visible a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .learn-animate.is-visible h2 { transition-delay: 0.2s; }
+  .learn-animate.is-visible p { transition-delay: 0.4s; }
+  .learn-animate.is-visible ul { transition-delay: 0.6s; }
+  .learn-animate.is-visible a { transition-delay: 0.8s; }
+
+  /* Newsletter specific animation */
+  .newsletter-animate {
+    transform: scale(0.5) translateY(100px);
+  }
+
+  .newsletter-animate.is-visible {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  /* Enhanced delay utilities */
+  .delay-100 { transition-delay: 0.1s !important; }
+  .delay-200 { transition-delay: 0.2s !important; }
+  .delay-300 { transition-delay: 0.3s !important; }
+  .delay-400 { transition-delay: 0.4s !important; }
+  .delay-500 { transition-delay: 0.5s !important; }
+</style>
+
+<script>
+// Testimonial slider functionality
+const slider = document.getElementById('testimonial-slider');
+const dots = document.querySelectorAll('#slider-dots button');
+let currentSlide = 0;
+const totalSlides = dots.length;
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Update dots
+    dots.forEach((dot, index) => {
+        dot.style.opacity = index === currentSlide ? '1' : '0.5';
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+}
+
+// Add click handlers to dots
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlider();
+        resetInterval();
+    });
+});
+
+// Auto-slide every 3 seconds
+let slideInterval = setInterval(nextSlide, 3000);
+
+// Reset interval when user interacts
+function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 3000);
+}
+
+// Initialize first slide
+updateSlider();
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+};
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Once the animation is done, we can stop observing the element
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const fadeObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+// Observe all sections with fade-in-section class
+document.addEventListener('DOMContentLoaded', () => {
+    const fadeElements = document.querySelectorAll('.fade-in-section');
+    fadeElements.forEach(element => fadeObserver.observe(element));
+});
+
+// Add stagger effect to child elements
+document.querySelectorAll('.fade-in-section').forEach(section => {
+    const children = section.children;
+    Array.from(children).forEach((child, index) => {
+        if (index > 0) { // Skip the first child
+            child.classList.add(`delay-${index * 200}`);
+        }
+    });
+});
+
+// Add before the existing scripts
+document.addEventListener('DOMContentLoaded', () => {
+    // Intersection Observer setup with larger threshold
+    const observerOptions = {
+        root: null,
+        rootMargin: '50px',
+        threshold: 0.1 // Trigger earlier
+    };
+
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add specific animation classes
+                entry.target.classList.add('is-visible');
+                
+                // Also animate children with animation classes
+                entry.target.querySelectorAll('[class*="-animate"]').forEach(element => {
+                    element.classList.add('is-visible');
+                });
+                
+                // For brand logos, add individual animations
+                if (entry.target.classList.contains('brands-animate')) {
+                    const logos = entry.target.querySelectorAll('img');
+                    logos.forEach((logo, index) => {
+                        setTimeout(() => {
+                            logo.style.opacity = '1';
+                            logo.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    });
+                }
+                
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe elements with animation classes
+    const animatedElements = document.querySelectorAll('[class*="-animate"]');
+    animatedElements.forEach(element => observer.observe(element));
+
+    // Trigger hero animation immediately with a dramatic entrance
+    setTimeout(() => {
+        const heroElement = document.querySelector('.hero-animate');
+        if (heroElement) {
+            heroElement.style.transition = 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1)';
+            heroElement.classList.add('is-visible');
+        }
+    }, 300);
+});
+
+// Mobile menu functionality
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const closeMenuButton = document.getElementById('close-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+});
+
+closeMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = '';
+});
+
+// Close menu when clicking on a link
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        document.body.style.overflow = '';
+    });
+});
+</script>
+              </body>
+            </html>
+          
