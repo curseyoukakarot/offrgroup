@@ -1,864 +1,436 @@
-
-<html class="">
-              
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-      window.FontAwesomeConfig = {
-          autoReplaceSvg: 'nest', // Options: 'nest', 'remove', 'replace'
-      };
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    
-<style>
-  * {
-    font-family: "Inter", sans-serif;
-  }
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
-</style>
-
-    
-<style>
-  .highlighted-section {
-    outline: 2px solid #3F20FB;
-    background-color: rgba(63, 32, 251, 0.1);
-  }
-
-  .edit-button {
-    position: absolute;
-    z-index: 1000;
-  }
-</style>
-
-    
-<style>
-   :root {
-          /* Base colors */
-          --color-base: #ffffff;
-          --color-base-50: #f9fafb;
-          --color-base-100: #f3f4f6;
-          --color-base-200: #e5e7eb;
-          --color-base-300: #d1d5db;
-          --color-base-400: #9ca3af;
-          --color-base-500: #6b7280;
-          --color-base-600: #4b5563;  
-          --color-base-700: #374151;
-          --color-base-800: #1f2937;  
-          --color-base-900: #111827;
-          --color-base-content: #1f2937;
-
-          /* Primary colors */
-          --color-primary: #3b82f6;
-          --color-primary-50: #eff6ff;
-          --color-primary-100: #dbeafe;
-          --color-primary-200: #bfdbfe;
-          --color-primary-300: #93c5fd;
-          --color-primary-400: #60a5fa;
-          --color-primary-500: #3b82f6;
-          --color-primary-600: #2563eb;
-          --color-primary-700: #1d4ed8;
-          --color-primary-800: #1e40af;
-          --color-primary-900: #1e3a8a;
-          --color-primary-focus: #2563eb;
-          --color-primary-content: #ffffff;
-
-          /* Secondary colors */
-          --color-secondary: #8b5cf6;
-          --color-secondary-50: #f5f3ff;
-          --color-secondary-100: #ede9fe;
-          --color-secondary-200: #ddd6fe;
-          --color-secondary-300: #c4b5fd;
-          --color-secondary-400: #a78bfa;
-          --color-secondary-500: #8b5cf6;
-          --color-secondary-600: #7c3aed;
-          --color-secondary-700: #6d28d9;
-          --color-secondary-800: #5b21b6;
-          --color-secondary-900: #4c1d95;
-          --color-secondary-focus: #7c3aed;
-          --color-secondary-content: #ffffff;
-
-          /* Accent colors */
-          --color-accent: #f472b6;
-          --color-accent-50: #fdf2f8;
-          --color-accent-100: #fce7f3;
-          --color-accent-200: #fbcfe8;
-          --color-accent-300: #f9a8d4;
-          --color-accent-400: #f472b6;
-          --color-accent-500: #ec4899;
-          --color-accent-600: #db2777;
-          --color-accent-700: #be185d;
-          --color-accent-800: #9d174d;
-          --color-accent-900: #831843;
-          --color-accent-focus: #db2777;
-          --color-accent-content: #ffffff;
-
-          /* Neutral colors */
-          --color-neutral: #6b7280;
-          --color-neutral-50: #f9fafb;
-          --color-neutral-100: #f3f4f6;
-          --color-neutral-200: #e5e7eb;
-          --color-neutral-300: #d1d5db;
-          --color-neutral-400: #9ca3af;
-          --color-neutral-500: #6b7280;
-          --color-neutral-600: #4b5563;
-          --color-neutral-700: #374151;
-          --color-neutral-800: #1f2937;
-          --color-neutral-900: #111827;
-          --color-neutral-focus: #4b5563;
-          --color-neutral-content: #ffffff;
-
-          /* Info colors */
-          --color-info: #3b82f6;
-          --color-info-50: #eff6ff;
-          --color-info-100: #dbeafe;
-          --color-info-200: #bfdbfe;
-          --color-info-300: #93c5fd;
-          --color-info-400: #60a5fa;
-          --color-info-500: #3b82f6;
-          --color-info-600: #2563eb;
-          --color-info-700: #1d4ed8;
-          --color-info-800: #1e40af;
-          --color-info-900: #1e3a8a;
-          --color-info-focus: #2563eb;
-          --color-info-content: #ffffff;
-
-          /* Success colors */
-          --color-success: #10b981;
-          --color-success-50: #ecfdf5;
-          --color-success-100: #d1fae5;
-          --color-success-200: #a7f3d0;
-          --color-success-300: #6ee7b7;
-          --color-success-400: #34d399;
-          --color-success-500: #10b981;
-          --color-success-600: #059669;
-          --color-success-700: #047857;
-          --color-success-800: #065f46;
-          --color-success-900: #064e3b;
-          --color-success-focus: #059669;
-          --color-success-content: #ffffff;
-
-          /* Warning colors */
-          --color-warning: #f59e0b;
-          --color-warning-50: #fffbeb;
-          --color-warning-100: #fef3c7;
-          --color-warning-200: #fde68a;
-          --color-warning-300: #fcd34d;
-          --color-warning-400: #fbbf24;
-          --color-warning-500: #f59e0b;
-          --color-warning-600: #d97706;
-          --color-warning-700: #b45309;
-          --color-warning-800: #92400e;
-          --color-warning-900: #78350f;
-          --color-warning-focus: #d97706;
-          --color-warning-content: #ffffff;
-
-          /* Error colors */
-          --color-error: #ef4444;
-          --color-error-50: #fef2f2;
-          --color-error-100: #fee2e2;
-          --color-error-200: #fecaca;
-          --color-error-300: #fca5a5;
-          --color-error-400: #f87171;
-          --color-error-500: #ef4444;
-          --color-error-600: #dc2626;
-          --color-error-700: #b91c1c;
-          --color-error-800: #991b1b;
-          --color-error-900: #7f1d1d;
-          --color-error-focus: #dc2626;
-          --color-error-content: #ffffff;
-        }
-</style>
-
-    
-<style>
-/* Dark theme */
-        .dark {
-          /* Base colors */
-          --color-base: #1f2937;
-          --color-base-50: #111827;
-          --color-base-100: #1f2937;
-          --color-base-200: #374151;
-          --color-base-300: #4b5563;
-          --color-base-400: #6b7280;
-          --color-base-500: #9ca3af;
-          --color-base-600: #d1d5db;
-          --color-base-700: #e5e7eb;
-          --color-base-800: #f3f4f6;
-          --color-base-900: #f9fafb;
-          --color-base-content: #f9fafb;
-
-          /* Primary colors */
-          --color-primary: #60a5fa;
-          --color-primary-50: #1e3a8a;
-          --color-primary-100: #1e40af;
-          --color-primary-200: #1d4ed8;
-          --color-primary-300: #2563eb;
-          --color-primary-400: #3b82f6;
-          --color-primary-500: #60a5fa;
-          --color-primary-600: #93c5fd;
-          --color-primary-700: #bfdbfe;
-          --color-primary-800: #dbeafe;
-          --color-primary-900: #eff6ff;
-          --color-primary-focus: #3b82f6;
-          --color-primary-content: #1f2937;
-
-          /* Secondary colors */
-          --color-secondary: #a78bfa;
-          --color-secondary-50: #4c1d95;
-          --color-secondary-100: #5b21b6;
-          --color-secondary-200: #6d28d9;
-          --color-secondary-300: #7c3aed;
-          --color-secondary-400: #8b5cf6;
-          --color-secondary-500: #a78bfa;
-          --color-secondary-600: #c4b5fd;
-          --color-secondary-700: #ddd6fe;
-          --color-secondary-800: #ede9fe;
-          --color-secondary-900: #f5f3ff;
-          --color-secondary-focus: #8b5cf6;
-          --color-secondary-content: #1f2937;
-
-          /* Accent colors */
-          --color-accent: #f472b6;
-          --color-accent-50: #831843;
-          --color-accent-100: #9d174d;
-          --color-accent-200: #be185d;
-          --color-accent-300: #db2777;
-          --color-accent-400: #ec4899;
-          --color-accent-500: #f472b6;
-          --color-accent-600: #f9a8d4;
-          --color-accent-700: #fbcfe8;
-          --color-accent-800: #fce7f3;
-          --color-accent-900: #fdf2f8;
-          --color-accent-focus: #ec4899;
-          --color-accent-content: #1f2937;
-
-          /* Neutral colors remain the same as light theme */
-
-          /* Info colors */
-          --color-info: #60a5fa;
-          --color-info-50: #1e3a8a;
-          --color-info-100: #1e40af;
-          --color-info-200: #1d4ed8;
-          --color-info-300: #2563eb;
-          --color-info-400: #3b82f6;
-          --color-info-500: #60a5fa;
-          --color-info-600: #93c5fd;
-          --color-info-700: #bfdbfe;
-          --color-info-800: #dbeafe;
-          --color-info-900: #eff6ff;
-          --color-info-focus: #3b82f6;
-          --color-info-content: #1f2937;
-
-          /* Success colors */
-          --color-success: #34d399;
-          --color-success-50: #064e3b;
-          --color-success-100: #065f46;
-          --color-success-200: #047857;
-          --color-success-300: #059669;
-          --color-success-400: #10b981;
-          --color-success-500: #34d399;
-          --color-success-600: #6ee7b7;
-          --color-success-700: #a7f3d0;
-          --color-success-800: #d1fae5;
-          --color-success-900: #ecfdf5;
-          --color-success-focus: #10b981;
-          --color-success-content: #1f2937;
-
-          /* Warning colors */
-          --color-warning: #fbbf24;
-          --color-warning-50: #78350f;
-          --color-warning-100: #92400e;
-          --color-warning-200: #b45309;
-          --color-warning-300: #d97706;
-          --color-warning-400: #f59e0b;
-          --color-warning-500: #fbbf24;
-          --color-warning-600: #fcd34d;
-          --color-warning-700: #fde68a;
-          --color-warning-800: #fef3c7;
-          --color-warning-900: #fffbeb;
-          --color-warning-focus: #f59e0b;
-          --color-warning-content: #1f2937;
-
-          /* Error colors */
-          --color-error: #f87171;
-          --color-error-50: #7f1d1d;
-          --color-error-100: #991b1b;
-          --color-error-200: #b91c1c;
-          --color-error-300: #dc2626;
-          --color-error-400: #ef4444;
-          --color-error-500: #f87171;
-          --color-error-600: #fca5a5;
-          --color-error-700: #fecaca;
-          --color-error-800: #fee2e2;
-          --color-error-900: #fef2f2;
-          --color-error-focus: #ef4444;
-          --color-error-content: #1f2937;
-        }
-</style>
-
-    
-  <script>
-        tailwind.config = {
-            theme: {
-              extend: {
-                colors: {
-                ...{"transparent":"transparent","current":"currentColor","black":"#000000","white":"#ffffff","gray":{"50":"#f9fafb","100":"#f3f4f6","200":"#e5e7eb","300":"#d1d5db","400":"#9ca3af","500":"#6b7280","600":"#4b5563","700":"#374151","800":"#1f2937","900":"#111827"},"red":{"50":"#fef2f2","100":"#fee2e2","200":"#fecaca","300":"#fca5a5","400":"#f87171","500":"#ef4444","600":"#dc2626","700":"#b91c1c","800":"#991b1b","900":"#7f1d1d"},"yellow":{"50":"#fffbeb","100":"#fef3c7","200":"#fde68a","300":"#fcd34d","400":"#fbbf24","500":"#f59e0b","600":"#d97706","700":"#b45309","800":"#92400e","900":"#78350f"},"green":{"50":"#ecfdf5","100":"#d1fae5","200":"#a7f3d0","300":"#6ee7b7","400":"#34d399","500":"#10b981","600":"#059669","700":"#047857","800":"#065f46","900":"#064e3b"},"blue":{"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"},"indigo":{"50":"#eef2ff","100":"#e0e7ff","200":"#c7d2fe","300":"#a5b4fc","400":"#818cf8","500":"#6366f1","600":"#4f46e5","700":"#4338ca","800":"#3730a3","900":"#312e81"},"purple":{"50":"#f5f3ff","100":"#ede9fe","200":"#ddd6fe","300":"#c4b5fd","400":"#a78bfa","500":"#8b5cf6","600":"#7c3aed","700":"#6d28d9","800":"#5b21b6","900":"#4c1d95"},"pink":{"50":"#fdf2f8","100":"#fce7f3","200":"#fbcfe8","300":"#f9a8d4","400":"#f472b6","500":"#ec4899","600":"#db2777","700":"#be185d","800":"#9d174d","900":"#831843"}},
-                ...{"primary":{"50":"var(--color-primary-50)","100":"var(--color-primary-100)","200":"var(--color-primary-200)","300":"var(--color-primary-300)","400":"var(--color-primary-400)","500":"var(--color-primary-500)","600":"var(--color-primary-600)","700":"var(--color-primary-700)","800":"var(--color-primary-800)","900":"var(--color-primary-900)","DEFAULT":"var(--color-primary)","focus":"var(--color-primary-focus)","content":"var(--color-primary-content)"},"secondary":{"50":"var(--color-secondary-50)","100":"var(--color-secondary-100)","200":"var(--color-secondary-200)","300":"var(--color-secondary-300)","400":"var(--color-secondary-400)","500":"var(--color-secondary-500)","600":"var(--color-secondary-600)","700":"var(--color-secondary-700)","800":"var(--color-secondary-800)","900":"var(--color-secondary-900)","DEFAULT":"var(--color-secondary)","focus":"var(--color-secondary-focus)","content":"var(--color-secondary-content)"},"accent":{"50":"var(--color-accent-50)","100":"var(--color-accent-100)","200":"var(--color-accent-200)","300":"var(--color-accent-300)","400":"var(--color-accent-400)","500":"var(--color-accent-500)","600":"var(--color-accent-600)","700":"var(--color-accent-700)","800":"var(--color-accent-800)","900":"var(--color-accent-900)","DEFAULT":"var(--color-accent)","focus":"var(--color-accent-focus)","content":"var(--color-accent-content)"},"neutral":{"50":"var(--color-neutral-50)","100":"var(--color-neutral-100)","200":"var(--color-neutral-200)","300":"var(--color-neutral-300)","400":"var(--color-neutral-400)","500":"var(--color-neutral-500)","600":"var(--color-neutral-600)","700":"var(--color-neutral-700)","800":"var(--color-neutral-800)","900":"var(--color-neutral-900)","DEFAULT":"var(--color-neutral)","focus":"var(--color-neutral-focus)","content":"var(--color-neutral-content)"},"info":{"50":"var(--color-info-50)","100":"var(--color-info-100)","200":"var(--color-info-200)","300":"var(--color-info-300)","400":"var(--color-info-400)","500":"var(--color-info-500)","600":"var(--color-info-600)","700":"var(--color-info-700)","800":"var(--color-info-800)","900":"var(--color-info-900)","DEFAULT":"var(--color-info)","focus":"var(--color-info-focus)","content":"var(--color-info-content)"},"success":{"50":"var(--color-success-50)","100":"var(--color-success-100)","200":"var(--color-success-200)","300":"var(--color-success-300)","400":"var(--color-success-400)","500":"var(--color-success-500)","600":"var(--color-success-600)","700":"var(--color-success-700)","800":"var(--color-success-800)","900":"var(--color-success-900)","DEFAULT":"var(--color-success)","focus":"var(--color-success-focus)","content":"var(--color-success-content)"},"warning":{"50":"var(--color-warning-50)","100":"var(--color-warning-100)","200":"var(--color-warning-200)","300":"var(--color-warning-300)","400":"var(--color-warning-400)","500":"var(--color-warning-500)","600":"var(--color-warning-600)","700":"var(--color-warning-700)","800":"var(--color-warning-800)","900":"var(--color-warning-900)","DEFAULT":"var(--color-warning)","focus":"var(--color-warning-focus)","content":"var(--color-warning-content)"},"error":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"},"danger":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"}},
-                },
-              },
-            },
-            variants: {
-              extend: {
-                backgroundColor: ['active', 'group-hover'],
-                textColor: ['active', 'group-hover'],
-              },
-            },
-            plugins: [],
-          };
-  </script>
-
-</head>
-
-              <body class="h-full text-base-content">
-                <!-- Navbar -->
-<nav id="header" class="fixed top-0 w-full bg-indigo-950 bg-opacity-95 z-50 px-4 sm:px-6 py-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="index.html" class="flex items-center">
-            <img src="assets/images/logos/logo.png" alt="Offr Group Logo" class="h-8 sm:h-10">
-        </a>
-        
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-button" class="md:hidden text-white">
-            <i class="fa-solid fa-bars text-xl"></i>
-        </button>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="text-gray-300 hover:text-white">Home</a>
-            <a href="about.html" class="text-gray-300 hover:text-white">Our Methodology</a>
-            <a href="https://www.careerkitchen.co" target="_blank" class="text-gray-300 hover:text-white">Career Kitchen Blog and Podcast</a>
-            <a href="contact.html" class="text-white bg-indigo-600 px-4 py-2 rounded-full">Engage With Us</a>
-            <a href="https://form.typeform.com/to/fTjZFf" target="_blank" class="text-gray-300 hover:text-white">Get Support Now</a>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-indigo-950 bg-opacity-95 z-50">
-            <div class="flex flex-col h-full p-6">
-                <div class="flex justify-between items-center mb-8">
-                    <img src="assets/images/logos/logo.png" alt="Offr Group Logo" class="h-8">
-                    <button id="close-menu" class="text-white">
-                        <i class="fa-solid fa-times text-xl"></i>
-                    </button>
-                </div>
-                <div class="flex flex-col space-y-6">
-                    <a href="index.html" class="text-gray-300 hover:text-white text-lg">Home</a>
-                    <a href="about.html" class="text-gray-300 hover:text-white text-lg">Our Methodology</a>
-                    <a href="https://www.careerkitchen.co" target="_blank" class="text-gray-300 hover:text-white text-lg">Career Kitchen Blog and Podcast</a>
-                    <a href="contact.html" class="text-white bg-indigo-600 px-4 py-2 rounded-full text-lg text-center">Engage With Us</a>
-                    <a href="https://form.typeform.com/to/fTjZFf" target="_blank" class="text-gray-300 hover:text-white text-lg">Get Support Now</a>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--====== Required meta tags ======-->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--====== Title ======-->
+        <title>The Offr Group: Hiring Top Teams</title>
+        <!--====== Favicon Icon ======-->
+        <link rel="shortcut icon" href="assets/images/logo/offr-group-logo.png" type="image/png">
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="assets/css/default.css">
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!--====== Responsive css ======-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <style>
+            /* Navbar links turn white while hero is in view */
+            .theme-header.nav-light .main-menu ul li > a { color: #fff !important; }
+            .theme-header.nav-light .main-menu ul li > a:hover { color: #fff !important; opacity: .85; }
+            /* Smooth anchor scrolling */
+            html { scroll-behavior: smooth; }
+            /* Prevent fixed/transparent header overlap when scrolled to anchors */
+            #about, #services { scroll-margin-top: 85px; }
+            /* Reduce navbar height further (~1/3 thinner) without touching external CSS */
+            .header-navigation { padding: 7px 0; }
+            .navigation-style-v1 .container-fluid{ padding-left: 50px; padding-right: 50px; }
+        </style>
+    </head>
+    <body>
+        <!--====== Start Preloader ======-->
+        <div class="preloader">
+            <div class="loader">
+                <div class="pre-shadow"></div>
+                <div class="pre-box"></div>
             </div>
         </div>
-
-        <button class="hidden md:block text-white">
-            <i class="fa-solid fa-magnifying-glass text-xl"></i>
-        </button>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="hero" class="relative bg-gradient-to-b from-indigo-950 via-indigo-900 to-white h-[800px] flex items-center fade-in-section">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="relative z-10 hero-animate">
-            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-                Connecting Growing<br>Companies To Top Tier<br>Talent
-            </h1>
-            <p class="text-xl text-gray-300 mb-8">
-                Work With Us And Take Recruiting Completely Off Of Your Plate!
-            </p>
-            <div class="flex space-x-4">
-                <a href="https://form.typeform.com/to/fTjZFf" target="_blank" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700">
-                    Hire top talent
-                </a>
-                <a href="https://form.typeform.com/to/loGrlaKi" target="_blank" class="border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded-lg hover:bg-emerald-400 hover:text-white">
-                    Find a new opportunity
-                </a>
+        <!--====== End Preloader ======-->
+        <!--====== offcanvas-panel ======-->
+        <div class="offcanvas-panel">
+            <div class="panel-overlay"></div>
+            <div class="offcanvas-panel-inner">
+                <div class="panel-logo">
+                    <a href="index.html"><img src="assets/images/logo/offr-group-logo.png" alt="Offr Group"></a>
+                </div>
+                <div class="about-us">
+                    <h5 class="panel-widget-title">Keep In Touch With Us.</h5>
+                    <p>
+                        600 Congress Ave 14th Floor<br>
+                        Austin TX 78701
+                    </p>
+                </div>
+                <div class="contact-us">
+                    <h5 class="panel-widget-title">Contact Us</h5>
+                    <ul>
+                        <li>
+                            <i class="fal fa-map-marker-alt"></i>
+                            600 Congress Ave 14th Floor, Austin TX 78701
+                        </li>
+                        <li>
+                            <i class="fal fa-envelope-open"></i>
+                            <a href="mailto:engage@offrgroup.com">engage@offrgroup.com</a>
+                        </li>
+                        <li>
+                            <i class="fal fa-phone"></i>
+                            <a href="tel:2107421010">210.742.1010</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="panel-close"><i class="fal fa-times"></i></a>
             </div>
-        </div>
-    </div>
-    <div class="absolute bottom-0 w-full">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
-            <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-        </svg>
-    </div>
-</section>
-
-<!-- Trusted Brands Section -->
-<section id="trusted-brands" class="bg-white py-16 fade-in-section">
-    <div class="max-w-7xl mx-auto px-6 brands-animate">
-        <h2 class="text-center text-3xl font-semibold mb-8">Trusted by the world's biggest brands</h2>
-        <div class="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center">
-            <img src="assets/images/logos/kitman-labs.jpg" alt="Kitman Labs" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
-            <img src="assets/images/logos/merrill-lynch.png" alt="Merrill Lynch" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
-            <img src="assets/images/logos/netflix.png" alt="Netflix" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
-            <img src="assets/images/logos/packetfabric.png" alt="PacketFabric" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
-            <img src="assets/images/logos/windstream.png" alt="Windstream" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
-            <img src="assets/images/logos/linq.png" alt="Linq" class="h-9.5 object-contain hover:opacity-75 transition-opacity">
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Section -->
-<section id="testimonials" class="bg-purple-600 py-16 fade-in-section">
-    <div class="max-w-7xl mx-auto px-6 testimonial-animate">
-        <h2 class="text-center text-3xl font-bold text-white mb-4">What People Say</h2>
-        <p class="text-center text-white mb-12">What our clients and candidates say about us</p>
-        
-        <div class="relative">
-            <div class="overflow-hidden">
-                <div class="flex transition-transform duration-500" id="testimonial-slider">
-                    <!-- Testimonial 1 -->
-                    <div class="w-full flex-none">
-                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
-                            <div class="flex items-center text-purple-600 mb-4">
-                                <h3 class="text-xl font-semibold">Great Work</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6">"Brandon knows people, and how to attract the best talent. In the SaaS industry, finding the right talent can be a challenge, especially in the state of the market now. If you want someone who knows what they're doing and actually cares - talk to Brandon."</p>
-                            <div class="flex items-center">
-                                <img src="assets/images/testimonials/jeff-hunter.png" alt="Jeff Hunter" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <p class="font-semibold">Jeff Hunter</p>
-                                    <p class="text-sm text-gray-500">CEO of Savage Marketing</p>
-                                </div>
-                            </div>
+        </div><!--====== offcanvas-panel ======-->
+        <!--====== Start Header Section ======-->
+        <header class="theme-header transparent-header" id="site-header">
+            <!-- header Navigation -->
+            <div class="header-navigation navigation-style-v1">
+                <div class="nav-overlay"></div>
+                <div class="container-fluid">
+                    <div class="primary-menu">
+                        <div class="site-branding">
+                            <a href="index.html" class="brand-logo"><img src="assets/images/logo/offr-group-logo.png" alt="Offr Group"></a>
                         </div>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="w-full flex-none">
-                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
-                            <div class="flex items-center text-purple-600 mb-4">
-                                <h3 class="text-xl font-semibold">Perfect Job</h3>
+                        <div class="nav-menu">
+                            <!-- Navbar Close -->
+                            <div class="navbar-close"><i class="far fa-times"></i></div>
+                            <!-- Nav Search -->
+                            <div class="nav-search">
+                                <form>
+                                    <div class="form_group">
+                                        <input type="email" class="form_control" placeholder="Search Here" name="email" required>
+                                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
                             </div>
-                            <p class="text-gray-600 mb-6">"Brandon has been an excellent mentor to me and accountability partner. Brandon has taught me the meaning and importance of cultivating relationships in business. I am a great sales leader and business woman thanks to Brandon's continuous 'push'."</p>
-                            <div class="flex items-center">
-                                <img src="assets/images/testimonials/sierra-alston.jpg" alt="Sierra Alston" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <p class="font-semibold">Sierra Alston</p>
-                                    <p class="text-sm text-gray-500">CEO of Arreis Construction Group</p>
-                                </div>
-                            </div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <ul>
+                                    <li class="menu-item"><a href="#about" class="nav-link">About</a></li>
+                                    <li class="menu-item"><a href="#services" class="nav-link">Services</a></li>
+                                    <li class="menu-item"><a href="https://careerkitchen.co" class="nav-link" target="_blank" rel="noopener">Our Blog and Podcast Career Kitchen</a></li>
+                                    <li class="menu-item"><a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="nav-link" target="_blank" rel="noopener">Engage</a></li>
+                                </ul>
+                            </nav>
                         </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="w-full flex-none">
-                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
-                            <div class="flex items-center text-purple-600 mb-4">
-                                <h3 class="text-xl font-semibold">Service Good</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6">"I owe a lot of my success to this man and Offr Group. I now have a bright career with solid training under my belt thanks to Brandon. To have been taught by Brandon, along with other industry leaders, is truly a blessing. Thank you for your teachings and support you've given me!"</p>
-                            <div class="flex items-center">
-                                <img src="assets/images/testimonials/brian-kwa.jpg" alt="Brian Kwa" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <p class="font-semibold">Brian Kwa</p>
-                                    <p class="text-sm text-gray-500">Founder, MPH Academy</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 4 -->
-                    <div class="w-full flex-none">
-                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
-                            <div class="flex items-center text-purple-600 mb-4">
-                                <h3 class="text-xl font-semibold">Work Hard</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6">"Brandon is a very decisive and innovative entrepreneur. Along with being tech savvy, he is also a quick thinker, giving him a very clear advantage. He understands the proper marketing strategies and the needs of businesses to be able to grow and succeed."</p>
-                            <div class="flex items-center">
-                                <img src="assets/images/testimonials/debbrah-dizon.jpg" alt="Debbrah Dizon" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <p class="font-semibold">Debbrah Dizon</p>
-                                    <p class="text-sm text-gray-500">Sales Enablement Leader</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 5 -->
-                    <div class="w-full flex-none">
-                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
-                            <div class="flex items-center text-purple-600 mb-4">
-                                <h3 class="text-xl font-semibold">Great Work</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6">"Brandon and his team are rising stars with limitless potential. He is the single most positive person I have ever had the good fortune to work with. He is passionate, hard working and skilled. He takes coaching and criticism very well and is always looking to grow and improve. Brandon's consistency is a welcome addition to any company he works with."</p>
-                            <div class="flex items-center">
-                                <img src="assets/images/testimonials/scott-leese.jpg" alt="Scott Leese" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <p class="font-semibold">Scott Leese</p>
-                                    <p class="text-sm text-gray-500">President of Sales</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 6 -->
-                    <div class="w-full flex-none">
-                        <div class="bg-white rounded-xl p-6 mx-auto max-w-2xl">
-                            <div class="flex items-center text-purple-600 mb-4">
-                                <h3 class="text-xl font-semibold">Work Hard</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6">"Brandon's expertise proved invaluable in navigating the course en route to my first official offer letter. I appreciate that his methodology is based on practice and not theory, built upon a foundation of many years of experience working the roles he now fills; you'd be hard-pressed to find someone with a better understanding of the inside sales recruiting process. As he came highly recommended to me and lived up to his edification, I too highly recommend Brandon's services to efficiently bridge the gap between hiring managers and job seekers."</p>
-                            <div class="flex items-center">
-                                <img src="assets/images/testimonials/eugene-tomanpos.png" alt="Eugene Tomanpos" class="w-12 h-12 rounded-full mr-4">
-                                <div>
-                                    <p class="font-semibold">Eugene Tomanpos</p>
-                                    <p class="text-sm text-gray-500">Product Manager</p>
-                                </div>
-                            </div>
+                        <div class="header-right-nav">
+                            <ul>
+                                <li class="bar-item"><a href="#"><img src="assets/images/dot.png" alt="dot"></a></li>
+                                <li class="navbar-toggle-btn">
+                                    <div class="navbar-toggler">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Navigation Dots -->
-            <div class="flex justify-center mt-8 space-x-2" id="slider-dots">
-                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="0"></button>
-                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="1"></button>
-                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="2"></button>
-                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="3"></button>
-                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="4"></button>
-                <button class="w-3 h-3 rounded-full bg-white opacity-50 transition-opacity" data-index="5"></button>
+        </header><!--====== End Header Section ======-->
+        <!--====== Start Hero Section ======-->
+        <section class="hero-banner-v1 position-relative">
+            <div class="bg-one"></div>
+            <div class="bg-two"></div>
+            <div style="position:absolute; inset:0; background: rgba(34,48,180,0.58); z-index:1; pointer-events:none;"></div>
+            <div class="hero-img hero-img-one scene"><span data-depth=".5"><img src="assets/images/hero/hero-one-img-1.jpg" class="wow fadeInLeft" alt="hero image"></span></div>
+            <div class="hero-img hero-img-two scene"><span data-depth=".2"><img src="assets/images/hero1.png" class="wow fadeInLeft" alt="hero image"></span></div>
+            <div class="hero-img hero-img-three scene"><span data-depth=".3"><img src="assets/images/shape/circle-logo-1.png" class="wow fadeInLeft" alt="hero image"></span></div>
+            <div class="shape shape-one scene"><span data-depth="1"><img src="assets/images/shape/shape-1.png" alt="shape"></span></div>
+            <div class="shape shape-two scene"><span data-depth="2"><img src="assets/images/shape/shape-2.png" alt="shape"></span></div>
+            <div class="shape shape-three scene"><span data-depth="3"><img src="assets/images/shape/shape-3.png" alt="shape"></span></div>
+            <div class="container" style="position:relative; z-index:2;">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12">
+                        <div class="hero-content" style="color:#fff;">
+                            <h1 class="wow fadeInUp" data-wow-delay=".5s" style="color:#fff;">Connecting Great Companies 
+                                with Exceptional Talent</h1>
+                            <p class="wow fadeInDown" data-wow-delay="1s">Offr Group is a full-service recruiting and staffing firm helping
+                                organizations scale faster and professionals land their next great opportunity.</p>
+                            <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="main-btn arrow-btn wow fadeInUp" data-wow-delay=".5s" target="_blank" rel="noopener">Hire Talent or Find Work</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Learn Section -->
-<section id="learn" class="bg-white py-16 fade-in-section">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="learn-animate">
-                <h2 class="text-4xl font-bold mb-6">Learn new career skills when and where you like.</h2>
-                <p class="text-gray-600 mb-8">Listen to our podcast and start getting advice from business leaders in your industry. Our courses can help you level up your skills.</p>
-                <ul class="space-y-4 mb-8">
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
-                        Free Resume Template
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
-                        Free Career Navigation Courses
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
-                        Get A Promotion
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-check text-emerald-500 mr-3"></i>
-                        Learn From Top Industry Leaders
-                    </li>
-                </ul>
-                <a href="https://www.careerkitchen.co" target="_blank" class="bg-indigo-950 text-white px-8 py-3 rounded-lg hover:bg-indigo-900 inline-block">
-                    Start Here
-                </a>
-            </div>
-            <div class="learn-animate delay-200">
-                <img class="rounded-2xl" src="assets/images/about.png" alt="Professional team members collaborating in modern office setting">
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Newsletter Section -->
-<section id="newsletter" class="bg-purple-600 py-16 fade-in-section">
-    <div class="max-w-7xl mx-auto px-6 text-center newsletter-animate">
-        <h2 class="text-3xl font-bold text-white mb-8">Join our newsletter!</h2>
-        <button class="bg-emerald-400 text-white px-8 py-3 rounded-lg hover:bg-emerald-500">
-            Join Now
-        </button>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer id="footer" class="bg-indigo-950 py-8 fade-in-section">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-        <p class="text-gray-400">© 2025 The Offr Group All Rights Reserved.</p>
-    </div>
-</footer>
-
-<style>
-  /* Add after the existing styles */
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-
-  /* Base animation styles */
-  [class*="-animate"] {
-    opacity: 0;
-    visibility: hidden;
-    transition: all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1);
-  }
-
-  [class*="-animate"].is-visible {
-    opacity: 1;
-    visibility: visible;
-    transform: none !important;
-  }
-
-  /* Hero specific animation */
-  .hero-animate {
-    transform: scale(0.8) translateY(100px);
-  }
-
-  .hero-animate.is-visible {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  /* Brands specific animation */
-  .brands-animate {
-    transform: translateY(100px);
-  }
-
-  .brands-animate img {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s cubic-bezier(0.17, 0.55, 0.55, 1);
-  }
-
-  .brands-animate.is-visible img {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Add stagger delays to brand logos */
-  .brands-animate img:nth-child(1) { transition-delay: 0.1s; }
-  .brands-animate img:nth-child(2) { transition-delay: 0.2s; }
-  .brands-animate img:nth-child(3) { transition-delay: 0.3s; }
-  .brands-animate img:nth-child(4) { transition-delay: 0.4s; }
-  .brands-animate img:nth-child(5) { transition-delay: 0.5s; }
-  .brands-animate img:nth-child(6) { transition-delay: 0.6s; }
-
-  /* Testimonials specific animation */
-  .testimonial-animate {
-    transform: translateX(-200px);
-  }
-
-  .testimonial-animate.is-visible {
-    animation: pulse 4s ease-in-out infinite;
-  }
-
-  /* Learn section specific animation */
-  .learn-animate {
-    transform: translateX(200px);
-  }
-
-  .learn-animate h2,
-  .learn-animate p,
-  .learn-animate ul,
-  .learn-animate a {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1);
-  }
-
-  .learn-animate.is-visible h2,
-  .learn-animate.is-visible p,
-  .learn-animate.is-visible ul,
-  .learn-animate.is-visible a {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .learn-animate.is-visible h2 { transition-delay: 0.2s; }
-  .learn-animate.is-visible p { transition-delay: 0.4s; }
-  .learn-animate.is-visible ul { transition-delay: 0.6s; }
-  .learn-animate.is-visible a { transition-delay: 0.8s; }
-
-  /* Newsletter specific animation */
-  .newsletter-animate {
-    transform: scale(0.5) translateY(100px);
-  }
-
-  .newsletter-animate.is-visible {
-    animation: pulse 3s ease-in-out infinite;
-  }
-
-  /* Enhanced delay utilities */
-  .delay-100 { transition-delay: 0.1s !important; }
-  .delay-200 { transition-delay: 0.2s !important; }
-  .delay-300 { transition-delay: 0.3s !important; }
-  .delay-400 { transition-delay: 0.4s !important; }
-  .delay-500 { transition-delay: 0.5s !important; }
-</style>
-
-<script>
-// Testimonial slider functionality
-const slider = document.getElementById('testimonial-slider');
-const dots = document.querySelectorAll('#slider-dots button');
-let currentSlide = 0;
-const totalSlides = dots.length;
-
-function updateSlider() {
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-    
-    // Update dots
-    dots.forEach((dot, index) => {
-        dot.style.opacity = index === currentSlide ? '1' : '0.5';
-    });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateSlider();
-}
-
-// Add click handlers to dots
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        currentSlide = index;
-        updateSlider();
-        resetInterval();
-    });
-});
-
-// Auto-slide every 3 seconds
-let slideInterval = setInterval(nextSlide, 3000);
-
-// Reset interval when user interacts
-function resetInterval() {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 3000);
-}
-
-// Initialize first slide
-updateSlider();
-
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-};
-
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            // Once the animation is done, we can stop observing the element
-            observer.unobserve(entry.target);
-        }
-    });
-};
-
-const fadeObserver = new IntersectionObserver(observerCallback, observerOptions);
-
-// Observe all sections with fade-in-section class
-document.addEventListener('DOMContentLoaded', () => {
-    const fadeElements = document.querySelectorAll('.fade-in-section');
-    fadeElements.forEach(element => fadeObserver.observe(element));
-});
-
-// Add stagger effect to child elements
-document.querySelectorAll('.fade-in-section').forEach(section => {
-    const children = section.children;
-    Array.from(children).forEach((child, index) => {
-        if (index > 0) { // Skip the first child
-            child.classList.add(`delay-${index * 200}`);
-        }
-    });
-});
-
-// Add before the existing scripts
-document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer setup with larger threshold
-    const observerOptions = {
-        root: null,
-        rootMargin: '50px',
-        threshold: 0.1 // Trigger earlier
-    };
-
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add specific animation classes
-                entry.target.classList.add('is-visible');
-                
-                // Also animate children with animation classes
-                entry.target.querySelectorAll('[class*="-animate"]').forEach(element => {
-                    element.classList.add('is-visible');
-                });
-                
-                // For brand logos, add individual animations
-                if (entry.target.classList.contains('brands-animate')) {
-                    const logos = entry.target.querySelectorAll('img');
-                    logos.forEach((logo, index) => {
-                        setTimeout(() => {
-                            logo.style.opacity = '1';
-                            logo.style.transform = 'translateY(0)';
-                        }, index * 200);
-                    });
+        </section><!--====== End Hero Section ======-->
+        <script>
+        (function(){
+            var header = document.getElementById('site-header');
+            var hero = document.querySelector('.hero-banner-v1');
+            if(!header || !hero) return;
+            var onScroll = function(){
+                var rect = hero.getBoundingClientRect();
+                var threshold = rect.height * 0.5; // switch midway through hero
+                if (rect.bottom > threshold) {
+                    header.classList.add('nav-light');
+                } else {
+                    header.classList.remove('nav-light');
                 }
-                
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    // Observe elements with animation classes
-    const animatedElements = document.querySelectorAll('[class*="-animate"]');
-    animatedElements.forEach(element => observer.observe(element));
-
-    // Trigger hero animation immediately with a dramatic entrance
-    setTimeout(() => {
-        const heroElement = document.querySelector('.hero-animate');
-        if (heroElement) {
-            heroElement.style.transition = 'all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1)';
-            heroElement.classList.add('is-visible');
-        }
-    }, 300);
-});
-
-// Mobile menu functionality
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const closeMenuButton = document.getElementById('close-menu');
-const mobileMenu = document.getElementById('mobile-menu');
-
-mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-});
-
-closeMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    document.body.style.overflow = '';
-});
-
-// Close menu when clicking on a link
-mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        document.body.style.overflow = '';
-    });
-});
-</script>
-              </body>
-            </html>
-          
+            };
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        })();
+        </script>
+        <!--====== Start About Section ======-->
+        <section id="about" class="about-area about-area-v1 position-relative pt-130">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="img-holder-box mb-50">
+                            <div class="img-holder wow fadeInLeft">
+                                <img src="assets/images/team-austin-centre.jpg" alt="Recruiting at Offr Group">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-wrapper mb-50 wow fadeInRight">
+                            <div class="section-title mb-15">
+                                <span class="sub-title st-one">About Offr Group</span>
+                                <h2>Recruiting Made Human</h2>
+                            </div>
+                            <h4>We partner with clients and candidates to create hiring success stories.</h4>
+                            <p>Offr Group is a modern recruiting and staffing firm built to connect
+                                growing companies with top-tier professionals across industries. Our
+                                team combines data-driven sourcing with real human connection to
+                                deliver exceptional hires faster.</p>
+                            <ul class="list-style-one mb-35">
+                                <li>RPO & Contingency Recruiting</li>
+                                <li>Executive Search & Staffing Solutions</li>
+                                <li>Career Coaching & Job Seeker Programs</li>
+                            </ul>
+                            <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="main-btn bordered-btn btn-blue arrow-btn" target="_blank" rel="noopener">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== End About Section ======-->
+        <!--====== Start Service Section ======-->
+        <section id="services" class="service-area pt-90 pb-80" style="background-image: linear-gradient(rgba(34,48,180,0.85), rgba(34,48,180,0.85)), url(assets/images/slider-1.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center mb-55 wow fadeInUp" style="color:#fff;">
+                            <span class="sub-title st-one">Our Services</span>
+                            <h2 style="color:#fff;">Recruiting Solutions for Every Need</h2>
+                            <p>We provide tailored talent solutions for companies and career seekers alike.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-item service-style-one mb-40 wow fadeInDown" data-wow-delay=".3s">
+                            <div class="icon">
+                                <i class="flaticon-strategy"></i>
+                            </div>
+                            <div class="text">
+                                <h3 class="title">RPO Services</h3>
+                                <ul class="list-style-two">
+                                    <li>Dedicated recruiting partner</li>
+                                    <li>Embedded sourcing support</li>
+                                    <li>Scalable hiring campaigns</li>
+                                </ul>
+                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="btn-link" target="_blank" rel="noopener">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-item service-style-one mb-40 wow fadeInDown" data-wow-delay=".5s">
+                            <div class="icon">
+                                <i class="flaticon-design"></i>
+                            </div>
+                            <div class="text">
+                                <h3 class="title">Contingency & Executive Search</h3>
+                                <ul class="list-style-two">
+                                    <li>No upfront cost, pay when we deliver</li>
+                                    <li>Senior and specialized placements</li>
+                                    <li>Nationwide executive network</li>
+                                </ul>
+                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="btn-link" target="_blank" rel="noopener">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="service-item service-style-one mb-40 wow fadeInDown" data-wow-delay=".7s">
+                            <div class="icon">
+                                <i class="flaticon-source-code"></i>
+                            </div>
+                            <div class="text">
+                                <h3 class="title">Staffing & Job Placement</h3>
+                                <ul class="list-style-two">
+                                    <li>Temporary & contract roles</li>
+                                    <li>Full-time placements</li>
+                                    <li>Career coaching & resume help</li>
+                                </ul>
+                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="btn-link" target="_blank" rel="noopener">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Service Section ======-->
+        
+        <!--====== Start CTA Section ======-->
+        <section class="cta-area cta-area-v1 pt-130">
+            <div class="container-1450">
+                <div class="cta-wrapper dark-blue-bg">
+                    <div class="cta-img wow fadeInDown "><img src="assets/images/img-1.jpg" alt="Recruiting CTA"></div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-12">
+                            <div class="text-wrapper wow fadeInUp">
+                                <div class="section-title section-title-white mb-55">
+                                    <span class="sub-title st-one">Let’s Work Together</span>
+                                    <h2>Whether you're <span class="fill-text">hiring</span> your next team member
+                                        or <span class="fill-text">searching</span> for your next opportunity —
+                                        Offr Group has you covered.</h2>
+                                </div>
+                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="main-btn bordered-btn btn-white arrow-btn" target="_blank" rel="noopener">Start the Conversation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== End CTA Section ======-->
+        <!--====== Start Counter Section ======-->
+        <section class="counter-area counter-area-v1 pt-240 pb-90">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-title text-center mb-55 wow fadeInUp">
+                            <span class="sub-title st-one">Our Results</span>
+                            <h2>Trusted by Growing Teams Nationwide</h2>
+                            <p>We’ve built long-term partnerships based on trust, results, and exceptional service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="counter-item mb-40 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="icon">
+                                <i class="flaticon-start-up"></i>
+                            </div>
+                            <div class="text">
+                                <h2 class="number"><span>500</span>+</h2>
+                                <p>Successful Placements</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="counter-item mb-40 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="icon">
+                                <i class="flaticon-medal"></i>
+                            </div>
+                            <div class="text">
+                                <h2 class="number"><span>15</span>+</h2>
+                                <p>Years of Recruiting Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="counter-item mb-40 wow fadeInUp" data-wow-delay=".5s">
+                            <div class="icon">
+                                <i class="flaticon-technical-support"></i>
+                            </div>
+                            <div class="text">
+                                <h2 class="number"><span>98</span>%</h2>
+                                <p>Client Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Counter Section ======-->
+        <!--====== Start Testimonial Section ======-->
+        <section class="testimonial-area testimonial-area-v1 dark-blue-bg pattern-bg pt-130 pb-80">
+            <div class="shape-img wow fadeInRight animate-float-y"><span><img src="assets/images/img-3.jpg" alt=""></span></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="section-title section-title-white mb-50 wow fadeInLeft">
+                            <span class="sub-title st-one">Testimonials</span>
+                            <h2>What our clients say about us</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="img-holder mb-50 wow fadeInLeft">
+                            <img src="assets/images/portrait.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="testimonial-slider-one mb-50 wow fadeInRight">
+                            <div class="testimonial-item">
+                                <div class="testimonial-content">
+                                    <i class="flaticon-quotation"></i>
+                                    <h3>Service is Good — "I owe a lot of my success to this man and Offr Group. I now have a bright career with solid training under my belt thanks to Brandon. To have been taught by Brandon, along with other industry leaders, is truly a blessing. Thank you for your teachings and support you've given me!"</h3>
+                                    <div class="author-title">
+                                        <h4>Brian Kwa</h4>
+                                        <p class="position">Founder, MPH Academy</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-content">
+                                    <i class="flaticon-quotation"></i>
+                                    <h3>The team works hard — "Brandon is a very decisive and innovative entrepreneur. Along with being tech savvy, he is also a quick thinker, giving him a very clear advantage. He understands the proper marketing strategies and the needs of businesses to be able to grow and succeed."</h3>
+                                    <div class="author-title">
+                                        <h4>Debbrah Dizon</h4>
+                                        <p class="position">Sales Enablement Leader</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-content">
+                                    <i class="flaticon-quotation"></i>
+                                    <h3>Great Work — "Brandon and his team are rising stars with limitless potential. He is the single most positive person I have ever had the good fortune to work with. He is passionate, hard working and skilled. He takes coaching and criticism very well and is always looking to grow and improve. Brandon's consistency is a welcome addition to any company he works with."</h3>
+                                    <div class="author-title">
+                                        <h4>Scott Leese</h4>
+                                        <p class="position">Founder of Scott Leese Consulting</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-item">
+                                <div class="testimonial-content">
+                                    <i class="flaticon-quotation"></i>
+                                    <h3>Unparralleled Expertise — "Brandon's expertise proved invaluable in navigating the course en route to my first official offer letter. I appreciate that his methodology is based on practice and not theory, built upon a foundation of many years of experience working the roles he now fills; you'd be hard-pressed to find someone with a better understanding of the inside sales recruiting process. As he came highly recommended to me and lived up to his edification, I too highly recommend Brandon's services to efficiently bridge the gap between hiring managers and job seekers."</h3>
+                                    <div class="author-title">
+                                        <h4>Eugene Tomanpos</h4>
+                                        <p class="position">Product Manager</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== End Testimonial Section ======-->
+        
+        
+        
+        
+        <!--====== back-to-top ======-->
+        <a href="#" class="back-to-top" ><i class="far fa-angle-up"></i></a>
+        <!--====== Jquery js ======-->
+        <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="assets/vendor/popper/popper.min.js"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!--====== Slick js ======-->
+        <script src="assets/vendor/slick/slick.min.js"></script>
+        <!--====== Magnific js ======-->
+        <script src="assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+        <!--====== Isotope js ======-->
+        <script src="assets/vendor/isotope.min.js"></script>
+        <!--====== Imagesloaded js ======-->
+        <script src="assets/vendor/imagesloaded.min.js"></script>
+        <!--====== Counterup js ======-->
+        <script src="assets/vendor/jquery.counterup.min.js"></script>
+        <!--====== Waypoints js ======-->
+        <script src="assets/vendor/jquery.waypoints.js"></script>
+        <!--====== Nice-select js ======-->
+        <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+        <!--====== WOW js ======-->
+        <script src="assets/vendor/wow.min.js"></script>
+        <!--====== Parallax js ======-->
+        <script src="assets/vendor/parallax.min.js"></script>
+        <!--====== Main js ======-->
+        <script src="assets/js/theme.js"></script>
+    </body>
+</html>
