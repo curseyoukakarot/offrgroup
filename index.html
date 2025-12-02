@@ -1,436 +1,990 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <!--====== Required meta tags ======-->
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!--====== Title ======-->
-        <title>The Offr Group: Hiring Top Teams</title>
-        <!--====== Favicon Icon ======-->
-        <link rel="shortcut icon" href="HTML/assets/images/logo/offr-group-logo.png" type="image/png">
-        <!--====== Default css ======-->
-        <link rel="stylesheet" href="HTML/assets/css/default.css">
-        <!--====== Style css ======-->
-        <link rel="stylesheet" href="HTML/assets/css/style.css">
-        <!--====== Responsive css ======-->
-        <link rel="stylesheet" href="HTML/assets/css/responsive.css">
-        <style>
-            /* Navbar links turn white while hero is in view */
-            .theme-header.nav-light .main-menu ul li > a { color: #fff !important; }
-            .theme-header.nav-light .main-menu ul li > a:hover { color: #fff !important; opacity: .85; }
-            /* Smooth anchor scrolling */
-            html { scroll-behavior: smooth; }
-            /* Prevent fixed/transparent header overlap when scrolled to anchors */
-            #about, #services { scroll-margin-top: 85px; }
-            /* Reduce navbar height further (~1/3 thinner) without touching external CSS */
-            .header-navigation { padding: 7px 0; }
-            .navigation-style-v1 .container-fluid{ padding-left: 50px; padding-right: 50px; }
-        </style>
-    </head>
-    <body>
-        <!--====== Start Preloader ======-->
-        <div class="preloader">
-            <div class="loader">
-                <div class="pre-shadow"></div>
-                <div class="pre-box"></div>
+
+<head>
+   <style>/* ===== Recent Placements Slider ===== */
+
+    .placementsSwiper {
+        padding: 20px 0 40px;
+    }
+    
+    .swiper-slide {
+        display: flex !important;
+        justify-content: center;
+    }
+    
+    .placement-card {
+        width: 340px;  /* WIDER */
+        height: 640px; /* TALLER */
+        border-radius: 18px;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+    }
+    
+    .placement-inner {
+        text-align: center;
+        margin-top: 40px; /* pushes text into upper-middle */
+    }
+    
+    .inactive-card {
+        background: linear-gradient(to bottom, #eeeeee, #cfcfcf);
+    }
+    
+    .active-card {
+        background: linear-gradient(to bottom, #d9b07d, #000);
+        color: white;
+    }
+    
+    .placement-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 14px;
+    }
+    
+    .placement-desc {
+        font-size: 16px;
+        opacity: 0.85;
+    }
+    
+    /* Arrows */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #000;
+        width: 45px;
+        height: 45px;
+    }</style>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Offr Group is a nimble recruiting firm for high-velocity teams, helping founders and revenue leaders hire faster without sacrificing quality.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
+    <title>Offr Group | Nimble Recruiting for High-Velocity Teams</title>
+    
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    
+    <!--====== animate css ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+  
+  
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- END LOADER -->
+   
+   <!--====== HEADER PART START ======-->
+
+<header class="header-area">
+    <div class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="navigation">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+
+                            <!-- LOGO -->
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png"
+                                     alt="Offr Group logo"
+                                     class="offr-logo">
+                            </a>
+
+                            <!-- MOBILE TOGGLER -->
+                            <button class="navbar-toggler" type="button"
+                                    data-toggle="collapse"
+                                    data-target="#navbarSupportedContent"
+                                    aria-controls="navbarSupportedContent"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <!-- MAIN NAV (NO DROPDOWNS) -->
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#about">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#services">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#engagements">Engagements</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="job-seekers.html">Job Seekers</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- CTA BUTTON -->
+                            <div class="navbar-btn d-none d-sm-block">
+                                <a class="main-btn"
+                                   href="https://app.thehirepilot.com/f/new-client">
+                                    Book a Strategy Call
+                                </a>
+                            </div>
+
+                        </nav>
+                    </div> <!-- navigation -->
+                </div>
+            </div> <!-- row -->
+        </div>
+    </div>
+</header>
+
+<!--====== HEADER PART ENDS ======-->
+
+    <!--====== HERO PART START ======-->
+    
+    <section class="hero-area">
+        <div class="section__bg"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-10">
+                    <div class="hero-content">
+                        <img src="assets/images/hero-line.png" alt="">
+                        <h1 class="title animated wow fadeInLeft" data-wow-duration="3000ms" data-wow-delay="0ms">
+                            Nimble Recruiting <br>for High-Velocity Teams
+                        </h1>
+                        <span class="animated wow fadeInLeft"
+                        data-wow-duration="3000ms"
+                        data-wow-delay="300ms">
+                      Offr Group plugs in as your recruiting engine—helping founders and revenue teams hire faster,
+                      with clean process, real conversations, and zero spam.
+                  </span>
+                  
+                  <!-- CTA placed directly under subtext -->
+                  <a class="main-btn main-btn-2 animated wow fadeInDown"
+                     data-wow-duration="3000ms"
+                     data-wow-delay="600ms"
+                     href="https://app.thehirepilot.com/f/new-client"
+                     target="_blank" rel="noopener">
+                     Book a Strategy Call
+                  </a>
+                    </div>
+                </div>
+                <!-- removed the video column -->
             </div>
         </div>
-        <!--====== End Preloader ======-->
-        <!--====== offcanvas-panel ======-->
-        <div class="offcanvas-panel">
-            <div class="panel-overlay"></div>
-            <div class="offcanvas-panel-inner">
-                <div class="panel-logo">
-                    <a href="index.html"><img src="HTML/assets/images/logo/offr-group-logo.png" alt="Offr Group"></a>
+    </section>
+    
+    <!--====== HERO PART ENDS ======-->
+
+    <!--====== SUB ITEM PART START ======-->
+    
+    <section class="sub-item-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="sub-item">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="62.001" height="70" viewBox="0 0 62.001 70">
+                              <g id="Group_6" data-name="Group 6" transform="translate(-270 -1139)">
+                                <path data-name="Union 2" d="M-5,322.218.218,317l1.8,1.8-2.145,2.145H15.685V323.5H-.109l2.131,2.131-1.8,1.8Z" transform="translate(275 855.366)"/>
+                                <g data-name="Group 9" transform="translate(277.025 1139)">
+                                  <path data-name="Path 19" d="M127.959,440.246H81.286V428.611h46.673v11.635Zm-44.165-2.551h41.657v-6.532H83.795Z" transform="translate(-81.286 -370.246)" fill="#fff"/>
+                                  <path data-name="Path 20" d="M146.328,199.2H106.764l1.088-1.873c5.87-10.114,8.973-22.572,8.973-36.027v-1.248h19.443V161.3c0,13.457,3.1,25.914,8.973,36.027Zm-35.269-2.5h30.974c-5.241-9.813-8.081-21.551-8.257-34.157H119.316C119.141,175.152,116.3,186.89,111.059,196.7Z" transform="translate(-103.209 -138.284)" fill="#fff"/>
+                                  <path data-name="Path 21" d="M151.5,19.4H132.928L124.97,0h11.275V4.835h2.316V0h7.3V4.835h2.316V0h11.276ZM134.6,16.924H149.82L155.744,2.48H150.67V7.315h-7.3V2.48h-2.315V7.315h-7.3V2.48h-5.072Z" transform="translate(-118.875)" fill="#fff"/>
+                                  <path data-name="Path 22" d="M174.109,131.565H145.3v-6.778h28.81Zm-26.329-2.314h23.846V127.1H147.781Z" transform="translate(-136.367 -107.479)" fill="#fff"/>
+                                </g>
+                                <path data-name="Path 23" d="M219.916,244.71a6.1,6.1,0,1,1-6.094-6.1A6.1,6.1,0,0,1,219.916,244.71Z" transform="translate(86.549 932.872)" fill="#fff"/>
+                                <path data-name="Union 1" d="M15.841,326.379l-3.41-3.408H-5v-2.551H12.421L15.841,317H26.792L22.1,321.69l4.692,4.689Zm-1.082-4.689,2.138,2.138h3.733l-2.138-2.138,2.138-2.137H16.9Z" transform="translate(305.208 855.895)"/>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">Nimble Recruiting Strategy</h3>
+                        <span>We design a lean hiring lane around your goals so every search moves with your team’s actual pace.</span>
+                    </div>
                 </div>
-                <div class="about-us">
-                    <h5 class="panel-widget-title">Keep In Touch With Us.</h5>
-                    <p>
-                        600 Congress Ave 14th Floor<br>
-                        Austin TX 78701
-                    </p>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="sub-item">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="93.8" height="70" viewBox="0 0 93.8 70">
+                              <defs>
+                                <clipPath id="clip-path">
+                                  <rect width="93.8" height="70" fill="none"/>
+                                </clipPath>
+                              </defs>
+                              <g  data-name="Repeat Grid 9" clip-path="url(#clip-path)">
+                                <g  data-name="Group 4549" transform="translate(-635 -1820)">
+                                  <g  data-name="Group 30" transform="translate(637.972 1820)">
+                                    <path data-name="Path 126" d="M420.336,203.743l-1.992-1.992,1.409-1.409a20.992,20.992,0,0,0,6.363-11.882l2.789.4a23.73,23.73,0,0,1-7.16,13.474Z" transform="translate(-347.973 -165.146)" fill="#fff"/>
+                                    <path data-name="Path 127" d="M58.235,235.736l-33.4-33.4a23.731,23.731,0,0,1-7.16-13.474l2.788-.4a20.992,20.992,0,0,0,6.363,11.882l31.4,31.4,15.908-15.908,1.992,1.992Z" transform="translate(-17.539 -165.736)" fill="#fff"/>
+                                    <path data-name="Path 128" d="M56.042,72.114a18.384,18.384,0,0,0-36.375,0L16.88,71.7a21.2,21.2,0,0,1,41.949,0Z" transform="translate(-16.88 -53.596)" fill="#fff"/>
+                                    <path data-name="Path 129" d="M280.042,72.114a18.384,18.384,0,0,0-36.375,0l-2.788-.41a21.2,21.2,0,0,1,41.95,0Z" transform="translate(-201.757 -53.596)" fill="#fff"/>
+                                  </g>
+                                  <g data-name="Group 31" transform="translate(635 1836.341)">
+                                    <rect data-name="Rectangle 66" width="4.2" height="4.2" transform="translate(41.838 27.896)" fill="#fff"/>
+                                    <rect data-name="Rectangle 71" width="4.2" height="4.2" transform="translate(41.838 36.296)" fill="#fff"/>
+                                    <rect data-name="Rectangle 67" width="4.2" height="2.8" transform="translate(41.838 19.496)" fill="#fff"/>
+                                    <path data-name="Path 130" d="M8.452,158.048H0V149.6H8.452Zm-5.635-2.817H5.635v-2.817H2.817Z" transform="translate(0 -149.596)" fill="#fff"/>
+                                    <path data-name="Union 3" d="M15.095,8.452V5.415H0V3.386H15.095V0h8.452V3.386h16.02V5.415H23.546V8.452Zm2.818-2.818h2.817V2.818H17.912Z" transform="translate(24.185 0)"/>
+                                    <path data-name="Path 132" d="M456.452,158.048H448V149.6h8.452Zm-5.635-2.314h2.817v-2.817h-2.817Z" transform="translate(-369.435 -149.596)" fill="#fff"/>
+                                  </g>
+                                  <path data-name="Path 133" d="M342.18,287.795,330.5,256.1,362.2,267.776l4.229,1.759-18.3,4.19L343.5,291.343Zm-6.922-26.941,7.855,21.32,2.693-10.771,10.771-2.693Z" transform="translate(362.372 1598.541)"/>
+                                </g>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">Pipeline Visibility</h3>
+                        <span>Clear shortlists, weekly updates, and transparent reporting from first touch to signed offer.</span>
+                    </div>
                 </div>
-                <div class="contact-us">
-                    <h5 class="panel-widget-title">Contact Us</h5>
-                    <ul>
-                        <li>
-                            <i class="fal fa-map-marker-alt"></i>
-                            600 Congress Ave 14th Floor, Austin TX 78701
-                        </li>
-                        <li>
-                            <i class="fal fa-envelope-open"></i>
-                            <a href="mailto:engage@offrgroup.com">engage@offrgroup.com</a>
-                        </li>
-                        <li>
-                            <i class="fal fa-phone"></i>
-                            <a href="tel:2107421010">210.742.1010</a>
-                        </li>
-                    </ul>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="sub-item">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56.911" height="70.55" viewBox="0 0 56.911 70.55">
+                              <g transform="translate(0.25 0.25)">
+                                <path data-name="Path 10777" d="M56.033,70l3.224-19.556L53.832,32.628a22.7,22.7,0,1,1,44.162-7.392l.016,3.092,4.813,14.08H97.179l-1.2,15.051-11.975-1.1-1.638,13.28,2.519.31L86.227,59.11l12.084,1.11,1.214-15.275h6.847L100.546,27.9l-.014-2.67a25.236,25.236,0,1,0-49.114,8.18l5.239,17.207L53.528,69.588Z" transform="translate(-50.06)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                <path data-name="Path 10778" d="M150.726,64.3A4.614,4.614,0,0,1,157,58.021a4.618,4.618,0,0,1,8.887,0A4.614,4.614,0,0,1,172.17,64.3a4.616,4.616,0,0,1-1.256,9.06h-7.683a4.62,4.62,0,0,0-4.62,4.62v31.6H156.6v-31.6a4.617,4.617,0,0,0-4.617-4.62,4.616,4.616,0,0,1-1.256-9.06Z" transform="translate(-135.811 -39.283)"/>
+                                <g id="Group_2290" data-name="Group 2290" transform="translate(19.392 24.177)">
+                                  <rect data-name="Rectangle 3474" width="2.415" height="2.415" transform="translate(9.661)" fill="#fff"/>
+                                  <rect data-name="Rectangle 3475" width="2.415" height="2.415" transform="translate(4.829)" fill="#fff"/>
+                                  <rect  data-name="Rectangle 3476" width="2.415" height="2.415" transform="translate(0)" fill="#fff"/>
+                                </g>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">On-Demand Partnership</h3>
+                        <span>We slot into your stack—Slack, ATS, and calendar—so hiring feels integrated, not outsourced.</span>
+                    </div>
                 </div>
-                <a href="#" class="panel-close"><i class="fal fa-times"></i></a>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="sub-item">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+                              <g transform="translate(-0.014)">
+                                <path data-name="Path 15" d="M31.037,62.047A31.023,31.023,0,1,1,62.06,31.021H59.348A28.311,28.311,0,1,0,31.037,59.335v2.712h0Z" transform="translate(0 0)" fill="#fff"/>
+                                <g id="Group_7" data-name="Group 7" transform="translate(9.732 9.725)">
+                                  <path data-name="Path 16" d="M92.514,71.368a21.182,21.182,0,1,0,0,42.364v-6.9A14.284,14.284,0,1,1,106.8,92.548h6.909A21.213,21.213,0,0,0,92.514,71.368Z" transform="translate(-71.328 -71.368)" stroke="#2aa38c" stroke-width="1.5"/>
+                                  <path data-name="Path 17" d="M187.375,179.982a7.388,7.388,0,1,1-7.388-7.386A7.386,7.386,0,0,1,187.375,179.982Z" transform="translate(-158.799 -158.802)" stroke="#2aa38c" stroke-width="1.5"/>
+                                </g>
+                                <g data-name="Group 8" transform="translate(31.154 31.139)">
+                                  <path id="Path_18" data-name="Path 18" d="M242.492,265.68l-15.677-38.861,38.86,15.684-16.129,7.045ZM231.7,231.7l10.893,21.32,2.693-10.771,10.771-2.693Z" transform="translate(-226.815 -226.819)" fill="#fff"/>
+                                  <rect id="Rectangle_9" data-name="Rectangle 9" width="13.584" height="2.701" transform="translate(30.352 32.263) rotate(-135)" fill="#fff"/>
+                                </g>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">Candidate Experience</h3>
+                        <span>Thoughtful outreach, clear expectations, and fast feedback that reflect your brand at its best.</span>
+                    </div>
+                </div>
             </div>
-        </div><!--====== offcanvas-panel ======-->
-        <!--====== Start Header Section ======-->
-        <header class="theme-header transparent-header" id="site-header">
-            <!-- header Navigation -->
-            <div class="header-navigation navigation-style-v1">
-                <div class="nav-overlay"></div>
-                <div class="container-fluid">
-                    <div class="primary-menu">
-                        <div class="site-branding">
-                            <a href="index.html" class="brand-logo"><img src="HTML/assets/images/logo/offr-group-logo.png" alt="Offr Group"></a>
+        </div>
+    </section>
+    
+    <!--====== SUB ITEM PART ENDS ======-->
+
+    <!--====== ABOUT US PART START ======-->
+    
+    
+    <section id="about-offr" class="about-area pb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="about-content">
+                        <img src="assets/images/hero-line.png" alt="">
+                        <span>About Offr Group</span>
+                        <h3 class="title">Nimble, fast, organic recruiting & staffing</h3>
+                        <p>We connect high-impact teams with vetted, passively sourced talent. Lean process, real conversations, and tight feedback loops—so you hire faster without trading away quality.</p>
+                        <ul>
+                            <li>48-hour shortlists from active & passive pipelines</li>
+                            <li>Embedded recruiters that feel like part of your team</li>
+                            <li>Contract, contract-to-hire, and direct hire options</li>
+                            <li>Diversity-first sourcing with human, personalized outreach</li>
+                        </ul>
+                        <a class="main-btn" href="https://app.thehirepilot.com/f/new-client">Hire Faster</a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="about-thumb">
+                        <img src="assets/images/team-austin-centre.jpg" alt="Offr Group Team" class="about-team-photo">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== ABOUT US PART ENDS ======-->
+
+    <!--====== SERVICE PART START ======-->
+    
+    <section id="services" class="service-area pb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section-title text-center">
+                        <img src="assets/images/hero-line.png" alt="">
+                        <h3 class="title">Recruiting & Staffing Services</h3>
+                        <p>Built for speed and quality—supported by an organic talent network and hands-on recruiters who understand your revenue and product goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- SERVICE ITEMS (already recruiting-focused, just lightly edited) -->
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="service-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="62.001" height="70" viewBox="0 0 62.001 70">
+                              <g data-name="Group 15" transform="translate(-270 -1139)">
+                                <path data-name="Union 2" d="M-5,322.218.218,317l1.8,1.8-2.145,2.145H15.685V323.5H-.109l2.131,2.131-1.8,1.8Z" transform="translate(275 855.366)" fill="#ffab4a"/>
+                                <g data-name="Group 9" transform="translate(277.025 1139)">
+                                  <path class="white" data-name="Path 19" d="M127.959,440.246H81.286V428.611h46.673v11.635Zm-44.165-2.551h41.657v-6.532H83.795Z" transform="translate(-81.286 -370.246)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 20" d="M146.328,199.2H106.764l1.088-1.873c5.87-10.114,8.973-22.572,8.973-36.027v-1.248h19.443V161.3c0,13.457,3.1,25.914,8.973,36.027Zm-35.269-2.5h30.974c-5.241-9.813-8.081-21.551-8.257-34.157H119.316C119.141,175.152,116.3,186.89,111.059,196.7Z" transform="translate(-103.209 -138.284)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 21" d="M151.5,19.4H132.928L124.97,0h11.275V4.835h2.316V0h7.3V4.835h2.316V0h11.276ZM134.6,16.924H149.82L155.744,2.48H150.67V7.315h-7.3V2.48h-2.315V7.315h-7.3V2.48h-5.072Z" transform="translate(-118.875)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 22" d="M174.109,131.565H145.3v-6.778h28.81Zm-26.329-2.314h23.846V127.1H147.781Z" transform="translate(-136.367 -107.479)" fill="#235c51"/>
+                                </g>
+                                <path class="white" data-name="Path 23" d="M219.916,244.71a6.1,6.1,0,1,1-6.094-6.1A6.1,6.1,0,0,1,219.916,244.71Z" transform="translate(86.549 932.872)" fill="#235c51"/>
+                                <path  data-name="Union 1" d="M15.841,326.379l-3.41-3.408H-5v-2.551H12.421L15.841,317H26.792L22.1,321.69l4.692,4.689Zm-1.082-4.689,2.138,2.138h3.733l-2.138-2.138,2.138-2.137H16.9Z" transform="translate(305.208 855.895)" fill="#ffab4a"/>
+                              </g>
+                            </svg>
                         </div>
-                        <div class="nav-menu">
-                            <!-- Navbar Close -->
-                            <div class="navbar-close"><i class="far fa-times"></i></div>
-                            <!-- Nav Search -->
-                            <div class="nav-search">
-                                <form>
-                                    <div class="form_group">
-                                        <input type="email" class="form_control" placeholder="Search Here" name="email" required>
-                                        <button class="search-btn"><i class="fas fa-search"></i></button>
-                                    </div>
-                                </form>
+                        <h3 class="title">Direct Hire & Executive Search</h3>
+                        <p>Targeted, confidential searches delivering shortlist-ready candidates in days—not months.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="service-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="92.773" height="70" viewBox="0 0 92.773 70">
+                              <g  data-name="003-vector" transform="translate(0 -53.596)">
+                                <g data-name="Group 30" transform="translate(2.93 53.596)">
+                                  <path class="white"  data-name="Path 126" d="M420.307,203.524l-1.963-1.963,1.389-1.389A20.692,20.692,0,0,0,426,188.46l2.749.393a23.391,23.391,0,0,1-7.058,13.281Z" transform="translate(-348.665 -165.053)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 127" d="M57.655,235.059,24.738,202.142a23.391,23.391,0,0,1-7.058-13.281l2.748-.393A20.692,20.692,0,0,0,26.7,200.18l30.955,30.952,15.68-15.68,1.963,1.963Z" transform="translate(-17.541 -165.059)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 128" d="M55.482,71.849a18.121,18.121,0,0,0-35.854,0l-2.748-.4a20.9,20.9,0,0,1,41.348,0Z" transform="translate(-16.88 -53.596)" fill="#235c51"/>
+                                  <path class="white" id="Path_129" data-name="Path 129" d="M279.482,71.849a18.121,18.121,0,0,0-35.854,0l-2.748-.4a20.9,20.9,0,0,1,41.35,0Z" transform="translate(-202.002 -53.596)" fill="#235c51"/>
+                                </g>
+                                <g id="Group_31" data-name="Group 31" transform="translate(0 70.258)">
+                                  <rect class="white" data-name="Rectangle 66" width="3" height="4" transform="translate(42 27.338)" fill="#235c51"/>
+                                  <rect class="white" data-name="Rectangle 71" width="3" height="4" transform="translate(42 35.338)" fill="#235c51"/>
+                                  <rect class="white" data-name="Rectangle 67" width="3" height="3" transform="translate(42 19.338)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 130" d="M8.331,157.927H0V149.6H8.331ZM2.777,155.15H5.554v-2.777H2.777Z" transform="translate(0 -149.596)" fill="#235c51"/>
+                                  <path data-name="Union 3" d="M-640.122-2454.331v-2.993H-655v-2h14.878v-3.338h8.331v3.338H-616v2h-15.791v2.993Zm2.777-2.778h2.777v-2.776h-2.777Z" transform="translate(679 2462.662)" fill="#ffab4a"/>
+                                  <path class="white" data-name="Path 132" d="M456.331,157.927H448V149.6h8.331Zm-5.554-2.777h2.777v-2.777h-2.777Z" transform="translate(-370.244 -149.596)" fill="#235c51"/>
+                                </g>
+                                <path data-name="Path 133" d="M342.013,287.341,330.5,256.1l31.241,11.509,4.168,1.734-18.038,4.13-4.562,17.366Zm-6.823-26.555,7.742,21.015,2.655-10.617L356.2,268.53Z" transform="translate(-273.141 -167.357)" fill="#ffab4a"/>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">Contract & Contract-to-Hire</h3>
+                        <p>Spin up vetted contractors fast, with seamless conversion once you’re ready to bring them on full-time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="service-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="79.34" height="70" viewBox="0 0 79.34 70">
+                              <path data-name="Path 10826" d="M124.784,198.044a1.3,1.3,0,0,1-.848-.313l-8.476-7.217a1.31,1.31,0,0,1,0-1.995l8.476-7.217a1.31,1.31,0,1,1,1.7,1.994l-7.3,6.22,7.3,6.22a1.31,1.31,0,0,1-.85,2.308Zm0,0" transform="translate(-93.481 -147.122)" fill="#ffab4a"/>
+                              <path data-name="Path 10827" d="M251.018,198.044a1.311,1.311,0,0,1-.85-2.308l7.3-6.22-7.3-6.22a1.309,1.309,0,0,1,1.7-1.994l8.476,7.217a1.31,1.31,0,0,1,0,1.995l-8.476,7.217A1.3,1.3,0,0,1,251.018,198.044Zm0,0" transform="translate(-202.982 -147.122)" fill="#ffab4a"/>
+                              <path data-name="Path 10828" d="M190.266,180.725a1.333,1.333,0,0,1-.272-.028,1.31,1.31,0,0,1-1.012-1.552l5.283-25.081a1.31,1.31,0,1,1,2.563.54l-5.283,25.081A1.31,1.31,0,0,1,190.266,180.725Zm0,0" transform="translate(-153.596 -124.39)" fill="#ffab4a"/>
+                              <path class="white" data-name="Path 10829" d="M70.545,70H8.795A8.8,8.8,0,0,1,0,61.205V8.795A8.805,8.805,0,0,1,8.795,0H70.545A8.805,8.805,0,0,1,79.34,8.795v52.41A8.8,8.8,0,0,1,70.545,70ZM8.795,2.62A6.182,6.182,0,0,0,2.62,8.795v52.41A6.182,6.182,0,0,0,8.795,67.38H70.545a6.182,6.182,0,0,0,6.175-6.175V8.795A6.182,6.182,0,0,0,70.545,2.62Zm0,0" fill="#235c51"/>
+                              <path class="white" data-name="Path 10830" d="M78.03,100.71H1.31a1.31,1.31,0,0,1,0-2.62H78.03a1.31,1.31,0,0,1,0,2.62Zm0,0" transform="translate(0 -79.735)" fill="#235c51"/>
+                              <path class="white" data-name="Path 10831" d="M101.594,42.579a4.145,4.145,0,1,1,4.145-4.145A4.151,4.151,0,0,1,101.594,42.579Zm0-5.671a1.525,1.525,0,1,0,1.525,1.525A1.527,1.527,0,0,0,101.594,36.909Zm0,0" transform="translate(-79.214 -27.873)" fill="#235c51"/>
+                              <path class="white" data-name="Path 10832" d="M33.532,42.365a4.145,4.145,0,1,1,4.145-4.145A4.15,4.15,0,0,1,33.532,42.365Zm0-5.671a1.525,1.525,0,1,0,1.525,1.525A1.528,1.528,0,0,0,33.532,36.694Zm0,0" transform="translate(-23.888 -27.698)" fill="#235c51"/>
+                              <path class="white" data-name="Path 10833" d="M169.66,42.794a4.145,4.145,0,1,1,4.145-4.145A4.15,4.15,0,0,1,169.66,42.794Zm0-5.671a1.525,1.525,0,1,0,1.525,1.525A1.527,1.527,0,0,0,169.66,37.123Zm0,0" transform="translate(-134.544 -28.047)" fill="#235c51"/>
+                            </svg>
+                        </div>
+                        <h3 class="title">Embedded Recruiting</h3>
+                        <p>Plug a seasoned recruiter into your team to run end-to-end hiring sprints and keep your pipeline moving.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="service-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56.911" height="70.537" viewBox="0 0 56.911 70.537">
+                              <g transform="translate(0.25 0.25)">
+                                <path class="white" data-name="Path 10777" d="M56.033,70l3.225-19.556L53.832,32.628a22.7,22.7,0,1,1,44.162-7.392l.016,3.092,4.813,14.08H97.179l-1.2,15.051-11.975-1.1-1.638,13.28,2.519.31L86.227,59.11l12.084,1.11,1.214-15.275h6.847L100.546,27.9l-.014-2.67a25.236,25.236,0,1,0-49.114,8.18l5.239,17.207L53.528,69.588Z" transform="translate(-50.06)" fill="#235c51"  stroke-width="0.5"/>
+                                <path data-name="Path 10778" d="M151.369,66.148a5.5,5.5,0,0,1,7.479-7.484,5.5,5.5,0,0,1,10.586,0,5.5,5.5,0,0,1,7.48,7.484,5.5,5.5,0,0,1-1.5,10.792h-9.152a5.5,5.5,0,0,0-5.5,5.5v31.081h-2.4V82.443a5.5,5.5,0,0,0-5.5-5.5,5.5,5.5,0,0,1-1.5-10.792Z" transform="translate(-138.717 -43.73)" fill="#ffab4a"/>
+                                <g data-name="Group 2290" transform="translate(19.431 24.183)">
+                                  <rect data-name="Rectangle 3474" width="2.397" height="2.397" transform="translate(9.59)" fill="#fff"/>
+                                  <rect data-name="Rectangle 3475" width="2.397" height="2.397" transform="translate(4.793)" fill="#fff"/>
+                                  <rect data-name="Rectangle 3476" width="2.397" height="2.397" transform="translate(0)" fill="#fff"/>
+                                </g>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">High-Velocity Hiring Sprints</h3>
+                        <p>Time-boxed campaigns to fill multiple roles quickly without sacrificing fit or candidate experience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="service-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="69.996" height="70" viewBox="0 0 69.996 70">
+                              <g transform="translate(-0.014)">
+                                <path class="white" data-name="Path 15" d="M31.022,62.02A31.01,31.01,0,1,1,62.03,31.008H59.319a28.3,28.3,0,1,0-28.3,28.3V62.02h0Z" transform="translate(0 0)" fill="#235c51"/>
+                                <g data-name="Group 7" transform="translate(9.764 9.757)">
+                                  <path data-name="Path 16" d="M92.584,71.368a21.252,21.252,0,1,0,0,42.5v-6.921a14.331,14.331,0,1,1,14.332-14.334h6.931A21.283,21.283,0,0,0,92.584,71.368Z" transform="translate(-71.328 -71.368)" fill="#ffab4a" stroke="#fff" stroke-width="1.5"/>
+                                  <path data-name="Path 17" d="M187.424,180.007a7.412,7.412,0,1,1-7.413-7.411A7.411,7.411,0,0,1,187.424,180.007Z" transform="translate(-158.753 -158.756)" fill="#ffab4a" stroke="#fff" stroke-width="1.5"/>
+                                </g>
+                                <g data-name="Group 8" transform="translate(31.022 31.01)">
+                                  <path  class="white" data-name="Path 18" d="M242.544,265.809l-15.729-38.99L265.8,242.555l-16.183,7.068ZM231.716,231.72l10.929,27.091,4.917-11.248,11.243-4.911Z" transform="translate(-226.815 -226.819)" fill="#235c51"/>
+                                  <rect  class="white" data-name="Rectangle 9" width="13.629" height="2.71" transform="translate(30.452 32.37) rotate(-135)" fill="#235c51"/>
+                                </g>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">Sourcing & Outreach</h3>
+                        <p>Human, personalized outreach to passive talent—no spray-and-pray blasts or generic templates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="service-item mt-30 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="icon">
+                            <!-- SVG unchanged -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="76.473" height="70" viewBox="0 0 76.473 70">
+                              <g transform="translate(0 -21.668)">
+                                <path class="white" data-name="Path 10718" d="M38.236,63.548A45.313,45.313,0,0,1,.523,43.39L0,42.608l.523-.782a45.357,45.357,0,0,1,75.426,0l.524.782-.524.782A45.32,45.32,0,0,1,38.236,63.548ZM3.4,42.608a42.543,42.543,0,0,0,69.682,0,42.543,42.543,0,0,0-69.682,0Z" fill="#235c51"/>
+                                <path data-name="Path 10719" d="M196.974,90.273A12.571,12.571,0,1,1,184.4,77.7,12.572,12.572,0,0,1,196.974,90.273Z" transform="translate(-146.167 -47.664)" fill="#ffab4a"/>
+                                <path class="white" data-name="Path 10720" d="M190.866,121h-2.811a10.1,10.1,0,0,1,2.968-7.177l1.992,1.984A7.309,7.309,0,0,0,190.866,121Z" transform="translate(-159.967 -78.39)" fill="#235c51"/>
+                                <g data-name="Group 2240" transform="translate(17.296 21.668)">
+                                  <path class="white" data-name="Path 10721" d="M228.013,138.8a4.914,4.914,0,1,1,4.914-4.914A4.92,4.92,0,0,1,228.013,138.8Zm0-7.017a2.1,2.1,0,1,0,2.1,2.1A2.106,2.106,0,0,0,228.013,131.778Z" transform="translate(-207.073 -112.941)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 10722" d="M136.743,63.549a20.941,20.941,0,1,1,20.939-20.94A20.964,20.964,0,0,1,136.743,63.549Zm0-39.07a18.129,18.129,0,1,0,18.128,18.129A18.15,18.15,0,0,0,136.743,24.479Z" transform="translate(-115.802 -21.668)" fill="#235c51"/>
+                                  <rect id="Rectangle_3408" data-name="Rectangle 3408" width="2.811" height="6.59" transform="translate(19.537 40.475)" fill="#235c51"/>
+                                  <path class="white" data-name="Path 10723" d="M225.751,351.713a5.313,5.313,0,0,1-5.312-5.314V327.373h10.625V346.4a5.317,5.317,0,0,1-5.313,5.312Zm-2.5-21.529V346.4a2.5,2.5,0,0,0,5,0V330.184Z" transform="translate(-204.81 -281.713)" fill="#235c51"/>
+                                </g>
+                              </g>
+                            </svg>
+                        </div>
+                        <h3 class="title">Employer Brand & Experience</h3>
+                        <p>Messaging, interview flow, and feedback loops that convert the best candidates into enthusiastic hires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== SERVICE PART ENDS ======-->
+
+   <!--====== PORTFOLIO PART START ======-->
+<section class="portfolio-area pb-130">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-10">
+                <div class="section-title text-center">
+                    <h3 class="title">Recent Placements</h3>
+                    <p>A snapshot of roles we’ve filled for high-velocity teams—industry-agnostic, impact-focused.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid p-0">
+        <div class="row portfolio-active">
+
+            <div class="col-lg-3">
+                <div class="portfolio-item placement-card mt-30">
+                    <div class="placement-content">
+                        <h4>Director of Sales — SaaS</h4>
+                        <p>Closed with 3 finalist rounds and strong quota alignment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="portfolio-item placement-card mt-30">
+                    <div class="placement-content">
+                        <h4>Head of Customer Success</h4>
+                        <p>Placed in 17 days with a calibrated GTM match.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="portfolio-item placement-card mt-30">
+                    <div class="placement-content">
+                        <h4>Full-Stack Engineer — eCommerce</h4>
+                        <p>Closed with 2 interviews and a calibrated profile in 12 days.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="portfolio-item placement-card mt-30">
+                    <div class="placement-content">
+                        <h4>RevOps Manager — B2B</h4>
+                        <p>Hired in under 3 weeks; pipeline clean-up + execution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="portfolio-item placement-card mt-30">
+                    <div class="placement-content">
+                        <h4>Senior AE — Enterprise Sales</h4>
+                        <p>Candidate sourced &amp; placed in 9 days with full alignment.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--====== PORTFOLIO PART ENDS ======-->
+
+    <!--====== TESTIMONIAL PART START ======-->
+<section class="testimonial-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-9">
+                <div class="section-title section-title-2 text-center">
+                    <img src="assets/images/hero-line.png" alt="">
+                    <h3 class="title">Testimonials</h3>
+                    <p>What clients and candidates say about our speed, care, and results.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row testimonial-active">
+            <div class="col-lg-4">
+                <div class="testimonial-item mt-30">
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="53.729" height="40" viewBox="0 0 53.729 40">
+                            <g data-name="Group 21" transform="translate(0 0)">
+                                <path data-name="Union 1" d="M47.055,40a1.21,1.21,0,0,1-1.018-.509L31.106,19.357A12.178,12.178,0,0,1,29.07,11.1,12.364,12.364,0,1,1,45.98,23.881l6.957,14.253A1.313,1.313,0,0,1,51.806,40ZM18.1,40a1.209,1.209,0,0,1-1.018-.509L2.149,19.357A12.77,12.77,0,0,1,.056,11.043,12.395,12.395,0,1,1,17.023,23.881L23.98,38.134A1.313,1.313,0,0,1,22.849,40Z" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>I've never experienced a recruiting process this fast or this human. I had clarity at
+                        every step and offers on the table faster than any firm I’ve worked with.</p>
+                    <div class="info">
+                        <h5 class="title">Senior Product Manager, Placed Candidate</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="testimonial-item mt-30">
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="53.729" height="40" viewBox="0 0 53.729 40">
+                            <g data-name="Group 21" transform="translate(0 0)">
+                                <path data-name="Union 1" d="M47.055,40a1.21,1.21,0,0,1-1.018-.509L31.106,19.357A12.178,12.178,0,0,1,29.07,11.1,12.364,12.364,0,1,1,45.98,23.881l6.957,14.253A1.313,1.313,0,0,1,51.806,40ZM18.1,40a1.209,1.209,0,0,1-1.018-.509L2.149,19.357A12.77,12.77,0,0,1,.056,11.043,12.395,12.395,0,1,1,17.023,23.881L23.98,38.134A1.313,1.313,0,0,1,22.849,40Z" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>We scaled our SDR team from 5 to 14 in under a month and never lowered the bar.
+                        Offr Group moved at our speed and delivered consistently strong talent.</p>
+                    <div class="info">
+                        <h5 class="title">Revenue Operations Leader</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="testimonial-item mt-30">
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="53.729" height="40" viewBox="0 0 53.729 40">
+                            <g data-name="Group 21" transform="translate(0 0)">
+                                <path data-name="Union 1" d="M47.055,40a1.21,1.21,0,0,1-1.018-.509L31.106,19.357A12.178,12.178,0,0,1,29.07,11.1,12.364,12.364,0,1,1,45.98,23.881l6.957,14.253A1.313,1.313,0,0,1,51.806,40ZM18.1,40a1.209,1.209,0,0,1-1.018-.509L2.149,19.357A12.77,12.77,0,0,1,.056,11.043,12.395,12.395,0,1,1,17.023,23.881L23.98,38.134A1.313,1.313,0,0,1,22.849,40Z" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>Every intro came with context, insight, and clear thinking about team fit.
+                        It never felt like “volume recruiting” — every candidate was intentional.</p>
+                    <div class="info">
+                        <h5 class="title">Founder, Early-Stage Startup</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="testimonial-item mt-30">
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="53.729" height="40" viewBox="0 0 53.729 40">
+                            <g data-name="Group 21" transform="translate(0 0)">
+                                <path data-name="Union 1" d="M47.055,40a1.21,1.21,0,0,1-1.018-.509L31.106,19.357A12.178,12.178,0,0,1,29.07,11.1,12.364,12.364,0,1,1,45.98,23.881l6.957,14.253A1.313,1.313,0,0,1,51.806,40ZM18.1,40a1.209,1.209,0,0,1-1.018-.509L2.149,19.357A12.77,12.77,0,0,1,.056,11.043,12.395,12.395,0,1,1,17.023,23.881L23.98,38.134A1.313,1.313,0,0,1,22.849,40Z" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>Offr Group didn’t just fill roles — they built us a repeatable hiring system.
+                        Our interviews are smoother, our funnel is clearer, and time-to-hire dropped immediately.</p>
+                    <div class="info">
+                        <h5 class="title">Head of People, Growth Company</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="testimonial-item mt-30">
+                    <div class="quote">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="53.729" height="40" viewBox="0 0 53.729 40">
+                            <g data-name="Group 21" transform="translate(0 0)">
+                                <path data-name="Union 1" d="M47.055,40a1.21,1.21,0,0,1-1.018-.509L31.106,19.357A12.178,12.178,0,0,1,29.07,11.1,12.364,12.364,0,1,1,45.98,23.881l6.957,14.253A1.313,1.313,0,0,1,51.806,40ZM18.1,40a1.209,1.209,0,0,1-1.018-.509L2.149,19.357A12.77,12.77,0,0,1,.056,11.043,12.395,12.395,0,1,1,17.023,23.881L23.98,38.134A1.313,1.313,0,0,1,22.849,40Z" transform="translate(0 0)"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <p>Most recruiters disappear once they send a resume. Offr Group actually communicates,
+                        sets expectations, and follows through. It felt like someone was in my corner.</p>
+                    <div class="info">
+                        <h5 class="title">Sales Candidate</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== TESTIMONIAL PART ENDS ======-->
+
+    <!--====== OVERVIEW PART START ======-->
+    
+    <section class="overview-area pb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- LEFT SIDE – STORY + LOGOS -->
+                <div class="col-lg-6">
+                    <div class="overview-content">
+                        <img src="assets/images/hero-line.png" alt="">
+                        <span>How we work</span>
+                        <h3 class="title">A simple, nimble hiring engine</h3>
+    
+                        <p>
+                            We start with a sharp intake to understand your roles, roadmap, and hiring backlog.
+                            From there, we build a lean recruiting lane—sourcing channels, outreach, interview flow,
+                            and reporting—then run it alongside your team.
+                        </p>
+                        <p>
+                            Every week, we refine based on real candidates and real data, so each search moves faster,
+                            gets more accurate, and feels lighter for your team.
+                        </p>
+    
+                        <a class="main-btn" href="https://app.thehirepilot.com/f/new-client">Let’s Chat</a>
+    
+                        <!-- CLIENT LOGOS -->
+                        <div class="brand-item d-flex align-items-center mt-70">
+                            <div class="item">
+                                <img src="assets/images/merrill-lynch.png" alt="Merrill Lynch">
                             </div>
-                            <!-- Main Menu -->
-                            <nav class="main-menu">
-                                <ul>
-                                    <li class="menu-item"><a href="#about" class="nav-link">About</a></li>
-                                    <li class="menu-item"><a href="#services" class="nav-link">Services</a></li>
-                                    <li class="menu-item"><a href="https://careerkitchen.co" class="nav-link" target="_blank" rel="noopener">Our Blog and Podcast Career Kitchen</a></li>
-                                    <li class="menu-item"><a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="nav-link" target="_blank" rel="noopener">Engage</a></li>
-                                </ul>
-                            </nav>
+                            <div class="item">
+                                <img src="assets/images/netflix.png" alt="Netflix">
+                            </div>
+                            <div class="item">
+                                <img src="assets/images/windstream.png" alt="Windstream">
+                            </div>
                         </div>
-                        <div class="header-right-nav">
+                    </div>
+                </div>
+    
+                <!-- RIGHT SIDE – METRICS -->
+                <div class="col-lg-6">
+                    <div class="overview-counter-area">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="overview-counter-item mt-10 animated wow fadeInUp"
+                                     data-wow-duration="3000ms" data-wow-delay="0ms">
+                                    <div class="icon">
+                                        <img src="assets/images/overview-1.png" alt="">
+                                    </div>
+                                    <h3 class="title count">14</h3>
+                                    <span>Average days to shortlist</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="overview-counter-item mt-10 animated wow fadeInUp"
+                                     data-wow-duration="3000ms" data-wow-delay="300ms">
+                                    <div class="icon">
+                                        <img src="assets/images/overview-2.png" alt="">
+                                    </div>
+                                    <h3 class="title count">250</h3>
+                                    <span>Roles filled across GTM &amp; product</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="overview-counter-item mt-30 animated wow fadeInUp"
+                                     data-wow-duration="3000ms" data-wow-delay="600ms">
+                                    <div class="icon">
+                                        <img src="assets/images/overview-3.png" alt="">
+                                    </div>
+                                    <h3 class="title count">92</h3>
+                                    <span>% offer acceptance rate</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="overview-counter-item mt-30 animated wow fadeInUp"
+                                     data-wow-duration="3000ms" data-wow-delay="900ms">
+                                    <div class="icon">
+                                        <img src="assets/images/overview-4.png" alt="">
+                                    </div>
+                                    <h3 class="title"><span class="count">85</span>%</h3>
+                                    <span>Clients from referrals or renewals</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <!--====== OVERVIEW PART ENDS ======-->
+
+    <!--====== PRICING / ENGAGEMENTS PART START ======-->
+    
+    <section id="engagements" class="pricing-area pb-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-9">
+                    <div class="section-title section-title-2 text-center">
+                        <img src="assets/images/hero-line.png" alt="">
+                        <h3 class="title">Engagement Models</h3>
+                        <p>Choose the level of partnership that fits your hiring tempo—from one-off key hires to fully embedded recruiting sprints.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Contingency Search -->
+                <div class="col-lg-4 col-md-6 col-sm-9 order-1">
+                    <div class="pricing-item mt-30 animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <h3 class="title">Contingency Search</h3>
+                        <span>Pay only when you hire</span>
+                        <p>Best for fast-moving teams that want a nimble partner focused on signal, not volume.</p>
+                        <ul>
+                            <li>Ideal for IC & mid-level roles</li>
+                            <li>Performance-based fees</li>
+                            <li>Shortlists in as little as 1–2 weeks</li>
+                            <li>Structured scorecards & references</li>
+                        </ul>
+                        <a class="main-btn" href="https://app.thehirepilot.com/f/new-client">Talk About a Role</a>
+                    </div>
+                </div>
+                <!-- Engaged Search -->
+                <div class="col-lg-4 col-md-6 col-sm-9 order-3 order-lg-2">
+                    <div class="pricing-item mt-30 center animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <h3 class="title">Executive Search</h3>
+                        <span>For critical or leadership hires</span>
+                        <p>Deeper partnership with dedicated time reserved for your search and stakeholder alignment.</p>
+                        <ul>
+                            <li>Upfront engagement to lock in focus</li>
+                            <li>Leadership & niche GTM roles</li>
+                            <li>Weekly market feedback & calibration</li>
+                            <li>Support through offer & acceptance</li>
+                        </ul>
+                        <a class="main-btn" href="https://app.thehirepilot.com/f/new-clientt">Book a Strategy Call</a>
+                        <div class="tag">Most Popular</div>
+                    </div>
+                </div>
+                <!-- Embedded Recruiting -->
+                <div class="col-lg-4 col-md-6 col-sm-9 order-2 order-lg-3">
+                    <div class="pricing-item mt-30 animated wow FadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <h3 class="title">Embedded Sprints</h3>
+                        <span>On-demand recruiting team</span>
+                        <p>For companies scaling across multiple roles and needing a plug-in recruiting engine.</p>
+                        <ul>
+                            <li>Dedicated recruiter + sourcing support</li>
+                            <li>Monthly or sprint-based engagements</li>
+                            <li>Pipeline reporting & process design</li>
+                            <li>Perfect for high-growth hiring waves</li>
+                        </ul>
+                        <a class="main-btn" href="https://app.thehirepilot.com/f/new-client">Design a Sprint</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--====== PRICING PART ENDS ======-->
+    
+
+    <!--====== FOOTER PART START ======-->
+    
+    <footer class="footer-area" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-top d-block d-sm-flex  justify-content-between align-items-center">
+                        <div class="footer-logo mb-4">
+                            <a href="index.html">
+                                <img src="assets/images/logo.png" alt="Offr Group Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-item">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-about mt-30">
+                            <h4 class="title">Offr Group</h4>
+                            <p>Offr Group is a nimble recruiting firm for high-velocity teams. We help founders and leaders build lean hiring systems, reach passive talent, and make confident hires—without slowing down the work.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-list mt-30 ml-95">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-list mt-30">
+                            <h4 class="title">For you</h4>
                             <ul>
-                                <li class="bar-item"><a href="#"><img src="HTML/assets/images/dot.png" alt="dot"></a></li>
-                                <li class="navbar-toggle-btn">
-                                    <div class="navbar-toggler">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </li>
+                                <li><a href="#">For Founders</a></li>
+                                <li><a href="job-seekers.html">For Job Seekers</a></li>
+                                <li><a href="#">Hiring Playbooks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info mt-30">
+                            <h3 class="title">Contact</h3>
+                            <ul>
+                                <li><i class="fal fa-map-marker-alt"></i>600 Congress Ave, 14th Floor, Austin, TX 78701</li>
+                                <li><i class="fal fa-phone"></i> +1 (210) 742-1010</li>
+                                <li><i class="fal fa-envelope"></i> engage@offrgroup.com </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </header><!--====== End Header Section ======-->
-        <!--====== Start Hero Section ======-->
-        <section class="hero-banner-v1 position-relative">
-            <div class="bg-one"></div>
-            <div class="bg-two"></div>
-            <div style="position:absolute; inset:0; background: rgba(34,48,180,0.58); z-index:1; pointer-events:none;"></div>
-            <div class="hero-img hero-img-one scene"><span data-depth=".5"><img src="HTML/assets/images/hero/hero-one-img-1.jpg" class="wow fadeInLeft" alt="hero image"></span></div>
-            <div class="hero-img hero-img-two scene"><span data-depth=".2"><img src="HTML/assets/images/hero1.png" class="wow fadeInLeft" alt="hero image"></span></div>
-            <div class="hero-img hero-img-three scene"><span data-depth=".3"><img src="HTML/assets/images/shape/circle-logo-1.png" class="wow fadeInLeft" alt="hero image"></span></div>
-            <div class="shape shape-one scene"><span data-depth="1"><img src="HTML/assets/images/shape/shape-1.png" alt="shape"></span></div>
-            <div class="shape shape-two scene"><span data-depth="2"><img src="HTML/assets/images/shape/shape-2.png" alt="shape"></span></div>
-            <div class="shape shape-three scene"><span data-depth="3"><img src="HTML/assets/images/shape/shape-3.png" alt="shape"></span></div>
-            <div class="container" style="position:relative; z-index:2;">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-12">
-                        <div class="hero-content" style="color:#fff;">
-                            <h1 class="wow fadeInUp" data-wow-delay=".5s" style="color:#fff;">Connecting Great Companies 
-                                with Exceptional Talent</h1>
-                            <p class="wow fadeInDown" data-wow-delay="1s">Offr Group is a full-service recruiting and staffing firm helping
-                                organizations scale faster and professionals land their next great opportunity.</p>
-                            <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="main-btn arrow-btn wow fadeInUp" data-wow-delay=".5s" target="_blank" rel="noopener">Hire Talent or Find Work</a>
-                        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copyright">
+                        <p>© Offr Group. All rights reserved.</p>
                     </div>
                 </div>
             </div>
-        </section><!--====== End Hero Section ======-->
-        <script>
-        (function(){
-            var header = document.getElementById('site-header');
-            var hero = document.querySelector('.hero-banner-v1');
-            if(!header || !hero) return;
-            var onScroll = function(){
-                var rect = hero.getBoundingClientRect();
-                var threshold = rect.height * 0.5; // switch midway through hero
-                if (rect.bottom > threshold) {
-                    header.classList.add('nav-light');
-                } else {
-                    header.classList.remove('nav-light');
-                }
-            };
-            onScroll();
-            window.addEventListener('scroll', onScroll, { passive: true });
-        })();
-        </script>
-        <!--====== Start About Section ======-->
-        <section id="about" class="about-area about-area-v1 position-relative pt-130">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="img-holder-box mb-50">
-                            <div class="img-holder wow fadeInLeft">
-                                <img src="HTML/assets/images/team-austin-centre.jpg" alt="Recruiting at Offr Group">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="text-wrapper mb-50 wow fadeInRight">
-                            <div class="section-title mb-15">
-                                <span class="sub-title st-one">About Offr Group</span>
-                                <h2>Recruiting Made Human</h2>
-                            </div>
-                            <h4>We partner with clients and candidates to create hiring success stories.</h4>
-                            <p>Offr Group is a modern recruiting and staffing firm built to connect
-                                growing companies with top-tier professionals across industries. Our
-                                team combines data-driven sourcing with real human connection to
-                                deliver exceptional hires faster.</p>
-                            <ul class="list-style-one mb-35">
-                                <li>RPO & Contingency Recruiting</li>
-                                <li>Executive Search & Staffing Solutions</li>
-                                <li>Career Coaching & Job Seeker Programs</li>
-                            </ul>
-                            <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="main-btn bordered-btn btn-blue arrow-btn" target="_blank" rel="noopener">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--====== End About Section ======-->
-        <!--====== Start Service Section ======-->
-        <section id="services" class="service-area pt-90 pb-80" style="background-image: linear-gradient(rgba(34,48,180,0.85), rgba(34,48,180,0.85)), url(HTML/assets/images/slider-1.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="section-title text-center mb-55 wow fadeInUp" style="color:#fff;">
-                            <span class="sub-title st-one">Our Services</span>
-                            <h2 style="color:#fff;">Recruiting Solutions for Every Need</h2>
-                            <p>We provide tailored talent solutions for companies and career seekers alike.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service-item service-style-one mb-40 wow fadeInDown" data-wow-delay=".3s">
-                            <div class="icon">
-                                <i class="flaticon-strategy"></i>
-                            </div>
-                            <div class="text">
-                                <h3 class="title">RPO Services</h3>
-                                <ul class="list-style-two">
-                                    <li>Dedicated recruiting partner</li>
-                                    <li>Embedded sourcing support</li>
-                                    <li>Scalable hiring campaigns</li>
-                                </ul>
-                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="btn-link" target="_blank" rel="noopener">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service-item service-style-one mb-40 wow fadeInDown" data-wow-delay=".5s">
-                            <div class="icon">
-                                <i class="flaticon-design"></i>
-                            </div>
-                            <div class="text">
-                                <h3 class="title">Contingency & Executive Search</h3>
-                                <ul class="list-style-two">
-                                    <li>No upfront cost, pay when we deliver</li>
-                                    <li>Senior and specialized placements</li>
-                                    <li>Nationwide executive network</li>
-                                </ul>
-                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="btn-link" target="_blank" rel="noopener">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="service-item service-style-one mb-40 wow fadeInDown" data-wow-delay=".7s">
-                            <div class="icon">
-                                <i class="flaticon-source-code"></i>
-                            </div>
-                            <div class="text">
-                                <h3 class="title">Staffing & Job Placement</h3>
-                                <ul class="list-style-two">
-                                    <li>Temporary & contract roles</li>
-                                    <li>Full-time placements</li>
-                                    <li>Career coaching & resume help</li>
-                                </ul>
-                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="btn-link" target="_blank" rel="noopener">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Service Section ======-->
-        
-        <!--====== Start CTA Section ======-->
-        <section class="cta-area cta-area-v1 pt-130">
-            <div class="container-1450">
-                <div class="cta-wrapper dark-blue-bg">
-                    <div class="cta-img wow fadeInDown "><img src="HTML/assets/images/img-1.jpg" alt="Recruiting CTA"></div>
-                    <div class="row">
-                        <div class="col-xl-8 col-lg-12">
-                            <div class="text-wrapper wow fadeInUp">
-                                <div class="section-title section-title-white mb-55">
-                                    <span class="sub-title st-one">Let’s Work Together</span>
-                                    <h2>Whether you're <span class="fill-text">hiring</span> your next team member
-                                        or <span class="fill-text">searching</span> for your next opportunity —
-                                        Offr Group has you covered.</h2>
-                                </div>
-                                <a href="https://form.typeform.com/to/fTjZFf?typeform-source=offrgroup.com" class="main-btn bordered-btn btn-white arrow-btn" target="_blank" rel="noopener">Start the Conversation</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--====== End CTA Section ======-->
-        <!--====== Start Counter Section ======-->
-        <section class="counter-area counter-area-v1 pt-240 pb-90">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="section-title text-center mb-55 wow fadeInUp">
-                            <span class="sub-title st-one">Our Results</span>
-                            <h2>Trusted by Growing Teams Nationwide</h2>
-                            <p>We’ve built long-term partnerships based on trust, results, and exceptional service.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row no-gutters justify-content-center">
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="counter-item mb-40 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="icon">
-                                <i class="flaticon-start-up"></i>
-                            </div>
-                            <div class="text">
-                                <h2 class="number"><span>500</span>+</h2>
-                                <p>Successful Placements</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="counter-item mb-40 wow fadeInUp" data-wow-delay=".4s">
-                            <div class="icon">
-                                <i class="flaticon-medal"></i>
-                            </div>
-                            <div class="text">
-                                <h2 class="number"><span>15</span>+</h2>
-                                <p>Years of Recruiting Experience</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="counter-item mb-40 wow fadeInUp" data-wow-delay=".5s">
-                            <div class="icon">
-                                <i class="flaticon-technical-support"></i>
-                            </div>
-                            <div class="text">
-                                <h2 class="number"><span>98</span>%</h2>
-                                <p>Client Satisfaction</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!--====== End Counter Section ======-->
-        <!--====== Start Testimonial Section ======-->
-        <section class="testimonial-area testimonial-area-v1 dark-blue-bg pattern-bg pt-130 pb-80">
-            <div class="shape-img wow fadeInRight animate-float-y"><span><img src="HTML/assets/images/img-3.jpg" alt=""></span></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="section-title section-title-white mb-50 wow fadeInLeft">
-                            <span class="sub-title st-one">Testimonials</span>
-                            <h2>What our clients say about us</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="img-holder mb-50 wow fadeInLeft">
-                            <img src="HTML/assets/images/portrait.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="testimonial-slider-one mb-50 wow fadeInRight">
-                            <div class="testimonial-item">
-                                <div class="testimonial-content">
-                                    <i class="flaticon-quotation"></i>
-                                    <h3>Service is Good — "I owe a lot of my success to this man and Offr Group. I now have a bright career with solid training under my belt thanks to Brandon. To have been taught by Brandon, along with other industry leaders, is truly a blessing. Thank you for your teachings and support you've given me!"</h3>
-                                    <div class="author-title">
-                                        <h4>Brian Kwa</h4>
-                                        <p class="position">Founder, MPH Academy</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item">
-                                <div class="testimonial-content">
-                                    <i class="flaticon-quotation"></i>
-                                    <h3>The team works hard — "Brandon is a very decisive and innovative entrepreneur. Along with being tech savvy, he is also a quick thinker, giving him a very clear advantage. He understands the proper marketing strategies and the needs of businesses to be able to grow and succeed."</h3>
-                                    <div class="author-title">
-                                        <h4>Debbrah Dizon</h4>
-                                        <p class="position">Sales Enablement Leader</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item">
-                                <div class="testimonial-content">
-                                    <i class="flaticon-quotation"></i>
-                                    <h3>Great Work — "Brandon and his team are rising stars with limitless potential. He is the single most positive person I have ever had the good fortune to work with. He is passionate, hard working and skilled. He takes coaching and criticism very well and is always looking to grow and improve. Brandon's consistency is a welcome addition to any company he works with."</h3>
-                                    <div class="author-title">
-                                        <h4>Scott Leese</h4>
-                                        <p class="position">Founder of Scott Leese Consulting</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-item">
-                                <div class="testimonial-content">
-                                    <i class="flaticon-quotation"></i>
-                                    <h3>Unparralleled Expertise — "Brandon's expertise proved invaluable in navigating the course en route to my first official offer letter. I appreciate that his methodology is based on practice and not theory, built upon a foundation of many years of experience working the roles he now fills; you'd be hard-pressed to find someone with a better understanding of the inside sales recruiting process. As he came highly recommended to me and lived up to his edification, I too highly recommend Brandon's services to efficiently bridge the gap between hiring managers and job seekers."</h3>
-                                    <div class="author-title">
-                                        <h4>Eugene Tomanpos</h4>
-                                        <p class="position">Product Manager</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--====== End Testimonial Section ======-->
-        
-        
-        
-        
-        <!--====== back-to-top ======-->
-        <a href="#" class="back-to-top" ><i class="far fa-angle-up"></i></a>
-        <!--====== Jquery js ======-->
-        <script src="HTML/assets/vendor/jquery-3.6.0.min.js"></script>
-        <!--====== Bootstrap js ======-->
-        <script src="HTML/assets/vendor/popper/popper.min.js"></script>
-        <!--====== Bootstrap js ======-->
-        <script src="HTML/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-        <!--====== Slick js ======-->
-        <script src="HTML/assets/vendor/slick/slick.min.js"></script>
-        <!--====== Magnific js ======-->
-        <script src="HTML/assets/vendor/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-        <!--====== Isotope js ======-->
-        <script src="HTML/assets/vendor/isotope.min.js"></script>
-        <!--====== Imagesloaded js ======-->
-        <script src="HTML/assets/vendor/imagesloaded.min.js"></script>
-        <!--====== Counterup js ======-->
-        <script src="HTML/assets/vendor/jquery.counterup.min.js"></script>
-        <!--====== Waypoints js ======-->
-        <script src="HTML/assets/vendor/jquery.waypoints.js"></script>
-        <!--====== Nice-select js ======-->
-        <script src="HTML/assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
-        <!--====== WOW js ======-->
-        <script src="HTML/assets/vendor/wow.min.js"></script>
-        <!--====== Parallax js ======-->
-        <script src="HTML/assets/vendor/parallax.min.js"></script>
-        <!--====== Main js ======-->
-        <script src="HTML/assets/js/theme.js"></script>
+        </div>
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+
+    <!--====== BACK TO TOP START ======-->
+
+    <a class="back-to-top">
+        <i class="fal fa-angle-up"></i>
+    </a>
+
+    <!--====== BACK TO TOP ENDS ======-->
+
+
+    
+    
+    
+    <!--====== jquery js ======-->
+    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    
+    <!--====== appear js ======-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="assets/js/slick.min.js"></script>
+    
+    <!--====== wow js ======-->
+    <script src="assets/js/wow.js"></script>
+    
+    <!--====== Isotope js ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    
+    <!--====== Images Loaded js ======-->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".placementsSwiper", {
+    slidesPerView: 3,
+    spaceBetween: 40,
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1200: { slidesPerView: 3 }
+    }
+  });
+</script><script>
+    function smoothScrollTo(targetY, duration = 900) {
+        const startY = window.pageYOffset;
+        const distance = targetY - startY;
+        let startTime = null;
+    
+        function animation(currentTime) {
+            if (!startTime) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+    
+            // Easing: easeOutCubic (gives that parallax drift feel)
+            const ease = 1 - Math.pow(1 - progress, 3);
+    
+            window.scrollTo(0, startY + distance * ease);
+    
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+    
+        requestAnimationFrame(animation);
+    }
+    
+    document.querySelectorAll('.scroll-link').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            const offset = target.offsetTop - 80;
+    
+            smoothScrollTo(offset, 900);
+        });
+    });
+    </script>
     </body>
+
 </html>
