@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Designing an Interview Loop That Respects Everyone’s Time | Hiring Manager Playbook | Offr Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Article-specific CSS -->
+  <style>
+    /* =========================================
+       PLAYBOOK ARTICLE – INTERVIEW LOOP
+       ========================================= */
+
+    .article-hero.playbook-article-hero {
+      padding: 150px 0 120px;
+      background: radial-gradient(circle at top left, #223149 0%, #161b29 45%, #0b101c 100%);
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .playbook-article-hero .row {
+      align-items: center;
+    }
+
+    .playbook-article-hero .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f7b15a;
+      margin-bottom: 18px;
+    }
+
+    .playbook-article-hero .article-title {
+      font-size: 40px;
+      line-height: 1.13;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #f5f5f5;
+    }
+
+    .playbook-article-hero .article-subtitle {
+      font-size: 16px;
+      max-width: 560px;
+      color: #e3e7ee;
+      margin-bottom: 22px;
+    }
+
+    .playbook-article-hero .article-meta {
+      font-size: 14px;
+      color: #c7cfdd;
+      margin-bottom: 8px;
+    }
+
+    .playbook-article-hero .article-back-link {
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .playbook-article-hero .article-back-link:hover {
+      color: #f7b15a;
+      text-decoration: underline;
+    }
+
+    .playbook-article-hero .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .playbook-article-hero .outline-btn {
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      padding: 10px 22px;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .playbook-article-hero .outline-btn:hover {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .gradient-highlight {
+      background: linear-gradient(90deg, #ffb36b 0%, #ffc878 45%, #ffe3a1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Right-hand meta card */
+    .article-side-card {
+      background: rgba(5, 9, 18, 0.92);
+      border-radius: 18px;
+      padding: 24px 26px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #e5ecf7;
+      max-width: 360px;
+      margin-left: auto;
+    }
+
+    .article-side-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #f9fafb;
+    }
+
+    .article-side-card ul {
+      margin: 0 0 12px;
+      padding-left: 18px;
+    }
+
+    .article-side-card ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    .article-side-card .side-cta {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ================================
+       ARTICLE BODY LAYOUT
+       ================================ */
+
+    .article-body {
+      padding: 80px 0 120px;
+      background: #f9fafb;
+    }
+
+    .article-body .article-main {
+      max-width: 780px;
+    }
+
+    .article-body h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .article-body h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .article-body p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    .article-body ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .article-body ul li {
+      font-size: 15px;
+      color: #4b5563;
+      margin-bottom: 6px;
+    }
+
+    .article-body strong {
+      color: #111827;
+    }
+
+    .article-callout {
+      border-left: 4px solid #3b82f6;
+      background: #eff6ff;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1d4ed8;
+      margin: 22px 0;
+    }
+
+    /* TOC / Right column */
+    .article-toc {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+      position: sticky;
+      top: 110px;
+    }
+
+    .article-toc h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .article-toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 8px;
+    }
+
+    .article-toc ul li {
+      margin-bottom: 6px;
+    }
+
+    .article-toc ul li a {
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .article-toc ul li a:hover {
+      color: #111827;
+      text-decoration: underline;
+    }
+
+    .article-toc .toc-note {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    .article-cta-block {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .article-cta-block a {
+      color: #111827;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .article-cta-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .article-hero.playbook-article-hero {
+        padding: 130px 0 90px;
+      }
+
+      .article-side-card {
+        margin: 30px auto 0;
+      }
+
+      .article-toc {
+        margin-top: 40px;
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .playbook-article-hero {
+        text-align: center;
+      }
+
+      .playbook-article-hero .article-subtitle,
+      .playbook-article-hero .article-title {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .playbook-article-hero .btn-row {
+        justify-content: center;
+      }
+
+      .article-hero .article-back-link {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--====== HEADER (same as other pages) ======-->
+  <header class="header-area">
+    <div class="header-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="navigation">
+              <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/OFFR-GROUP-Logo-White.png"
+                       alt="Offr Group logo"
+                       class="offr-logo" />
+                </a>
+
+                <!-- MOBILE TOGGLER -->
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button>
+
+                <!-- MAIN NAV -->
+                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html#engagements">Engagements</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- CTA BUTTON -->
+                <div class="navbar-btn d-none d-sm-block">
+                  <a class="main-btn"
+                     href="https://app.thehirepilot.com/f/new-client">
+                    Book a Strategy Call
+                  </a>
+                </div>
+
+              </nav>
+            </div> <!-- navigation -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+  </header>
+  <!--====== HEADER END ======-->
+
+  <main>
+    <!--======== ARTICLE HERO ========-->
+    <section class="article-hero playbook-article-hero">
+      <div class="container">
+        <div class="row">
+          <!-- LEFT -->
+          <div class="col-lg-8">
+            <a href="hiring-manager-playbook.html" class="article-back-link">
+              ← Back to Hiring Manager Playbook
+            </a>
+
+            <span class="eyebrow">Hiring Manager Playbook</span>
+
+            <h1 class="article-title">
+              Designing an interview loop that<br />
+              <span class="gradient-highlight">respects everyone’s time</span>
+            </h1>
+
+            <p class="article-subtitle">
+              A thoughtful interview loop protects your team’s calendar, gives candidates a fair shot,
+              and gets you to a confident “yes” or “no” faster. This playbook helps you design a loop
+              that does exactly that.
+            </p>
+
+            <p class="article-meta">
+              Category: Interview Design & Process • Approx. 12 minute read
+            </p>
+
+            <div class="btn-row">
+              <a href="#article-body" class="main-btn">Start reading the playbook</a>
+              <a href="https://thehirepilot.com" class="outline-btn" target="_blank" rel="noopener">
+                See how HirePilot runs interview workflows
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT META CARD -->
+          <div class="col-lg-4">
+            <aside class="article-side-card">
+              <h4>Who this is for</h4>
+              <ul>
+                <li>Founders and hiring managers running multiple searches</li>
+                <li>Talent leaders trying to reduce interview fatigue</li>
+                <li>Teams that want a fairer, more consistent process</li>
+              </ul>
+              <h4>What you’ll leave with</h4>
+              <ul>
+                <li>A simple interview loop blueprint</li>
+                <li>Role-based loop examples</li>
+                <li>Debrief & decision frameworks</li>
+              </ul>
+
+              <a href="https://app.thehirepilot.com/f/new-client"
+                 class="main-btn side-cta">
+                Get help designing your loop
+              </a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--======== ARTICLE BODY ========-->
+    <section class="article-body" id="article-body">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- MAIN CONTENT -->
+          <div class="col-lg-8">
+            <article class="article-main">
+              <!-- Intro -->
+              <p>
+                Most interview loops grow by accident. A founder adds one more conversation “just to be sure”.
+                A hiring manager pulls in extra stakeholders. A candidate ends up doing 8+ calls and leaves
+                wondering what anyone actually learned.
+              </p>
+
+              <p>
+                Meanwhile, your team is burning hours on interviews that don’t move the decision forward.
+                That’s how hiring becomes the thing everyone dreads, instead of a high-signal way to raise
+                the bar on your team.
+              </p>
+
+              <div class="article-callout">
+                A great interview loop is <strong>intentionally small, brutally clear, and highly repeatable</strong>.
+                Everyone knows why they’re in the room, what they’re assessing, and how the decision gets made.
+              </div>
+
+              <p>
+                This guide gives you a structure you can re-use across roles—especially in SaaS, IT, and tech—
+                with specific examples, questions, and tools you can plug into your stack.
+              </p>
+
+              <!-- 1. Why loops break -->
+              <h2 id="section-problems">1. Why most interview loops feel broken</h2>
+
+              <p>Common failure modes show up the same way across companies:</p>
+
+              <ul>
+                <li><strong>Too many conversations, not enough signal.</strong> Everyone asks the same questions in different words.</li>
+                <li><strong>Undefined roles for interviewers.</strong> Nobody knows what they’re responsible for assessing.</li>
+                <li><strong>No shared scorecard.</strong> Decisions are made on vibes, not evidence.</li>
+                <li><strong>Slow decisions.</strong> Candidates sit in limbo while internal teams “sync” for weeks.</li>
+                <li><strong>Poor candidate experience.</strong> No clear expectations, no follow-up, no closure.</li>
+              </ul>
+
+              <p>
+                When you fix the loop, you reduce busywork, treat candidates like adults, and make better decisions
+                with fewer conversations.
+              </p>
+
+              <!-- 2. Principles -->
+              <h2 id="section-principles">2. Principles of a time-respecting interview loop</h2>
+
+              <p>Three principles to anchor on before you design the loop:</p>
+
+              <h3>Principle #1: Every interview has a job</h3>
+              <p>
+                If a conversation doesn’t have a clear “job” (e.g., “assess strategic thinking” or
+                “evaluate technical depth”), it probably shouldn’t exist.
+              </p>
+
+              <h3>Principle #2: One owner, many contributors</h3>
+              <p>
+                Every role needs a single <strong>Decision Owner</strong> (usually the hiring manager),
+                and a small set of <strong>Signal Owners</strong> who each own one dimension: e.g., technical,
+                culture, cross-functional, leadership.
+              </p>
+
+              <h3>Principle #3: Constraints are your friend</h3>
+              <p>
+                Put a cap on the number of interviews and stick to it. For most roles, 3–5 touchpoints
+                is enough if you’re structured. Exceptions should be truly exceptional.
+              </p>
+
+              <div class="article-callout">
+                Decide your constraints <em>before</em> you start searching. If you wait until you’re in the
+                middle of a high-pressure search, the loop will bloat.
+              </div>
+
+              <!-- 3. Core loop structure -->
+              <h2 id="section-structure">3. A simple interview loop you can reuse</h2>
+
+              <p>
+                Here’s a baseline loop you can use for most professional roles (sales, marketing, product,
+                customer success, operations, etc.).
+              </p>
+
+              <h3>Stage 0 – Calibration & scorecard (internal)</h3>
+              <ul>
+                <li>Define the 4–6 key outcomes this hire must drive in the first 12 months.</li>
+                <li>Translate outcomes into 3–5 competencies (e.g., “pipeline ownership”, “strategic thinking”).</li>
+                <li>Assign each competency to an interviewer with a clear 1–5 scoring rubric.</li>
+              </ul>
+
+              <h3>Stage 1 – 30–45 min recruiter or screening call</h3>
+              <p><strong>Goal:</strong> confirm basics before you spend team time.</p>
+              <ul>
+                <li>High-level story: what they’ve done, where they’ve worked, career direction.</li>
+                <li>Baseline fit: comp, location, timeline, work authorization, seniority.</li>
+                <li>Initial signal on communication and self-awareness.</li>
+              </ul>
+
+              <h3>Stage 2 – 45–60 min hiring manager interview</h3>
+              <p><strong>Goal:</strong> dig into outcomes and problem patterns.</p>
+              <ul>
+                <li>Walk through 2–3 recent roles with a focus on impact.</li>
+                <li>Ask for specific examples that map to your scorecard outcomes.</li>
+                <li>Assess how they think, not just what they’ve done.</li>
+              </ul>
+
+              <h3>Stage 3 – 2–3 focused panel interviews (45–60 min each)</h3>
+              <p><strong>Goal:</strong> cross-functional and depth checks.</p>
+              <ul>
+                <li>Technical/depth interview (for IC or specialist roles).</li>
+                <li>Cross-functional interview (e.g., with Product, CS, Marketing, or Ops).</li>
+                <li>Leadership/values interview (for senior roles).</li>
+              </ul>
+
+              <h3>Stage 4 – Practical exercise or case (optional but powerful)</h3>
+              <p><strong>Goal:</strong> see how they think in realistic scenarios—not homework for free labor.</p>
+              <ul>
+                <li>Short, time-boxed exercise (e.g., 48–72 hours).</li>
+                <li>Clear prompts, evaluation criteria, and expectations on time required.</li>
+                <li>Live debrief: talk through tradeoffs and decisions, not slide design.</li>
+              </ul>
+
+              <h3>Stage 5 – Final conversation & close</h3>
+              <ul>
+                <li>Mutual Q&A, values alignment, and practical questions.</li>
+                <li>Clarify expectations for the first 90 days.</li>
+                <li>Give a realistic picture of the challenges ahead.</li>
+              </ul>
+
+              <!-- 4. Role-based examples -->
+              <h2 id="section-roleloops">4. Example loops by role & seniority</h2>
+
+              <h3>A. First VP of Sales (new logo acquisition)</h3>
+              <ul>
+                <li>Screen: recruiter or founder (30–45 min)</li>
+                <li>Hiring manager: CEO/founder deep dive (60 min)</li>
+                <li>Panel 1: Sales/RevOps pipeline & deal review (60 min)</li>
+                <li>Panel 2: Cross-functional (Marketing + CS or Product) (60 min)</li>
+                <li>Case: 30–60–90 day GTM plan overview + past pipeline walkthrough</li>
+                <li>Final: founder + key stakeholder (board member, investor, or senior exec)</li>
+              </ul>
+
+              <h3>B. Senior marketer (demand + content)</h3>
+              <ul>
+                <li>Screen: recruiter or CMO (30–45 min)</li>
+                <li>Hiring manager: strategy & craft deep dive (60 min)</li>
+                <li>Panel 1: GTM & sales partnership (Sales leader) (45–60 min)</li>
+                <li>Panel 2: Product & messaging alignment (Product leader) (45 min)</li>
+                <li>Case: past campaign teardown + 90-day plan for your ICP</li>
+              </ul>
+
+              <h3>C. Operator / Chief of Staff</h3>
+              <ul>
+                <li>Screen: Ops or People leader (30–45 min)</li>
+                <li>Hiring manager: CEO/founder workstyle + judgment (60 min)</li>
+                <li>Panel 1: Cross-functional project deep dive (60 min)</li>
+                <li>Panel 2: Values, conflict, and change management (45–60 min)</li>
+                <li>Case: scenario-based working session on actual company problem</li>
+              </ul>
+
+              <!-- 5. Interviewer prep -->
+              <h2 id="section-interviewers">5. Setting interviewers up for success</h2>
+
+              <p>Respecting your team’s time starts with clarity for interviewers.</p>
+
+              <h3>Give each interviewer a one-page brief</h3>
+              <ul>
+                <li>The role scorecard: outcomes + competencies.</li>
+                <li>Which competency they own in this conversation.</li>
+                <li>Suggested questions and “green flag / red flag” signals.</li>
+              </ul>
+
+              <h3>Use consistent questions to create signal</h3>
+              <p>Examples you can reuse:</p>
+
+              <ul>
+                <li>
+                  “Tell me about a time you had to achieve <em>X outcome</em> with limited resources.
+                  How did you approach it?”
+                </li>
+                <li>
+                  “Walk me through the last time you changed your mind on a big decision.
+                  What drove that change?”
+                </li>
+                <li>
+                  “What’s a project you’re proud of that didn’t go to plan?
+                  What did you learn, and what would you do differently?”
+                </li>
+              </ul>
+
+              <div class="article-callout">
+                Train interviewers that their job is to <strong>gather evidence</strong>, not to decide alone.
+                The decision happens in the debrief, not in individual rooms.
+              </div>
+
+              <!-- 6. Candidate experience -->
+              <h2 id="section-candidate">6. Designing the candidate experience</h2>
+
+              <p>Time-respecting loops aren’t just about your team—they’re about candidates, too.</p>
+
+              <h3>Set expectations upfront</h3>
+              <ul>
+                <li>Share the full loop: stages, approximate timing, and who they’ll meet.</li>
+                <li>Explain any exercises: time required, what you’re looking for, and how it’s used.</li>
+                <li>Give a realistic timeline for decisions and stick to it.</li>
+              </ul>
+
+              <h3>Communicate in the gaps</h3>
+              <ul>
+                <li>Send a quick update if you’re delayed—silence kills trust.</li>
+                <li>Be clear when they’re in process versus when they’re on hold.</li>
+                <li>Always close the loop, even if it’s a no.</li>
+              </ul>
+
+              <h3>Respect their work</h3>
+              <ul>
+                <li>Don’t ask for multi-day unpaid projects.</li>
+                <li>Focus exercises on realistic, bounded scenarios.</li>
+                <li>Offer to share high-level feedback where possible.</li>
+              </ul>
+
+              <!-- 7. Debrief & decision -->
+              <h2 id="section-debrief">7. Debrief: where you actually make the decision</h2>
+
+              <p>
+                A structured debrief saves hours of back-channeling and gives everyone a voice without devolving
+                into “I liked them” debates.
+              </p>
+
+              <h3>Run a 30–45 minute debrief with this structure</h3>
+
+              <ul>
+                <li><strong>Step 1 – Restate the role & scorecard.</strong> Remind people what matters.</li>
+                <li>
+                  <strong>Step 2 – Silent score entry.</strong> Each interviewer logs their 1–5 scores
+                  and short notes before discussion.
+                </li>
+                <li>
+                  <strong>Step 3 – Round-robin signal sharing.</strong> Each person shares: what they assessed,
+                  what they saw, and specific examples.
+                </li>
+                <li>
+                  <strong>Step 4 – Identify strong alignment or disagreements.</strong> Where are we wildly off?</li>
+                <li>
+                  <strong>Step 5 – Hiring manager decides.</strong> After hearing the room, the hiring manager
+                  makes the call and owns it.
+                </li>
+              </ul>
+
+              <div class="article-callout">
+                Consensus isn’t the goal. <strong>Informed ownership</strong> is. You want rich input,
+                clear tradeoffs, and a single decision owner.
+              </div>
+
+              <!-- 8. Metrics & iteration -->
+              <h2 id="section-metrics">8. Metrics that tell you if the loop is working</h2>
+
+              <p>Track a handful of simple metrics across roles:</p>
+
+              <ul>
+                <li><strong>Time to decision</strong> (from screen to offer or rejection).</li>
+                <li><strong>Number of interviews per hire</strong> (by role).</li>
+                <li><strong>Interviewer load</strong> (hours/week on interviews for key leaders).</li>
+                <li><strong>Candidate drop-off rate</strong> (who withdraws and when).</li>
+                <li><strong>Quality-of-hire signals</strong> at 90 days and 12 months.</li>
+              </ul>
+
+              <p>
+                If people are burned out on interviews, candidates keep withdrawing before the end of the loop,
+                or you’re still unsure after 5+ conversations, your loop needs tightening.
+              </p>
+
+              <!-- 9. TL;DR -->
+              <h2 id="section-summary">9. Hiring manager TL;DR</h2>
+
+              <ul>
+                <li>Design the loop <strong>before</strong> you open the role.</li>
+                <li>Give every interviewer a clear job and a piece of the scorecard.</li>
+                <li>Limit the number of interviews and protect your team’s calendar.</li>
+                <li>Set expectations with candidates and communicate throughout.</li>
+                <li>Use structured debriefs so decisions are based on evidence, not vibes.</li>
+              </ul>
+
+              <p>
+                When you treat the interview loop as a system—not a series of one-off meetings—you build a hiring
+                culture that respects time, produces better decisions, and makes top candidates more excited to work
+                with you.
+              </p>
+
+              <div class="article-callout">
+                If you want help translating this into a concrete loop for your sales, marketing, product, or
+                leadership roles, we can co-design the process and run the search with you.
+              </div>
+
+              <p>
+                <a href="https://app.thehirepilot.com/f/new-client" class="text-link">
+                  Share your next role with Offr Group →
+                </a>
+              </p>
+            </article>
+          </div>
+
+          <!-- TOC / SIDE PANEL -->
+          <div class="col-lg-4">
+            <aside class="article-toc">
+              <h4>On this page</h4>
+              <ul>
+                <li><a href="#section-problems">1. Why loops break</a></li>
+                <li><a href="#section-principles">2. Core principles</a></li>
+                <li><a href="#section-structure">3. Reusable loop structure</a></li>
+                <li><a href="#section-roleloops">4. Role-based examples</a></li>
+                <li><a href="#section-interviewers">5. Interviewer prep</a></li>
+                <li><a href="#section-candidate">6. Candidate experience</a></li>
+                <li><a href="#section-debrief">7. Debrief</a></li>
+                <li><a href="#section-metrics">8. Metrics</a></li>
+                <li><a href="#section-summary">9. TL;DR</a></li>
+              </ul>
+
+              <p class="toc-note">
+                Built for SaaS, tech, and services teams that want world-class hiring without burning out
+                the people doing the work.
+              </p>
+
+              <div class="article-cta-block">
+                Ready to turn this into a living system?<br />
+                <a href="https://app.thehirepilot.com/f/new-client">Talk to Offr Group about your next hire.</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--====== FOOTER ======-->
+  <footer class="footer-area" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-top d-block d-sm-flex  justify-content-between align-items-center">
+            <div class="footer-logo mb-4">
+              <a href="index.html">
+                <img src="assets/images/OFFR-GROUP-Logo-White.png" alt="Offr Group Logo">
+              </a>
+            </div>
+            <div class="footer-social">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-about mt-30">
+              <h4 class="title">Offr Group</h4>
+              <p>Offr Group is a nimble recruiting firm for high-velocity teams. We help founders and leaders build lean hiring systems, reach passive talent, and make confident hires—without slowing down the work.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-list mt-30 ml-95">
+              <h4 class="title">Quick links</h4>
+              <ul>
+                <li><a href="index.html#engagements">Engagement Models</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Recent Placements</a></li>
+                <li><a href="about.html#team">Our Team</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-list mt-30">
+              <h4 class="title">For you</h4>
+              <ul>
+                <li><a href="for-founders.html">For Founders</a></li>
+                <li><a href="jobseeker-program.html">For Job Seekers</a></li>
+                <li><a href="hiring-manager-playbook.html">Hiring Manager Playbook</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Hiring Playbooks</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info mt-30">
+              <h3 class="title">Contact</h3>
+              <ul>
+                <li><i class="fal fa-map-marker-alt"></i> Based in the US — working with teams remotely and globally.</li>
+                <li><i class="fal fa-phone"></i> +1 (210) 742-1010</li>
+                <li><i class="fal fa-envelope"></i> engage@offrgroup.com </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-copyright">
+            <p>© Offr Group. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hiring Operators & Chiefs of Staff | Hiring Manager Playbook | Offr Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core CSS (same as other pages) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Article-specific styling (scoped) -->
+  <style>
+    /* =========================================
+       PLAYBOOK ARTICLE – OPERATORS & CHIEFS
+       ========================================= */
+
+    .article-hero.playbook-article-hero {
+      padding: 150px 0 120px;
+      background: radial-gradient(circle at top left, #223149 0%, #161b29 45%, #0b101c 100%);
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .playbook-article-hero .row {
+      align-items: center;
+    }
+
+    .playbook-article-hero .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f7b15a;
+      margin-bottom: 18px;
+    }
+
+    .playbook-article-hero .article-title {
+      font-size: 40px;
+      line-height: 1.13;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #f5f5f5;
+    }
+
+    .playbook-article-hero .article-subtitle {
+      font-size: 16px;
+      max-width: 560px;
+      color: #e3e7ee;
+      margin-bottom: 22px;
+    }
+
+    .playbook-article-hero .article-meta {
+      font-size: 14px;
+      color: #c7cfdd;
+      margin-bottom: 8px;
+    }
+
+    .playbook-article-hero .article-back-link {
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .playbook-article-hero .article-back-link:hover {
+      color: #f7b15a;
+      text-decoration: underline;
+    }
+
+    .playbook-article-hero .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .playbook-article-hero .outline-btn {
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      padding: 10px 22px;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .playbook-article-hero .outline-btn:hover {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .gradient-highlight {
+      background: linear-gradient(90deg, #ffb36b 0%, #ffc878 45%, #ffe3a1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Right-hand meta card */
+    .article-side-card {
+      background: rgba(5, 9, 18, 0.92);
+      border-radius: 18px;
+      padding: 24px 26px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #e5ecf7;
+      max-width: 360px;
+      margin-left: auto;
+    }
+
+    .article-side-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #f9fafb;
+    }
+
+    .article-side-card ul {
+      margin: 0 0 12px;
+      padding-left: 18px;
+    }
+
+    .article-side-card ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    .article-side-card .side-cta {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ================================
+       ARTICLE BODY LAYOUT
+       ================================ */
+
+    .article-body {
+      padding: 80px 0 120px;
+      background: #f9fafb;
+    }
+
+    .article-body .article-main {
+      max-width: 780px;
+    }
+
+    .article-body h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .article-body h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .article-body p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    .article-body ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .article-body ul li {
+      font-size: 15px;
+      color: #4b5563;
+      margin-bottom: 6px;
+    }
+
+    .article-body strong {
+      color: #111827;
+    }
+
+    .article-callout {
+      border-left: 4px solid #3b82f6;
+      background: #eff6ff;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #1d4ed8;
+      margin: 22px 0;
+    }
+
+    /* TOC / Right column */
+    .article-toc {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+      position: sticky;
+      top: 110px;
+    }
+
+    .article-toc h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .article-toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 8px;
+    }
+
+    .article-toc ul li {
+      margin-bottom: 6px;
+    }
+
+    .article-toc ul li a {
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .article-toc ul li a:hover {
+      color: #111827;
+      text-decoration: underline;
+    }
+
+    .article-toc .toc-note {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    .article-cta-block {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .article-cta-block a {
+      color: #111827;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .article-cta-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 992px) {
+      .article-hero.playbook-article-hero {
+        padding: 130px 0 90px;
+      }
+
+      .article-side-card {
+        margin: 30px auto 0;
+      }
+
+      .article-toc {
+        margin-top: 40px;
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .playbook-article-hero {
+        text-align: center;
+      }
+
+      .playbook-article-hero .article-subtitle,
+      .playbook-article-hero .article-title {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .playbook-article-hero .btn-row {
+        justify-content: center;
+      }
+
+      .article-hero .article-back-link {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--====== HEADER PART START (same as homepage) ======-->
+  <header class="header-area">
+    <div class="header-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="navigation">
+              <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/OFFR-GROUP-Logo-White.png"
+                       alt="Offr Group logo"
+                       class="offr-logo" />
+                </a>
+
+                <!-- MOBILE TOGGLER -->
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button>
+
+                <!-- MAIN NAV -->
+                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html#engagements">Engagements</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- CTA BUTTON -->
+                <div class="navbar-btn d-none d-sm-block">
+                  <a class="main-btn"
+                     href="https://app.thehirepilot.com/f/new-client">
+                    Book a Strategy Call
+                  </a>
+                </div>
+
+              </nav>
+            </div> <!-- navigation -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+  </header>
+  <!--====== HEADER PART ENDS ======-->
+
+  <main>
+    <!--======== ARTICLE HERO ========-->
+    <section class="article-hero playbook-article-hero">
+      <div class="container">
+        <div class="row">
+          <!-- LEFT -->
+          <div class="col-lg-8">
+            <a href="hiring-manager-playbook.html" class="article-back-link">
+              ← Back to Hiring Manager Playbook
+            </a>
+
+            <span class="eyebrow">Hiring Manager Playbook</span>
+
+            <h1 class="article-title">
+              Hiring Operators & Chiefs of Staff:<br />
+              finding the <span class="gradient-highlight">force multiplier</span> your team can actually use
+            </h1>
+
+            <p class="article-subtitle">
+              The right operator or Chief of Staff can pull you out of founder chaos and move your whole org
+              three quarters ahead. The wrong one becomes an expensive project manager with no leverage.
+              This playbook shows you how to tell the difference.
+            </p>
+
+            <p class="article-meta">
+              Category: Operations & Leadership • Approx. 14 minute read
+            </p>
+
+            <div class="btn-row">
+              <a href="#article-body" class="main-btn">Start reading the playbook</a>
+              <a href="https://thehirepilot.com" class="outline-btn" target="_blank" rel="noopener">
+                See how HirePilot runs Ops & CoS searches
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT META CARD -->
+          <div class="col-lg-4">
+            <aside class="article-side-card">
+              <h4>Who this is for</h4>
+              <ul>
+                <li>Founders drowning in decisions and context</li>
+                <li>CEOs ready to step out of day-to-day ops</li>
+                <li>Teams considering their first Chief of Staff</li>
+              </ul>
+              <h4>What you’ll leave with</h4>
+              <ul>
+                <li>Clear differences: Operator vs CoS vs EA</li>
+                <li>Scorecards & interview prompts</li>
+                <li>A 90-day onboarding plan</li>
+              </ul>
+
+              <a href="https://app.thehirepilot.com/f/new-client"
+                 class="main-btn side-cta">
+                Get help with your next hire
+              </a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--======== ARTICLE BODY ========-->
+    <section class="article-body" id="article-body">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- MAIN CONTENT -->
+          <div class="col-lg-8">
+            <article class="article-main">
+              <!-- Intro -->
+              <p>
+                Every founder hits the same wall: the company is finally working, but their calendar
+                is the single biggest bottleneck in the business.
+              </p>
+
+              <p>
+                Deals are moving, the team is growing, and yet every decision, every escalation, every
+                hiring choice still routes back through the same person. You.
+              </p>
+
+              <div class="article-callout">
+                Operators and Chiefs of Staff are how you trade <strong>founder heroics</strong> for
+                <strong>repeatable execution</strong>. But only if you hire the right archetype for your stage.
+              </div>
+
+              <p>
+                This guide walks you through how to define the role, where these people do their best work,
+                how to interview them, and how to set up the first 90 days so you actually get leverage.
+              </p>
+
+              <!-- Section 1 -->
+              <h2 id="section-stages">1. Where operators & Chiefs of Staff do their best work</h2>
+
+              <p>
+                Before you post a job, you need to understand when these roles shine, and when they’re just
+                an expensive band-aid.
+              </p>
+
+              <h3>Early stage (0–$2M ARR): high noise, low structure</h3>
+              <ul>
+                <li>You’re still proving product-market fit.</li>
+                <li>Priorities change week to week.</li>
+                <li>Founder is still in the weeds on almost everything.</li>
+              </ul>
+
+              <p>
+                In this stage, a full-fledged Chief of Staff can be premature. What you often need is
+                a <strong>generalist operator</strong> or <strong>ops-minded EA</strong> who can:
+              </p>
+
+              <ul>
+                <li>Keep projects moving across functions.</li>
+                <li>Translate founder decisions into clear tasks.</li>
+                <li>Create just enough process to avoid chaos, not bureaucracy.</li>
+              </ul>
+
+              <h3>Expansion stage ($2M–$10M ARR): complexity goes up, specialization starts</h3>
+              <ul>
+                <li>Multiple teams, multiple priorities, more stakeholders.</li>
+                <li>Leadership bandwidth is the constraint, not opportunities.</li>
+                <li>Cross-functional work is where things break.</li>
+              </ul>
+
+              <p>
+                Here is where a true <strong>Chief of Staff or senior operator</strong> can be a massive unlock:
+              </p>
+
+              <ul>
+                <li>Owner of cross-functional projects (pricing, launches, hiring plans).</li>
+                <li>Right hand to the CEO on strategy execution, not just scheduling.</li>
+                <li>Translator between “what we decided” and “what we actually shipped”.</li>
+              </ul>
+
+              <h3>Later stage ($10M+ ARR): portfolio of bets, exec calendar congestion</h3>
+              <ul>
+                <li>Your exec team is juggling multiple initiatives.</li>
+                <li>Meetings multiply; decisions slow down.</li>
+                <li>You need someone to run the operating rhythm of the business.</li>
+              </ul>
+
+              <p>
+                Now CoS becomes the <strong>air traffic controller</strong>:
+                owning cadences, prepping key meetings, and ensuring that strategic work doesn’t die in docs.
+              </p>
+
+              <!-- Section 2 -->
+              <h2 id="section-archetypes">2. Operator vs CoS vs EA vs “mini-founder”</h2>
+
+              <p>
+                Titles are messy. Let’s strip them back to the work.
+              </p>
+
+              <h3>Executive Assistant (EA)</h3>
+              <ul>
+                <li>Owns calendar, inbox, travel, logistics.</li>
+                <li>Protects your time and attention.</li>
+                <li>Leverages systems but usually not responsible for cross-functional projects.</li>
+              </ul>
+
+              <p><strong>Think:</strong> leverage on the administrative and coordination side.</p>
+
+              <h3>Operator / Generalist Ops</h3>
+              <ul>
+                <li>Owns projects with clear scope and outcomes.</li>
+                <li>Comfortable building light process and dashboards.</li>
+                <li>Often rolls up under Ops, RevOps, or directly to the founder.</li>
+              </ul>
+
+              <p><strong>Think:</strong> person who gets “messy middle” projects over the line.</p>
+
+              <h3>Chief of Staff</h3>
+              <ul>
+                <li>Trusted extension of the CEO/Founder in rooms you’re not in.</li>
+                <li>Runs operating cadence: leadership meetings, OKRs, strategic projects.</li>
+                <li>High judgment, strong pattern recognition, deep context on the business.</li>
+              </ul>
+
+              <p><strong>Think:</strong> strategic operator with access, trust, and responsibility.</p>
+
+              <h3>“Mini-founder” archetype</h3>
+              <ul>
+                <li>Acts like an owner across ambiguous terrain.</li>
+                <li>Sees gaps and fills them without waiting for permission.</li>
+                <li>Can eventually grow into GM, VP Ops, or even founder of a new initiative.</li>
+              </ul>
+
+              <div class="article-callout">
+                Don’t hire a Chief of Staff when you really need an EA plus a strong operator.
+                CoS is not just “EA with a bigger title”. It’s a strategic role with real decision leverage.
+              </div>
+
+              <!-- Section 3 -->
+              <h2 id="section-misfires">3. Mis-hire patterns with operators & CoS</h2>
+
+              <h3>Pattern #1 – The “project manager with a fancy title” CoS</h3>
+              <p>
+                They’re great at note-taking, making checklists, and sending follow-ups…
+                but they don’t influence decisions, challenge priorities, or own outcomes.
+              </p>
+
+              <h3>Pattern #2 – The ex-consultant who never ships</h3>
+              <p>
+                They produce beautiful decks and frameworks but struggle to drive execution in noisy,
+                resource-constrained environments.
+              </p>
+
+              <h3>Pattern #3 – The ops generalist asked to do strategy they’re not ready for</h3>
+              <p>
+                They’re strong at running projects but overwhelmed by executive-level tradeoffs,
+                politics, and cross-functional conflict.
+              </p>
+
+              <h3>Pattern #4 – Hiring someone you can’t actually give power to</h3>
+              <p>
+                You say you want leverage, but every decision still comes back through you.
+                The CoS becomes a bottleneck plus one, instead of a force multiplier.
+              </p>
+
+              <!-- Section 4 -->
+              <h2 id="section-clarity">4. Role clarity: what problem are you really solving?</h2>
+
+              <p>Before writing a JD, answer three questions in one doc:</p>
+
+              <h3>1. What’s breaking today?</h3>
+              <ul>
+                <li>Too many projects half-finished?</li>
+                <li>No operating rhythm? (ad-hoc meetings, unclear decisions)</li>
+                <li>You’re stuck in tactical work instead of strategic?</li>
+              </ul>
+
+              <h3>2. Where do you personally want to reclaim time?</h3>
+              <ul>
+                <li>Hiring and people decisions?</li>
+                <li>Customer/partner relationships?</li>
+                <li>Product and GTM strategy?</li>
+              </ul>
+
+              <p>
+                Your answer here shapes whether you need an <strong>execution-heavy operator</strong>
+                or a <strong>strategic CoS</strong>.
+              </p>
+
+              <h3>3. What authority will this person actually have?</h3>
+              <ul>
+                <li>Can they say “no” to projects?</li>
+                <li>Can they re-order priorities in a quarter?</li>
+                <li>Can they represent you in exec or board prep?</li>
+              </ul>
+
+              <div class="article-callout">
+                If you can’t envision this person disagreeing with you and still thriving in the role,
+                you’re not ready for a real Chief of Staff. Start with operator/EA leverage first.
+              </div>
+
+              <!-- Section 5 -->
+              <h2 id="section-scorecards">5. Scorecards for Operator & Chief of Staff</h2>
+
+              <h3>Operator scorecard (Execution-first)</h3>
+
+              <p><strong>Must-have outcomes:</strong></p>
+              <ul>
+                <li>Projects ship on time, with clear owners and measurable impact.</li>
+                <li>Cross-functional work (launches, migrations, pricing tests) stops stalling.</li>
+                <li>Team feels more clarity, not more meetings.</li>
+              </ul>
+
+              <p><strong>Capabilities to assess:</strong></p>
+              <ul>
+                <li>Project scoping: can they turn chaos into a clear plan?</li>
+                <li>Prioritization: can they pick the next best thing with limited data?</li>
+                <li>Stakeholder management: can they push leaders without alienating them?</li>
+                <li>Systems thinking: can they improve how work flows, not just push tasks?</li>
+              </ul>
+
+              <p><strong>Red flags:</strong></p>
+              <ul>
+                <li>Everything is “I helped with…” and nothing is “I owned…”.</li>
+                <li>They over-index on tools and boards, under-index on hard decisions.</li>
+                <li>They’ve never killed a project or said “no” to a bad idea.</li>
+              </ul>
+
+              <h3>Chief of Staff scorecard (Leverage-first)</h3>
+
+              <p><strong>Must-have outcomes:</strong></p>
+              <ul>
+                <li>CEO calendar shifts toward top-leverage work.</li>
+                <li>Leadership meetings and planning cycles become consistent and effective.</li>
+                <li>Strategic decisions don’t die in docs—someone owns orchestration.</li>
+              </ul>
+
+              <p><strong>Capabilities to assess:</strong></p>
+              <ul>
+                <li>Executive communication: can they brief, synthesize, and push back?</li>
+                <li>Judgment: can they make calls in the gray when you’re not in the room?</li>
+                <li>Operating rhythm design: OKRs, QBRs, weekly leadership syncs.</li>
+                <li>Change management: can they shepherd the org through shifts?</li>
+              </ul>
+
+              <p><strong>Red flags:</strong></p>
+              <ul>
+                <li>They avoid conflict and “hard conversations”.</li>
+                <li>They’ve never worked directly with a founder/CEO before.</li>
+                <li>They talk like a strategist but have thin examples of actual execution.</li>
+              </ul>
+
+              <!-- Section 6 -->
+              <h2 id="section-interviews">6. Interview prompts that reveal judgment & resilience</h2>
+
+              <p>Use these with both operators and Chiefs of Staff:</p>
+
+              <ul>
+                <li>
+                  “Tell me about a project where everything started messy.
+                  How did you bring clarity without slowing everyone down?”
+                </li>
+                <li>
+                  “Describe a time you had to push back on a senior leader’s idea.
+                  What happened next?”
+                </li>
+                <li>
+                  “Walk me through a quarter where things didn’t go to plan.
+                  What changed because of what you did?”
+                </li>
+                <li>
+                  “What does a healthy operating rhythm look like to you at our stage?”
+                </li>
+                <li>
+                  “When you step into a new role, what do you do in your first 30 days?”
+                </li>
+              </ul>
+
+              <div class="article-callout">
+                You’re not just testing for competence. You’re testing for
+                <strong>emotional durability</strong> in an environment where priorities move fast
+                and not everything is figured out.
+              </div>
+
+              <!-- Section 7 -->
+              <h2 id="section-90days">7. Designing the first 90 days so you actually get leverage</h2>
+
+              <h3>First 30 days – Context & trust</h3>
+              <ul>
+                <li>Deep dive into product, customers, roadmap, and org chart.</li>
+                <li>Shadow key meetings and 1:1s with you and your leads.</li>
+                <li>Co-create a list of “critical friction points” in the business.</li>
+                <li>Align on 2–3 high-leverage projects they’ll own in the next 60 days.</li>
+              </ul>
+
+              <h3>Days 31–60 – Owning projects</h3>
+              <ul>
+                <li>Take formal ownership of one cross-functional initiative.</li>
+                <li>Set up lightweight tracking: what’s on track, at risk, blocked.</li>
+                <li>Start running or tightening one key meeting (e.g., weekly ops sync).</li>
+                <li>Reduce your involvement by 20–30% in at least one recurring process.</li>
+              </ul>
+
+              <h3>Days 61–90 – Operating rhythm & leverage proof</h3>
+              <ul>
+                <li>Co-design a simple operating system: planning, reviews, and check-ins.</li>
+                <li>Define what “great” looks like for the role for the next 6–12 months.</li>
+                <li>Identify which responsibilities can now permanently live with them.</li>
+                <li>Review outcomes vs. baseline: where is your time going now?</li>
+              </ul>
+
+              <!-- Section 8 -->
+              <h2 id="section-tools">8. Tools & cadences that make these roles effective</h2>
+
+              <p><strong>Suggested tooling:</strong></p>
+              <ul>
+                <li>Project tracking: Linear, Asana, Jira, or Notion—pick one and stick to it.</li>
+                <li>Dashboards: simple KPI snapshots in Notion, Sheets, or your BI tool.</li>
+                <li>Docs: decision logs and meeting notes in Notion or a central wiki.</li>
+                <li>Hiring system: HirePilot to manage roles, candidates, and pipelines.</li>
+              </ul>
+
+              <p><strong>Core cadences to implement:</strong></p>
+              <ul>
+                <li>Weekly leadership sync (60–90 mins) with a clear agenda.</li>
+                <li>Bi-weekly project review across major initiatives.</li>
+                <li>Quarterly planning and retro, owned by your operator/CoS.</li>
+                <li>Regular 1:1s with you focused on strategic alignment, not status updates.</li>
+              </ul>
+
+              <!-- Section 9 -->
+              <h2 id="section-summary">9. Founder TL;DR</h2>
+
+              <ul>
+                <li>If your calendar is chaos and everything is half-built:
+                  <strong>start with a strong operator or ops-minded EA</strong>.
+                </li>
+                <li>If your company is growing and strategy keeps stalling in execution:
+                  <strong>you may be ready for a real Chief of Staff</strong>.
+                </li>
+                <li>Hire based on the <strong>problem to solve</strong>, not the fanciest title you can afford.</li>
+              </ul>
+
+              <p>
+                The operator or CoS you hire should make your <strong>best work unavoidable</strong>—
+                by clearing noise, running the rhythm of the business, and telling the truth about what’s actually
+                getting done.
+              </p>
+
+              <div class="article-callout">
+                If you want help scoping the role, building the scorecard, and finding people who’ve already
+                done this inside high-velocity teams, that’s exactly what we do at Offr Group.
+              </div>
+
+              <p>
+                <a href="https://app.thehirepilot.com/f/new-client" class="text-link">
+                  Share your next Operator or CoS role with us →
+                </a>
+              </p>
+            </article>
+          </div>
+
+          <!-- TOC / SIDE PANEL -->
+          <div class="col-lg-4">
+            <aside class="article-toc">
+              <h4>On this page</h4>
+              <ul>
+                <li><a href="#section-stages">1. Where they add leverage</a></li>
+                <li><a href="#section-archetypes">2. Operator vs CoS vs EA</a></li>
+                <li><a href="#section-misfires">3. Mis-hire patterns</a></li>
+                <li><a href="#section-clarity">4. Role clarity</a></li>
+                <li><a href="#section-scorecards">5. Scorecards</a></li>
+                <li><a href="#section-interviews">6. Interview prompts</a></li>
+                <li><a href="#section-90days">7. 90-day plan</a></li>
+                <li><a href="#section-tools">8. Tools & cadence</a></li>
+                <li><a href="#section-summary">9. Founder TL;DR</a></li>
+              </ul>
+
+              <p class="toc-note">
+                Built for SaaS, tech, and services founders who feel like the bottleneck and need leverage without
+                losing control.
+              </p>
+
+              <div class="article-cta-block">
+                Ready to run this playbook with real candidates?<br />
+                <a href="https://app.thehirepilot.com/f/new-client">Share your next role with Offr Group.</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--====== FOOTER PART START ======-->
+  <footer class="footer-area" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-top d-block d-sm-flex  justify-content-between align-items-center">
+            <div class="footer-logo mb-4">
+              <a href="index.html">
+                <img src="assets/images/OFFR-GROUP-Logo-White.png" alt="Offr Group Logo">
+              </a>
+            </div>
+            <div class="footer-social">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-about mt-30">
+              <h4 class="title">Offr Group</h4>
+              <p>Offr Group is a nimble recruiting firm for high-velocity teams. We help founders and leaders build lean hiring systems, reach passive talent, and make confident hires—without slowing down the work.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-list mt-30 ml-95">
+              <h4 class="title">Quick links</h4>
+              <ul>
+                <li><a href="index.html#engagements">Engagement Models</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Recent Placements</a></li>
+                <li><a href="about.html#team">Our Team</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-list mt-30">
+              <h4 class="title">For you</h4>
+              <ul>
+                <li><a href="for-founders.html">For Founders</a></li>
+                <li><a href="jobseeker-program.html">For Job Seekers</a></li>
+                <li><a href="hiring-manager-playbook.html">Hiring Manager Playbook</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Hiring Playbooks</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info mt-30">
+              <h3 class="title">Contact</h3>
+              <ul>
+                <li><i class="fal fa-map-marker-alt"></i> Based in the US — working with teams remotely and globally.</li>
+                <li><i class="fal fa-phone"></i> +1 (210) 742-1010</li>
+                <li><i class="fal fa-envelope"></i> engage@offrgroup.com </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-copyright">
+            <p>© Offr Group. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--====== FOOTER PART ENDS ======-->
+
+  <!-- JS (same as other pages) -->
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -9755,3 +9755,1419 @@ p {
     margin-bottom: 24px;
   }
 }
+/* ==============================
+   FOR FOUNDERS – PAGE
+   ============================== */
+
+/* HERO */
+.founders-hero {
+  padding: 150px 0 120px;
+  background: radial-gradient(circle at top left, #27303a 0%, #161a21 55%, #0f1115 100%);
+  color: #ffffff;
+}
+
+.founders-hero-content .eyebrow {
+  display: inline-block;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #f7b15a;
+  margin-bottom: 18px;
+}
+
+.founders-hero-content .title {
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.founders-hero-content .gradient-highlight {
+  background: linear-gradient(90deg, #ffb36b 0%, #ffc878 50%, #ffe3a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.founders-hero-content p {
+  font-size: 16px;
+  max-width: 540px;
+  margin-bottom: 26px;
+  color: #e3e3e3;
+}
+
+.founders-hero-content .btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.founders-hero .outline-btn {
+  border: 2px solid #ffffff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #ffffff;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+.founders-hero .outline-btn:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.founders-meta {
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+/* Right hero panel */
+.founders-hero-panel {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 18px;
+  padding: 26px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.founders-hero-panel h4 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.founders-hero-panel ul {
+  margin: 0 0 14px 0;
+  padding-left: 20px;
+}
+
+.founders-hero-panel ul li {
+  color: #e4e4e4;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.founders-hero-panel .panel-footnote {
+  font-size: 13px;
+  color: #c7c7c7;
+}
+
+/* HOW IT WORKS */
+.founders-how-it-works {
+  padding: 90px 0 60px;
+  background: #0a0b0f;
+  color: #ffffff;
+}
+
+.founders-how-it-works .section-title .title {
+  color: #ffffff;
+}
+
+.founders-how-it-works .section-title p {
+  color: #d3d3d3;
+}
+
+.founders-steps-row {
+  margin-top: 40px;
+}
+
+.founders-step-card {
+  background: radial-gradient(circle at top left, #262c36 0%, #161921 60%, #101218 100%);
+  border-radius: 20px;
+  padding: 26px 24px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.founders-step-card .step-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #f7b15a;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.founders-step-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.founders-step-card p {
+  font-size: 14px;
+  color: #d8d8d8;
+}
+
+/* CATEGORY SECTION */
+.founders-categories {
+  padding: 80px 0 80px;
+  background: #050609;
+  color: #ffffff;
+}
+
+.founders-categories-intro .eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #f7b15a;
+  margin-bottom: 10px;
+}
+
+.founders-categories-intro h3 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.founders-categories-intro p {
+  color: #d0d0d0;
+  margin-bottom: 14px;
+}
+
+.founders-categories-intro .text-link {
+  color: #ffc878;
+  font-size: 14px;
+}
+
+.founder-category-card {
+  background: #10131b;
+  border-radius: 18px;
+  padding: 22px 22px 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.founder-category-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.founder-category-card p {
+  font-size: 14px;
+  color: #d4d4d4;
+  margin-bottom: 10px;
+}
+
+.founder-category-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.founder-category-card ul li {
+  font-size: 13px;
+  color: #bfc0c5;
+  margin-bottom: 4px;
+}
+
+/* PRICING NOTE */
+.founders-pricing-note {
+  padding: 80px 0 90px;
+  background: #050609;
+}
+
+.founders-pricing-card {
+  background: radial-gradient(circle at top left, #262c35 0%, #181b22 60%, #111319 100%);
+  border-radius: 22px;
+  padding: 36px 40px 34px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.founders-pricing-card h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.founders-pricing-card p {
+  font-size: 15px;
+  color: #dadada;
+  margin-bottom: 22px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .founders-hero {
+      padding: 130px 0 90px;
+      text-align: center;
+  }
+  .founders-hero-content .title {
+      font-size: 36px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .founders-hero-content p {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .founders-hero-panel {
+      margin: 32px auto 0;
+  }
+}
+.founders-hero {
+  min-height: 90vh;
+  padding: 150px 0 120px;
+  background: radial-gradient(
+      circle at top right,
+      #3b4652 0%,
+      #22262c 45%,
+      #1a1d20 100%
+  );
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.founders-hero .hero-title {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.founders-hero .hero-title .gradient-text {
+  background: radial-gradient(circle at top left, #2e3542 0%, #1a1d21 60%, #0f1113 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ==========================================================
+   FOUNDERS HERO SECTION – PREMIUM GRADIENT + CLEAN OVERRIDES
+   ========================================================== */
+
+   .founders-hero {
+    padding: 150px 0 120px;
+    min-height: 90vh;
+    background: radial-gradient(
+        circle at top left,
+        #404852 0%,
+        #22262c 45%,
+        #1a1d21 100%
+    );
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+}
+
+/* Eyebrow */
+.founders-eyebrow {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    color: #f7b15a;
+    display: block;
+    margin-bottom: 18px;
+}
+
+/* MAIN TITLE */
+.founders-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #f8f8f8 !important;
+    max-width: 550px;
+}
+
+.founders-title-accent {
+    background: linear-gradient(90deg, #ffcf87 0%, #ffdba5 50%, #fff2d1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.founders-desc {
+    font-size: 16px;
+    color: #e6e6e6;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.founders-btn-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.founders-outline-btn {
+    border: 2px solid #ffffff !important;
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: #ffffff !important;
+}
+.founders-outline-btn:hover {
+    background: #ffffff !important;
+    color: #111 !important;
+}
+
+/* Right Panel */
+.founders-hero-panel {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 28px 32px;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    margin-left: auto;
+    max-width: 420px;
+    color: #ffffff;
+}
+
+.founders-panel-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #ffffff !important;
+}
+
+.founders-panel-list li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #e0e0e0;
+}
+
+.founders-panel-footnote {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #cfcfcf;
+}
+.founders-hero {
+  padding: 150px 0 120px;
+  min-height: 90vh;
+
+  /* NEW BURGUNDY GRADIENT */
+  background: radial-gradient(
+      circle at top left,
+      #3a0d16 0%,
+      #24070e 40%,
+      #110307 100%
+  );
+
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+}
+/* Force white hero title on Founders page */
+.founders-hero .title {
+  color: #ffffff !important;
+}
+
+/* Make gradient-highlight POP more on burgundy */
+.founders-hero .title .gradient-highlight {
+  background: linear-gradient(90deg, #ffc878 0%, #ffdca1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.founders-hero .title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+/* Founders – structure card title */
+.structure-card-title {
+  color: #ffffff !important;
+}
+
+/* ==============================
+   Founders Testimonials Section
+   ============================== */
+
+   .founders-testimonials {
+    padding: 120px 0;
+    background: #0d0c0c; /* smooth dark background for separation */
+}
+
+.testimonials-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 32px 36px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    color: #e6e6e6;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+.testimonial-card .quote {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #f5f5f5;
+    margin-bottom: 24px;
+}
+
+.testimonial-card .author strong {
+    color: #ffc878; /* Offr gold */
+    font-size: 16px;
+}
+
+.testimonial-card .author span {
+    font-size: 14px;
+    color: #c9c9c9;
+}
+/* =========================================
+   HIRING MANAGER PLAYBOOK – HERO
+   ========================================= */
+
+   .playbook-hero {
+    padding: 150px 0 130px;
+    background: radial-gradient(circle at top left, #223149 0%, #161b29 45%, #0b101c 100%);
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .playbook-hero .row {
+    align-items: center;
+  }
+  
+  /* Eyebrow label */
+  .playbook-hero .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #f7b15a;
+    margin-bottom: 18px;
+  }
+  
+  /* Main title */
+  .playbook-title {
+    font-size: 46px;
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    max-width: 620px;
+  }
+  
+  /* Kill homepage scribble underline if it exists */
+  .playbook-title::before {
+    content: none !important;
+  }
+  
+  /* Gradient word “teams” etc. */
+  .gradient-highlight {
+    background: linear-gradient(90deg, #ffb36b 0%, #ffc878 45%, #ffe3a1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  /* Subtitle + footnote */
+  .playbook-subtitle {
+    font-size: 16px;
+    max-width: 540px;
+    margin-bottom: 26px;
+    color: #e3e7ee;
+  }
+  
+  .playbook-footnote {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #c8d0dd;
+  }
+  
+  /* Buttons row */
+  .playbook-hero .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 6px;
+  }
+  
+  /* Outline button override just in hero */
+  .playbook-hero .outline-btn {
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 11px 24px;
+    color: #ffffff;
+    display: inline-block;
+    transition: 0.25s ease;
+  }
+  
+  .playbook-hero .outline-btn:hover {
+    background: #ffffff;
+    color: #111111;
+  }
+  
+  /* Right-hand side card */
+  .playbook-side-card {
+    background: rgba(5, 9, 18, 0.82);
+    border-radius: 18px;
+    padding: 28px 30px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    color: #e5ecf7;
+    max-width: 420px;
+    margin-left: auto;
+  }
+  
+  .playbook-side-card h4 {
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: #f5f5f5;
+  }
+  
+  .playbook-side-card ul {
+    margin: 0 0 20px;
+    padding-left: 20px;
+  }
+  
+  .playbook-side-card ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Button inside the side card */
+  .playbook-side-card .side-cta {
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Hero responsive tweaks */
+  @media (max-width: 992px) {
+    .playbook-hero {
+      padding: 130px 0 90px;
+      text-align: left;
+    }
+  
+    .playbook-side-card {
+      margin: 40px auto 0;
+    }
+  
+    .playbook-title {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .playbook-hero {
+      text-align: center;
+    }
+  
+    .playbook-subtitle,
+    .playbook-title,
+    .playbook-footnote {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .playbook-hero .btn-row {
+      justify-content: center;
+    }
+  }
+  
+  /* =========================================
+     FEATURED CONVERSATIONS SECTION
+     (section with id="featured" and class="playbook-featured")
+     ========================================= */
+  
+  .playbook-featured {
+    padding: 90px 0 110px;
+    background: #f6f7fb;
+    color: #111827;
+  }
+  
+  .playbook-featured .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .playbook-featured .section-heading h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  
+  .playbook-featured .section-heading p {
+    max-width: 680px;
+    margin: 0 auto 18px;
+    font-size: 16px;
+    color: #4b5563;
+  }
+  
+  /* Little orange divider */
+  .playbook-featured .divider {
+    width: 56px;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ffb36b, #ffc878);
+    margin: 0 auto;
+  }
+  
+  /* Generic column spacing */
+  .playbook-featured h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .playbook-featured p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #4b5563;
+  }
+  
+  .playbook-featured ul {
+    margin: 10px 0 0;
+    padding-left: 18px;
+  }
+  
+  .playbook-featured ul li {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #4b5563;
+  }
+  
+  /* =========================================
+     PLAYBOOKS & TEMPLATES SECTION
+     (section id="playbook-guides")
+     ========================================= */
+  
+  .playbook-templates-section {
+    padding: 120px 0 150px;
+    background: linear-gradient(180deg, #f5f7fb 0%, #eef2f8 55%, #dde5f4 100%);
+    color: #0f172a;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Intro column */
+  .playbook-templates-intro h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0 18px;
+  }
+  
+  .playbook-templates-intro p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4b5563;
+    max-width: 520px;
+  }
+  
+  .playbook-templates-intro .small-note {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  /* Grid for the 4 cards */
+  .playbook-templates-section .playbook-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 40px;
+    row-gap: 40px;
+    margin-top: 32px;
+  }
+  
+  /* Individual card */
+  .playbook-templates-section .playbook-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 28px 26px;
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    transition: 0.25s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .playbook-templates-section .playbook-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  }
+  
+  /* Card content */
+  .playbook-templates-section .playbook-card .tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #9ca3af;
+    margin-bottom: 6px;
+  }
+  
+  .playbook-templates-section .playbook-card h4 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111827;
+  }
+  
+  .playbook-templates-section .playbook-card p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .playbook-templates-section .playbook-card ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
+  }
+  
+  .playbook-templates-section .playbook-card ul li {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 6px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .playbook-templates-section {
+      padding: 90px 0 120px;
+    }
+  
+    .playbook-templates-intro {
+      margin-bottom: 32px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .playbook-templates-section .playbook-card-grid {
+      column-gap: 28px;
+      row-gap: 28px;
+    }
+  }
+  
+  /* =========================================
+     TOOLS & SYSTEMS SECTION
+     (section class="playbook-section tools-section" id="tools")
+     ========================================= */
+  
+  .playbook-section.tools-section {
+    padding: 110px 0 130px;
+    background: radial-gradient(circle at top, #1d2434 0%, #0f172a 45%, #050814 100%);
+    color: #ffffff;
+  }
+  
+  /* Left intro column */
+  .tools-section .playbook-section-intro h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0 18px;
+    color: #f5f5f5;
+  }
+  
+  .tools-section .playbook-section-intro p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d5dde9;
+  }
+  
+  /* Tools list layout */
+  .tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  /* Individual tool card */
+  .tool-item {
+    background: rgba(7, 13, 26, 0.92);
+    border-radius: 18px;
+    padding: 20px 22px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+  }
+  
+  .tool-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #f9fafb;
+  }
+  
+  .tool-item p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #cfd7e6;
+    margin-bottom: 4px;
+  }
+  
+  /* Link to HirePilot */
+  .tools-section .text-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 14px;
+    color: #7fb3ff;
+    text-decoration: none;
+  }
+  
+  .tools-section .text-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Tools responsive tweaks */
+  @media (max-width: 992px) {
+    .playbook-section.tools-section {
+      padding: 90px 0 110px;
+    }
+  
+    .tools-section .playbook-section-intro {
+      margin-bottom: 28px;
+    }
+  }
+  /* ============================
+   FEATURED CONVERSATIONS
+   ============================ */
+
+.playbook-featured {
+  padding: 110px 0 120px;              /* nice breathing room */
+  background: #f5f7fb;                 /* soft light gray */
+  color: #111827;
+  border-top: 1px solid rgba(15,23,42,0.06);
+}
+
+/* Heading */
+.playbook-featured .section-heading h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.playbook-featured .section-heading p {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+/* Layout spacing between columns */
+.playbook-featured .col-lg-4,
+.playbook-featured .col-md-6 {
+  margin-bottom: 28px;
+}
+
+/* Card styling – scoped so it only affects this section */
+.playbook-featured .playbook-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 26px 24px 22px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label, title, body, meta */
+.playbook-featured .card-label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.playbook-featured .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.playbook-featured .card-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 14px;
+}
+
+.playbook-featured .card-meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* Link at bottom of card */
+.playbook-featured .card-link {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  text-decoration: none;
+}
+
+.playbook-featured .card-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .playbook-featured {
+    padding: 90px 0 100px;
+  }
+
+  .playbook-featured .section-heading h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================================================
+   FEATURED CONVERSATIONS — DARK GRADIENT EDITION
+   ========================================================= */
+
+   .playbook-featured {
+    padding: 130px 0 145px;
+    background: linear-gradient(
+      180deg,
+      #0f172a 0%,
+      #111827 40%,
+      #0b0f1a 100%
+    );
+    color: #f3f4f6;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* subtle top glow */
+  .playbook-featured::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 200px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(80, 111, 255, 0.18) 0%,
+      rgba(80, 111, 255, 0) 70%
+    );
+    z-index: 0;
+  }
+  
+  /* ======= Section Heading ======= */
+  .playbook-featured .section-heading {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .playbook-featured .section-heading h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+  }
+  
+  .playbook-featured .section-heading p {
+    max-width: 740px;
+    margin: 0 auto 55px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  /* ======= Cards Layout ======= */
+  .playbook-featured .col-lg-4,
+  .playbook-featured .col-md-6 {
+    margin-bottom: 36px;
+  }
+  
+  /* ======= Card Styling (glowing white cards) ======= */
+  .playbook-featured .playbook-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 32px 28px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow:
+      0 12px 35px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .playbook-featured .playbook-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.55),
+      0 0 18px rgba(255, 255, 255, 0.12);
+  }
+  
+  /* Card basics */
+  .playbook-featured .card-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: #6b7280;
+    margin-bottom: 10px;
+  }
+  
+  .playbook-featured .card-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #0f172a;
+  }
+  
+  .playbook-featured .card-body {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 18px;
+  }
+  
+  .playbook-featured .card-meta {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 18px;
+  }
+  
+  /* Link */
+  .playbook-featured .card-link {
+    margin-top: auto;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e3a8a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .playbook-featured .card-link:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+  
+  /* ======= Mobile tweaks ======= */
+  @media (max-width: 768px) {
+    .playbook-featured {
+      padding: 110px 0 130px;
+    }
+  
+    .playbook-featured .section-heading h2 {
+      font-size: 32px;
+    }
+  }
+  /* ============= BLOG HERO ============= */
+
+.blog-hero {
+  padding: 120px 0 80px;
+  background: radial-gradient(circle at top left, #1a2233 0%, #0e1623 55%, #080d14 100%);
+  color: #ffffff;
+}
+
+.blog-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 13px;
+  color: #ffcb84;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.blog-title {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 850px;
+  margin-bottom: 20px;
+}
+
+.blog-subtitle {
+  font-size: 18px;
+  color: #e6e9f0;
+  max-width: 680px;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.blog-meta {
+  font-size: 14px;
+  color: #bfc7d5;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ============= MAIN CONTENT ============= */
+
+.blog-content {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.blog-content .container {
+  display: flex;
+  gap: 50px;
+}
+
+/* Table of Contents */
+.blog-toc {
+  width: 260px;
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+.blog-toc h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.blog-toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-toc ul li {
+  margin-bottom: 10px;
+}
+
+.blog-toc ul li a {
+  color: #4a5568;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.blog-toc ul li a:hover {
+  color: #111827;
+}
+
+/* Article */
+.blog-article {
+  flex: 1;
+  max-width: 720px;
+}
+
+.blog-article h2 {
+  margin-top: 60px;
+  margin-bottom: 18px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.blog-article p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+/* ============= READ MORE ============= */
+
+.blog-more {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.blog-more h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.more-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-height: 420px; /* collapsed height */
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.more-card {
+  background: #f8f9fc;
+  padding: 22px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+.more-card h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.more-card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.more-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+}
+
+.more-btn {
+  margin-top: 30px;
+  padding: 14px 26px;
+  font-size: 15px;
+  border: none;
+  background: #111827;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.more-btn:hover {
+  opacity: 0.85;
+}
+/* ============================
+   BLOG HERO – WHITE TEXT FIX
+   ============================ */
+
+   .blog-hero {
+    color: #ffffff !important;
+  }
+  
+  .blog-hero .blog-eyebrow {
+    color: #e5e7eb !important; /* soft white */
+  }
+  
+  .blog-hero .blog-title {
+    color: #ffffff !important;
+  }
+  
+  .blog-hero .blog-subtitle {
+    color: #e5e7eb !important;
+  }
+  
+  .blog-hero .blog-meta {
+    color: #d1d5db !important;
+  }
+  
+  .blog-hero .blog-meta span {
+    color: #d1d5db !important;
+  }
+
+  .playbook-card-title-link {
+    color: #111827;
+    text-decoration: none;
+  }
+  
+  .playbook-card-title-link:hover {
+    text-decoration: underline;
+  }
+  
+  .playbook-card-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    text-decoration: none;
+  }
+  
+  .playbook-card-link:hover {
+    text-decoration: underline;
+  }
+ 
+/* View all button */
+.view-all-toggle {
+  margin-top: 32px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  transition: 0.2s ease;
+}
+
+.view-all-toggle:hover {
+  border-color: rgba(15, 23, 42, 0.25);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Accordion container */
+.playbook-accordion {
+  margin-top: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+  padding: 10px 0;
+}
+
+/* Individual item */
+.accordion-item + .accordion-item {
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 14px 20px;
+  background: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  cursor: pointer;
+}
+
+.accordion-icon {
+  font-size: 16px;
+  color: #6b7280;
+  transition: transform 0.2s ease;
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg); /* turns + into × */
+}
+
+.accordion-body {
+  padding: 0 20px 12px;
+  display: none;
+}
+
+.accordion-item.open .accordion-body {
+  display: block;
+}
+
+.accordion-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 0;
+}
+
+.accordion-body li + li {
+  margin-top: 4px;
+}
+
+.accordion-body a {
+  font-size: 13px;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.accordion-body a:hover {
+  text-decoration: underline;
+}
+
+/* Full-card links */
+.playbook-card-link-wrapper {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+.playbook-card {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.playbook-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+}

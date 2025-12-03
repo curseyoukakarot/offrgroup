@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Senior Marketer vs. Content Generalist | Hiring Manager Playbook | Offr Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Core CSS (match your other pages) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Article-specific styling (scoped) -->
+  <style>
+    /* =========================================
+       PLAYBOOK ARTICLE – MARKETER VS CONTENT
+       ========================================= */
+
+    .article-hero.playbook-article-hero {
+      padding: 150px 0 120px;
+      background: radial-gradient(circle at top left, #223149 0%, #161b29 45%, #0b101c 100%);
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .playbook-article-hero .row {
+      align-items: center;
+    }
+
+    .playbook-article-hero .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f7b15a;
+      margin-bottom: 18px;
+    }
+
+    .playbook-article-hero .article-title {
+      font-size: 40px;
+      line-height: 1.13;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #f5f5f5;
+    }
+
+    .playbook-article-hero .article-subtitle {
+      font-size: 16px;
+      max-width: 560px;
+      color: #e3e7ee;
+      margin-bottom: 22px;
+    }
+
+    .playbook-article-hero .article-meta {
+      font-size: 14px;
+      color: #c7cfdd;
+      margin-bottom: 8px;
+    }
+
+    .playbook-article-hero .article-back-link {
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .playbook-article-hero .article-back-link:hover {
+      color: #f7b15a;
+      text-decoration: underline;
+    }
+
+    .playbook-article-hero .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .playbook-article-hero .outline-btn {
+      border: 2px solid #ffffff;
+      border-radius: 8px;
+      padding: 10px 22px;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 14px;
+      transition: 0.25s ease;
+    }
+
+    .playbook-article-hero .outline-btn:hover {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .gradient-highlight {
+      background: linear-gradient(90deg, #ffb36b 0%, #ffc878 45%, #ffe3a1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Right-hand meta card */
+    .article-side-card {
+      background: rgba(5, 9, 18, 0.92);
+      border-radius: 18px;
+      padding: 24px 26px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      color: #e5ecf7;
+      max-width: 360px;
+      margin-left: auto;
+    }
+
+    .article-side-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #f9fafb;
+    }
+
+    .article-side-card ul {
+      margin: 0 0 12px;
+      padding-left: 18px;
+    }
+
+    .article-side-card ul li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    .article-side-card .side-cta {
+      margin-top: 10px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* ================================
+       ARTICLE BODY LAYOUT
+       ================================ */
+
+    .article-body {
+      padding: 80px 0 120px;
+      background: #f9fafb;
+    }
+
+    .article-body .article-main {
+      max-width: 780px;
+    }
+
+    .article-body h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #111827;
+    }
+
+    .article-body h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 26px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .article-body p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #4b5563;
+      margin-bottom: 14px;
+    }
+
+    .article-body ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .article-body ul li {
+      font-size: 15px;
+      color: #4b5563;
+      margin-bottom: 6px;
+    }
+
+    .article-body strong {
+      color: #111827;
+    }
+
+    .article-callout {
+      border-left: 4px solid #f59e0b;
+      background: #fffbeb;
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #92400e;
+      margin: 22px 0;
+    }
+
+    /* TOC / Right column */
+    .article-toc {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+      position: sticky;
+      top: 110px;
+    }
+
+    .article-toc h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .article-toc ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 8px;
+    }
+
+    .article-toc ul li {
+      margin-bottom: 6px;
+    }
+
+    .article-toc ul li a {
+      font-size: 14px;
+      color: #374151;
+      text-decoration: none;
+    }
+
+    .article-toc ul li a:hover {
+      color: #111827;
+      text-decoration: underline;
+    }
+
+    .article-toc .toc-note {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    .article-cta-block {
+      margin-top: 28px;
+      padding-top: 14px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .article-cta-block a {
+      color: #111827;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .article-cta-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 992px) {
+      .article-hero.playbook-article-hero {
+        padding: 130px 0 90px;
+      }
+
+      .article-side-card {
+        margin: 30px auto 0;
+      }
+
+      .article-toc {
+        margin-top: 40px;
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .playbook-article-hero {
+        text-align: center;
+      }
+
+      .playbook-article-hero .article-subtitle,
+      .playbook-article-hero .article-title {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .playbook-article-hero .btn-row {
+        justify-content: center;
+      }
+
+      .article-hero .article-back-link {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--====== HEADER PART START (same as homepage) ======-->
+  <header class="header-area">
+    <div class="header-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="navigation">
+              <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/OFFR-GROUP-Logo-White.png"
+                       alt="Offr Group logo"
+                       class="offr-logo" />
+                </a>
+
+                <!-- MOBILE TOGGLER -->
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                  <span class="toggler-icon"></span>
+                </button>
+
+                <!-- MAIN NAV -->
+                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html#engagements">Engagements</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- CTA BUTTON -->
+                <div class="navbar-btn d-none d-sm-block">
+                  <a class="main-btn"
+                     href="https://app.thehirepilot.com/f/new-client">
+                    Book a Strategy Call
+                  </a>
+                </div>
+
+              </nav>
+            </div> <!-- navigation -->
+          </div>
+        </div> <!-- row -->
+      </div>
+    </div>
+  </header>
+  <!--====== HEADER PART ENDS ======-->
+
+  <main>
+    <!--======== ARTICLE HERO ========-->
+    <section class="article-hero playbook-article-hero">
+      <div class="container">
+        <div class="row">
+          <!-- LEFT -->
+          <div class="col-lg-8">
+            <a href="hiring-manager-playbook.html" class="article-back-link">
+              ← Back to Hiring Manager Playbook
+            </a>
+
+            <span class="eyebrow">Hiring Manager Playbook</span>
+
+            <h1 class="article-title">
+              Senior Marketer vs. Content Generalist:<br />
+              hire the <span class="gradient-highlight">marketer your business actually needs</span>
+            </h1>
+
+            <p class="article-subtitle">
+              Most early-stage founders mis-hire their first marketer. This guide helps you decide whether you
+              need a content generalist, a true senior marketer, or something in between—using scorecards,
+              interview prompts, and real-world GTM patterns.
+            </p>
+
+            <p class="article-meta">
+              Category: Marketing & GTM • Approx. 12 minute read
+            </p>
+
+            <div class="btn-row">
+              <a href="#article-body" class="main-btn">Start reading the playbook</a>
+              <a href="https://thehirepilot.com" class="outline-btn" target="_blank" rel="noopener">
+                See how HirePilot runs GTM searches
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT META CARD -->
+          <div class="col-lg-4">
+            <aside class="article-side-card">
+              <h4>Who this is for</h4>
+              <ul>
+                <li>Founders hiring their first or second marketer</li>
+                <li>Hiring managers confused by “marketing titles”</li>
+                <li>Teams deciding between content and demand gen</li>
+              </ul>
+              <h4>What you’ll leave with</h4>
+              <ul>
+                <li>Clear role definitions by stage</li>
+                <li>Scorecards for both roles</li>
+                <li>Interview prompts & red flags</li>
+              </ul>
+
+              <a href="https://app.thehirepilot.com/f/new-client"
+                 class="main-btn side-cta">
+                Get help with your next hire
+              </a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--======== ARTICLE BODY ========-->
+    <section class="article-body" id="article-body">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- MAIN CONTENT -->
+          <div class="col-lg-8">
+            <article class="article-main">
+              <!-- Intro -->
+              <p>
+                Marketing is the single most mis-hired function in SaaS.
+                Not because founders are bad interviewers—but because the role label
+                “marketing” hides wildly different skill sets.
+              </p>
+
+              <p>
+                One marketer lives in spreadsheets and funnel models.
+                Another lives in content calendars and social carousels.
+                Both call themselves “marketing”. Only one will move your revenue curve.
+              </p>
+
+              <div class="article-callout">
+                Most early-stage teams don’t fail because “marketing didn’t work”.
+                They fail because they hired the wrong <strong>type</strong> of marketer
+                for their current stage.
+              </div>
+
+              <p>
+                This playbook gives you a clear, founder-friendly way to decide:
+                <strong>Do you need a senior marketer or a content generalist?</strong>
+              </p>
+
+              <!-- Section 1 -->
+              <h2 id="section-stage">1. Hire based on your stage, not your hope</h2>
+
+              <p>
+                The first rule: stop hiring for the company you wish you had,
+                and hire for the company you run <strong>right now</strong>.
+              </p>
+
+              <h3>Pre-product-market fit (0–$1M ARR)</h3>
+              <ul>
+                <li>You need scrappy execution, not big-picture strategy.</li>
+                <li>Founder is still the primary salesperson and storyteller.</li>
+                <li>Marketing supports learning: ICP clarity, messaging tests, channel experiments.</li>
+              </ul>
+
+              <p><strong>Best hire:</strong> content-heavy generalist who can ship quickly and amplify your voice.</p>
+
+              <h3>Post-PMF ($1M–$5M ARR)</h3>
+              <ul>
+                <li>You have a working product and paying customers.</li>
+                <li>The question shifts from “Will anyone buy this?” to “How do we scale this?”</li>
+                <li>You need to reproduce pipeline with more predictability and less founder heroics.</li>
+              </ul>
+
+              <p>
+                <strong>Best hire:</strong> a marketer who understands funnels, pipeline, and basic attribution—often a
+                “demand-oriented” senior IC.
+              </p>
+
+              <h3>Scaling ($5M–$15M ARR)</h3>
+              <ul>
+                <li>You’re juggling multiple channels and multiple motions.</li>
+                <li>You need someone who can architect the GTM engine, not just run campaigns.</li>
+                <li>Marketing must integrate with sales, CS, product, and finance.</li>
+              </ul>
+
+              <p>
+                <strong>Best hire:</strong> a true senior marketer (Head of Marketing, VP, or Director) who has owned
+                revenue-facing metrics before.
+              </p>
+
+              <div class="article-callout">
+                The mis-hire happens when you try to get
+                <strong>strategic architecture from a content generalist</strong>
+                or <strong>hands-on execution from a board-facing VP.</strong>
+              </div>
+
+              <!-- Section 2 -->
+              <h2 id="section-differences">2. Senior marketer vs. content generalist: clean differences</h2>
+
+              <h3>What a senior marketer really owns</h3>
+              <ul>
+                <li><strong>ICP & positioning:</strong> who you sell to and why they care.</li>
+                <li><strong>Funnel design:</strong> how strangers become pipeline and revenue.</li>
+                <li><strong>Channel strategy:</strong> which levers you pull and in what order.</li>
+                <li><strong>Attribution:</strong> knowing where opportunities come from.</li>
+                <li><strong>Budget & tradeoffs:</strong> what gets funded, what gets cut.</li>
+                <li><strong>Team building:</strong> when to hire specialists and how to manage them.</li>
+              </ul>
+
+              <p>
+                They think in systems, not posts. Give them a target pipeline number and they reverse-engineer
+                the path to get there.
+              </p>
+
+              <h3>What a content generalist really owns</h3>
+              <ul>
+                <li><strong>Copy & storytelling:</strong> emails, landing pages, social posts.</li>
+                <li><strong>Founder amplification:</strong> turning your voice into consistent content.</li>
+                <li><strong>Light SEO & distribution:</strong> getting more surface area for your message.</li>
+                <li><strong>Asset production:</strong> case studies, one-pagers, nurturing content.</li>
+              </ul>
+
+              <p>
+                They don’t architect demand. They make your message sharper, more visible, and more frequent—
+                which can absolutely drive revenue, if the rest of the system exists.
+              </p>
+
+              <!-- Section 3 -->
+              <h2 id="section-misfires">3. Mis-hire patterns that quietly kill momentum</h2>
+
+              <h3>Pattern #1 – Hiring “strategy” before you have signal</h3>
+              <p>
+                A strategist without data ends up guessing,
+                building frameworks for a funnel that doesn’t exist yet.
+              </p>
+
+              <h3>Pattern #2 – Hiring a content creator expecting pipeline</h3>
+              <p>
+                You get more noise—more posts, more emails, more “brand”—but not more qualified conversations.
+                Visibility is not the same as demand.
+              </p>
+
+              <h3>Pattern #3 – Big brand marketer, zero-resource startup</h3>
+              <p>
+                The person who’s used to a 10-person team and a $500K budget struggles when it’s just them,
+                a founder, and a spreadsheet.
+              </p>
+
+              <h3>Pattern #4 – Framework talker, no shipping history</h3>
+              <p>
+                They can reference every GTM model under the sun, but can’t show you a single campaign they took
+                from “idea → shipped → learned → iterated”.
+              </p>
+
+              <!-- Section 4 -->
+              <h2 id="section-framework">4. The role-definition clarity framework</h2>
+
+              <p>Before you post a JD, answer three questions:</p>
+
+              <h3>1. What must marketing solve in the next 90 days?</h3>
+              <ul>
+                <li>We need pipeline.</li>
+                <li>We need activation and onboarding to improve.</li>
+                <li>We need better messaging and positioning.</li>
+                <li>We need to prove a channel beyond founder-led outbound.</li>
+              </ul>
+
+              <h3>2. What resources exist today?</h3>
+              <ul>
+                <li>Budget (what can you comfortably spend per month?)</li>
+                <li>Sales capacity (can you even handle more pipeline?)</li>
+                <li>Data (do you have CRM hygiene and basic tracking?)</li>
+                <li>Time (how available are you for collaboration?)</li>
+              </ul>
+
+              <h3>3. What kind of output do you need?</h3>
+              <ul>
+                <li><strong>Strategic:</strong> someone to design the system.</li>
+                <li><strong>Executional:</strong> someone to ship assets and campaigns.</li>
+                <li><strong>Hybrid:</strong> enough strategy to avoid chaos, enough execution to move quickly.</li>
+              </ul>
+
+              <p>
+                If your answers skew tactical, you likely need a content generalist or execution-heavy marketer.
+                If your answers skew systemic (pipeline, attribution, channel mix), you’re closer to a senior marketer.
+              </p>
+
+              <!-- Section 5 -->
+              <h2 id="section-scorecards">5. Scorecards for both roles</h2>
+
+              <h3>Content generalist scorecard</h3>
+              <p><strong>Must-haves:</strong></p>
+              <ul>
+                <li>Strong copy across email, landing pages, and social.</li>
+                <li>Ability to mimic founder voice without making it robotic.</li>
+                <li>High content velocity—comfortable shipping multiple assets per week.</li>
+                <li>Basic understanding of funnels and CTAs.</li>
+                <li>Empathy for the buyer and their world.</li>
+              </ul>
+
+              <p><strong>Simple working session you can run:</strong></p>
+              <ul>
+                <li>Ask them to rewrite one of your recent emails in three different tones.</li>
+                <li>Have them turn a testimonial into a mini landing page section.</li>
+                <li>Ask for three LinkedIn posts based on a short Loom from you.</li>
+              </ul>
+
+              <p><strong>Red flags:</strong></p>
+              <ul>
+                <li>They talk more about “aesthetics” than outcomes.</li>
+                <li>No concrete examples of content that influenced pipeline.</li>
+                <li>They avoid feedback or iteration (“my style is just like this”).</li>
+              </ul>
+
+              <h3>Senior marketer scorecard</h3>
+              <p><strong>Must-haves:</strong></p>
+              <ul>
+                <li>Can walk you through a full funnel they’ve owned—top to bottom.</li>
+                <li>Understands attribution enough to know what’s directionally true.</li>
+                <li>Has cut channels before, and can explain why.</li>
+                <li>Talks about revenue, not just leads or MQLs.</li>
+                <li>Has managed conflict between sales and marketing.</li>
+              </ul>
+
+              <p><strong>Working session prompts:</strong></p>
+              <ul>
+                <li>“Walk me through a quarter where you missed your target and what changed next.”</li>
+                <li>“Show me a campaign you’d happily run again, as-is.”</li>
+                <li>“If our pipeline dropped 30% next month, what are the first three things you’d check?”</li>
+              </ul>
+
+              <p><strong>Red flags:</strong></p>
+              <ul>
+                <li>Everything is “a team effort” with no clear ownership.</li>
+                <li>They don’t know their numbers—or they’re vague about impact.</li>
+                <li>They blame sales for poor conversion without owning their part.</li>
+              </ul>
+
+              <!-- Section 6 -->
+              <h2 id="section-interviews">6. Interview prompts that separate talkers from operators</h2>
+
+              <p>Use these questions with either role and listen for specificity, numbers, and ownership:</p>
+
+              <ul>
+                <li>“Tell me about a channel you turned off. Why, and what happened next?”</li>
+                <li>“When marketing is working, what are the first signs you see?”</li>
+                <li>“Show me a campaign or piece of work you’re proud of and walk me through the outcome.”</li>
+                <li>“What did you learn from your last bad hire or misaligned partner?”</li>
+                <li>“If I gave you no extra budget, how would you generate more qualified conversations in 60 days?”</li>
+              </ul>
+
+              <div class="article-callout">
+                Great marketers talk about <strong>tradeoffs, constraints, and learning loops</strong>.
+                Weak marketers talk in slogans.
+              </div>
+
+              <!-- Section 7 -->
+              <h2 id="section-30days">7. 30-day action plan after you make the hire</h2>
+
+              <h3>If you hire a content generalist</h3>
+              <ul>
+                <li>Build a 4–6 week content calendar anchored in your ICP’s problems.</li>
+                <li>Record a 30–45 minute Loom downloading your story, product, and point of view.</li>
+                <li>Spin that into LinkedIn posts, email sequences, and a few key landing page upgrades.</li>
+                <li>Measure content performance on:
+                  <ul>
+                    <li>Reply rate and click-through on outbound sequences.</li>
+                    <li>Meeting quality feedback from sales/founders.</li>
+                    <li>Growth in engaged audience, not just impressions.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3>If you hire a senior marketer</h3>
+              <ul>
+                <li>Run an ICP and positioning workshop in week one.</li>
+                <li>Audit your funnel: traffic → sign-ups → opportunities → closed-won.</li>
+                <li>Define 2–3 channels to prioritize and 2 to pause for now.</li>
+                <li>Build a simple pipeline model:
+                  <ul>
+                    <li>How many opportunities you need.</li>
+                    <li>From which channels.</li>
+                    <li>At what conversion rates.</li>
+                  </ul>
+                </li>
+                <li>Agree on a weekly GTM meeting cadence with sales/founders.</li>
+              </ul>
+
+              <!-- Section 8 -->
+              <h2 id="section-tools">8. Suggested tools & stack by role</h2>
+
+              <h3>For a content generalist</h3>
+              <ul>
+                <li>Writing & editing: Google Docs, Grammarly, Notion.</li>
+                <li>Design & visuals: Figma, Canva, basic Loom editing.</li>
+                <li>Scheduling & distribution: Buffer, Hypefury, or native scheduling.</li>
+                <li>Light CRM and pipeline visibility: HirePilot or HubSpot starter.</li>
+              </ul>
+
+              <h3>For a senior marketer</h3>
+              <ul>
+                <li>CRM & pipeline: HubSpot / Salesforce + HirePilot for recruiting GTM roles.</li>
+                <li>Attribution & data: basic reporting first, dedicated tools later.</li>
+                <li>Automation: Zapier / Make to glue systems together.</li>
+                <li>Experiment tracking: Notion templates or a simple dashboard.</li>
+              </ul>
+
+              <!-- Section 9 -->
+              <h2 id="section-summary">9. Founder TL;DR</h2>
+
+              <ul>
+                <li>If you’re early and scrappy: <strong>hire a content generalist</strong> who ships.</li>
+                <li>If you’re proving repeatability: <strong>hire an execution-heavy senior marketer</strong>.</li>
+                <li>If you’re scaling across channels: <strong>hire a strategic leader</strong> who has owned revenue before.</li>
+              </ul>
+
+              <p>
+                When in doubt, bias toward execution—but make sure you know what you’re executing against. Strategy without
+                action is hallucination. Action without strategy is churn.
+              </p>
+
+              <div class="article-callout">
+                The job isn’t “hire marketing”.
+                The job is <strong>de-risk your GTM with the right kind of marketer for your stage</strong>.
+              </div>
+
+              <p>
+                If you’d like help scoping the role, building a scorecard, and running a targeted search,
+                that’s exactly what we do at Offr Group.
+              </p>
+
+              <p>
+                <a href="https://app.thehirepilot.com/f/new-client" class="text-link">
+                  Share your next marketing hire with us →
+                </a>
+              </p>
+            </article>
+          </div>
+
+          <!-- TOC / SIDE PANEL -->
+          <div class="col-lg-4">
+            <aside class="article-toc">
+              <h4>On this page</h4>
+              <ul>
+                <li><a href="#section-stage">1. Hire based on your stage</a></li>
+                <li><a href="#section-differences">2. Senior vs. generalist</a></li>
+                <li><a href="#section-misfires">3. Mis-hire patterns</a></li>
+                <li><a href="#section-framework">4. Role clarity framework</a></li>
+                <li><a href="#section-scorecards">5. Scorecards</a></li>
+                <li><a href="#section-interviews">6. Interview prompts</a></li>
+                <li><a href="#section-30days">7. 30-day plan</a></li>
+                <li><a href="#section-tools">8. Tools & stack</a></li>
+                <li><a href="#section-summary">9. Founder TL;DR</a></li>
+              </ul>
+
+              <p class="toc-note">
+                Built for SaaS, tech, and services founders who want less noise and more signal in their hiring.
+              </p>
+
+              <div class="article-cta-block">
+                Ready to run this playbook with real candidates?<br />
+                <a href="https://app.thehirepilot.com/f/new-client">Share your next role with Offr Group.</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--====== FOOTER PART START ======-->
+  <footer class="footer-area" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-top d-block d-sm-flex  justify-content-between align-items-center">
+            <div class="footer-logo mb-4">
+              <a href="index.html">
+                <img src="assets/images/OFFR-GROUP-Logo-White.png" alt="Offr Group Logo">
+              </a>
+            </div>
+            <div class="footer-social">
+              <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-about mt-30">
+              <h4 class="title">Offr Group</h4>
+              <p>Offr Group is a nimble recruiting firm for high-velocity teams. We help founders and leaders build lean hiring systems, reach passive talent, and make confident hires—without slowing down the work.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-list mt-30 ml-95">
+              <h4 class="title">Quick links</h4>
+              <ul>
+                <li><a href="index.html#engagements">Engagement Models</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Recent Placements</a></li>
+                <li><a href="about.html#team">Our Team</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="footer-list mt-30">
+              <h4 class="title">For you</h4>
+              <ul>
+                <li><a href="for-founders.html">For Founders</a></li>
+                <li><a href="jobseeker-program.html">For Job Seekers</a></li>
+                <li><a href="hiring-manager-playbook.html">Hiring Manager Playbook</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">Hiring Playbooks</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info mt-30">
+              <h3 class="title">Contact</h3>
+              <ul>
+                <li><i class="fal fa-map-marker-alt"></i> Based in the US — working with teams remotely and globally.</li>
+                <li><i class="fal fa-phone"></i> +1 (210) 742-1010</li>
+                <li><i class="fal fa-envelope"></i> engage@offrgroup.com </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-copyright">
+            <p>© Offr Group. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--====== FOOTER PART ENDS ======-->
+
+  <!-- JS (match your other pages) -->
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
